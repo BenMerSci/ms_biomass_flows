@@ -1,0 +1,7 @@
+\begin{figure}
+\hypertarget{fig:map}{%
+\centering
+\includegraphics{figures/network_map.png}
+\caption{This is the map of networks.}\label{fig:map}
+}
+\end{figure}
