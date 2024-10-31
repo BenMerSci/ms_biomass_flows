@@ -7,3 +7,5 @@ The study of ecological networks has therefore recently moved to the development
 Different models are derived from food web theory, such as the niche model @Williams2000SimRul, the nested-hierarchy model @Cattin2004PhyCon, trait-matching model @Bartomeus2016ComFra or physical constraints [@Portalier2019MecPre]. 
 More recently, @Strydom2021RoaPre developed a general framework to predict interaction probabilities between species in a community context.
 These methods are however mostly qualitative, i.e. they are meant to predict if there is an interaction or not, and there is a pressing need to expand them to quantitative interactions, where the strength of interaction between any two organisms is described.
+
+# References
