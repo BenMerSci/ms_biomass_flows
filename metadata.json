@@ -1,15 +1,15 @@
 {
-    "title": "Template to prepare preprints and manuscripts using markdown and github actions",
+    "title": "Hierarchical models to predict predation in complex trophic communities",
     "authors": [
         {
             "affiliations": [
-                "Université de Montréal",
+                "Université de Sherbrooke",
                 "Québec Centre for Biodiversity Sciences"
             ],
-            "familyname": "Poisot",
-            "givennames": "Timothée",
-            "email": "timothee.poisot@umontreal.ca",
-            "orcid": "0000-0002-0735-5184",
+            "familyname": "Mercier",
+            "givennames": "Benjamin",
+            "email": "benjamin.b.mercier@usherbrooke.ca",
+            "orcid": "0000-0002-4104-9463",
             "status": [
                 "corresponding",
                 "equal"
@@ -17,35 +17,31 @@
         },
         {
             "affiliations": [
-                "Inn of the Prancing Pony",
-                "Fellowship of the Ring"
+                "Université de Sherbrooke",
+                "Québec Centre for Biodiversity Sciences"
             ],
-            "familyname": "Took",
-            "givennames": "Peregrin",
-            "email": "pippin@took.shire"
+            "familyname": "Meahan MacDonald",
+            "givennames": "Arthur Andrew"
         },
         {
             "affiliations": [
-                "Green Dragon Inn",
-                "Fellowship of the Ring"
+                "Université de Sherbrooke",
+                "Québec Centre for Biodiversity Sciences"
             ],
-            "familyname": "Brandybuck",
-            "givennames": "Merriadoc",
-            "email": "merry@fellowship.ring",
-            "status": [
-                "equal"
-            ]
+            "familyname": "Gravel",
+            "givennames": "Dominique"
         }
     ],
-    "abstract": {
-        "Purpose": "This template provides a series of scripts to render a markdown document into an interactive website and a series of PDFs.",
-        "Motivation": "It makes collaborating on text with GitHub easier, and means that we never need to think about the output.",
-        "Internals": "GitHub actions and a series of python scritpts. The markdown is handled with `pandoc`."
-    },
+    "abstract": 
+        "Trophic interactions make the backbone of ecological communities. From herbivory to predation, these interactions of varying strength shape ecosystem and their related functions. There is a pressing need to be able to predict interaction strength at the scale of whole communities. While functional responses focus at the pairwise interaction level, we question here if the same underlying mechanisms could be leveraged to make predictions at the scale of the community. In this study, we develop 4 hierarchical models of increasing complexity based on the type I and the type II functional responses to predict biomass fluxes between consumers and resources at the community level. The main objective is to determine if simple mechanism such as mass action (type I) and the saturation of fluxes (type II) are sufficient to predict biomass fluxes. To do so, we collected 19 Ecopath networks encompassing 1380 interactions across marine, aquatic and terrestrial ecosystems. While we can not reject the mechanism of saturating fluxes (type II), our results suggest that a mass action mechanism is sufficient and more robust, in the context of our data, to predict biomass fluxes between consumers and resources at the community level. We also recovered the expected allometric relationships between consumers body mass and their space clearance rate parameters within the mass action model, further solidifying our findings. Further modelisation is needed, specifically a trait-matching model with more data, to develop a model generalizable to more taxons and types of trophic interactions."
+    ,
     "keywords": [
-        "pandoc",
-        "pandoc-crossref",
-        "github actions"
+        "pairwise trophic interactions",
+        "ecological networks",
+        "biomass flows",
+        "mass action",
+        "space clearance rate",
+        "bayesian analysis"
     ],
     "citationstyle": "ecology-letters"
 }
