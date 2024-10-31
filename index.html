@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Template to prepare preprints and manuscripts using markdown
-and github actions</title>
+    <title>Hierarchical models to predict predation in complex trophic
+communities</title>
     <script src="https://hypothes.is/embed.js" async></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
@@ -239,20 +239,20 @@ and github actions</title>
 <body>
     <header>
         <div class="container">
-            <div class="header--title">Template to prepare preprints and
-manuscripts using markdown and github actions</div>
+            <div class="header--title">Hierarchical models to predict
+predation in complex trophic communities</div>
             <div class="header--authors">
                 <span class="header--author">
-                <a href="https://orcid.org/0000-0002-0735-5184" target="_blank">
-                    Timothée Poisot
+                <a href="https://orcid.org/0000-0002-4104-9463" target="_blank">
+                    Benjamin Mercier
                 </a>
                 <sup class="affiliation">1,2,‡</sup>
                 </span><span class="header--author">
-                Peregrin Took
-                <sup class="affiliation">3,4</sup>
+                Arthur Andrew Meahan MacDonald
+                <sup class="affiliation">1,2</sup>
                 </span><span class="header--author">
-                Merriadoc Brandybuck
-                <sup class="affiliation">4,5,‡</sup>
+                Dominique Gravel
+                <sup class="affiliation">1,2</sup>
                 </span>
             </div>
         </div>
@@ -260,53 +260,296 @@ manuscripts using markdown and github actions</div>
 
     <main class="container">
         <section class="abstract">
-            
+            Trophic interactions make the backbone of ecological
+            communities. From herbivory to predation, these interactions
+            of varying strength shape ecosystem and their related
+            functions. There is a pressing need to be able to predict
+            interaction strength at the scale of whole communities.
+            While functional responses focus at the pairwise interaction
+            level, we question here if the same underlying mechanisms
+            could be leveraged to make predictions at the scale of the
+            community. In this study, we develop 4 hierarchical models
+            of increasing complexity based on the type I and the type II
+            functional responses to predict biomass fluxes between
+            consumers and resources at the community level. The main
+            objective is to determine if simple mechanism such as mass
+            action (type I) and the saturation of fluxes (type II) are
+            sufficient to predict biomass fluxes. To do so, we collected
+            19 Ecopath networks encompassing 1380 interactions across
+            marine, aquatic and terrestrial ecosystems. While we can not
+            reject the mechanism of saturating fluxes (type II), our
+            results suggest that a mass action mechanism is sufficient
+            and more robust, in the context of our data, to predict
+            biomass fluxes between consumers and resources at the
+            community level. We also recovered the expected allometric
+            relationships between consumers body mass and their space
+            clearance rate parameters within the mass action model,
+            further solidifying our findings. Further modelisation is
+            needed, specifically a trait-matching model with more data,
+            to develop a model generalizable to more taxons and types of
+            trophic interactions.
 
-            <dl>
-                    <dt>Purpose</dt>
-                <dd>This template provides a series of scripts to render
-            a markdown document into an interactive website and a series
-            of PDFs.</dd>
-                    <dt>Internals</dt>
-                <dd>GitHub actions and a series of python scritpts. The
-            markdown is handled with <code>pandoc</code>.</dd>
-                    <dt>Motivation</dt>
-                <dd>It makes collaborating on text with GitHub easier,
-            and means that we never need to think about the output.</dd>
-                </dl>
 
             <div class="artifacts">
-                <a href="Poisot_et_al_2024_template_prepare_draft.pdf" title="Draft" target="_blank">Draft</a>
-                <a href="Poisot_et_al_2024_template_prepare_preprint.pdf" title="Preprint" target="_blank">Preprint</a>
-                <a href="Poisot_et_al_2024_template_prepare.odt" title="OpenDocument" target="_blank">Libre Office</a>
+                <a href="Mercier_et_al_2024_hierarchical_models_draft.pdf" title="Draft" target="_blank">Draft</a>
+                <a href="Mercier_et_al_2024_hierarchical_models_preprint.pdf" title="Preprint" target="_blank">Preprint</a>
+                <a href="Mercier_et_al_2024_hierarchical_models.odt" title="OpenDocument" target="_blank">Libre Office</a>
             </div>
         </section>
 
         <article>
-            <p>Push and run test.</p>
+            <p>Trophic interactions make the backbone of ecological
+            communities <span class="citation"
+            data-cites="Bellingeri2016FooWeb">Wootton &amp; Emmerson
+            (2005)</span>, linking every component through nutrient and
+            energy flows <span class="citation"
+            data-cites="Lindeman1942TroAsp">(Lindeman 1942)</span>.
+            Consumer-resource interactions of varying strength play a
+            crucial role in shaping important ecosystem functions and
+            processes <span class="citation"
+            data-cites="Curtsdotter2019EcoFun">Wilmers <em>et al.</em>
+            (2012)</span> such as disease dynamics, invasive species and
+            biogeochemical cycles <span class="citation"
+            data-cites="Estes2011TroDow">(Estes <em>et al.</em>
+            2011)</span>. Identifying species interactions and
+            quantifying their strength is necessary to understand
+            community composition <span class="citation"
+            data-cites="Paine1992FooAna">(Paine 1992)</span>, stability
+            <span class="citation"
+            data-cites="deRuiter1995EnePat">Nilsson &amp; McCann
+            (2016)</span> and the resulting associated ecosystem
+            services <span class="citation"
+            data-cites="Montoya2003FooWeb">(Montoya <em>et al.</em>
+            2003)</span>. Global changes have a diversity of impacts on
+            species themselves, but also how they interact and the
+            resulting assemblages and functioning <span class="citation"
+            data-cites="Koltz2018WarRev">Lurgi <em>et al.</em>
+            (2012)</span>. Empirical observation of these interactions
+            and the evaluation of their strength is however challenging,
+            if not unfeasable due to their sheer amount, sampling biases
+            and the emergence of novel interactions between species that
+            never co-occurred <span class="citation"
+            data-cites="Jordano2016ChaEco">Aguiar <em>et al.</em>
+            (2019)</span>. The study of ecological networks has
+            therefore recently moved to the development of predictive
+            tools to overcome the limitations associated with empirical
+            sampling of trophic interactions <span class="citation"
+            data-cites="Poisot2016DesUnd">(Poisot <em>et al.</em>
+            2016)</span>. Different models are derived from food web
+            theory, such as the niche model <span class="citation"
+            data-cites="Williams2000SimRul">Williams &amp; Martinez
+            (2000)</span>, the nested-hierarchy model <span
+            class="citation" data-cites="Cattin2004PhyCon">Cattin <em>et
+            al.</em> (2004)</span>, trait-matching model <span
+            class="citation" data-cites="Bartomeus2016ComFra">Bartomeus
+            <em>et al.</em> (2016)</span> or physical constraints <span
+            class="citation" data-cites="Portalier2019MecPre">(Portalier
+            <em>et al.</em> 2019)</span>. More recently, <span
+            class="citation" data-cites="Strydom2021RoaPre">Strydom
+            <em>et al.</em> (2021)</span> developed a general framework
+            to predict interaction probabilities between species in a
+            community context. These methods are however mostly
+            qualitative, i.e. they are meant to predict if there is an
+            interaction or not, and there is a pressing need to expand
+            them to quantitative interactions, where the strength of
+            interaction between any two organisms is described.</p>
+            <div id="refs"
+            class="references csl-bib-body hanging-indent"
+            role="doc-bibliography">
+            <div id="ref-Aguiar2019RevBia" class="csl-entry"
+            role="doc-biblioentry">
+            Aguiar, M.A.M. de, Newman, E.A., Pires, M.M., Yeakel, J.D.,
+            Boettiger, C., Burkle, L.A., <em>et al.</em> (2019). <a
+            href="https://doi.org/10.7717/peerj.7566">Revealing biases
+            in the sampling of ecological interaction networks</a>.
+            <em>PeerJ</em>, 7, e7566.
+            </div>
+            <div id="ref-Bartomeus2016ComFra" class="csl-entry"
+            role="doc-biblioentry">
+            Bartomeus, I., Gravel, D., Tylianakis, J.M., Aizen, M.A.,
+            Dickie, I.A. &amp; Bernard-Verdier, M. (2016). <a
+            href="https://doi.org/10.1111/1365-2435.12666">A common
+            framework for identifying linkage rules across different
+            types of interactions</a>. <em>Functional Ecology</em>, 30,
+            1894–1903.
+            </div>
+            <div id="ref-Bascompte2005IntStr" class="csl-entry"
+            role="doc-biblioentry">
+            Bascompte, J., Melian, C.J. &amp; Sala, E. (2005). <a
+            href="https://doi.org/10.1073/pnas.0501562102">Interaction
+            strength combinations and the overfishing of a marine food
+            web</a>. <em>Proceedings of the National Academy of
+            Sciences</em>, 102, 5443–5447.
+            </div>
+            <div id="ref-Bellingeri2016FooWeb" class="csl-entry"
+            role="doc-biblioentry">
+            Bellingeri, M. &amp; Bodini, A. (2016). <a
+            href="https://doi.org/10.1111/oik.02244">Food web’s
+            backbones and energy delivery in ecosystems</a>.
+            <em>Oikos</em>, 125, 586–594.
+            </div>
+            <div id="ref-Cattin2004PhyCon" class="csl-entry"
+            role="doc-biblioentry">
+            Cattin, M.-F., Bersier, L.-F., Banašek-Richter, C.,
+            Baltensperger, R. &amp; Gabriel, J.-P. (2004). <a
+            href="https://doi.org/10.1038/nature02327">Phylogenetic
+            constraints and adaptation explain food-web structure</a>.
+            <em>Nature</em>, 427, 835–839.
+            </div>
+            <div id="ref-Curtsdotter2019EcoFun" class="csl-entry"
+            role="doc-biblioentry">
+            Curtsdotter, A., Banks, H.T., Banks, J.E., Jonsson, M.,
+            Jonsson, T., Laubmeier, A.N., <em>et al.</em> (2019). <a
+            href="https://doi.org/10.1111/1365-2656.12892">Ecosystem
+            function in predator–prey food webs—confronting dynamic
+            models with empirical data</a>. <em>Journal of Animal
+            Ecology</em>, 88, 196–210.
+            </div>
+            <div id="ref-deRuiter1995EnePat" class="csl-entry"
+            role="doc-biblioentry">
+            de Ruiter, P.C., Neutel, A.-M. &amp; Moore, J.C. (1995). <a
+            href="https://doi.org/10.1126/science.269.5228.1257">Energetics,
+            Patterns of Interaction Strengths, and Stability in Real
+            Ecosystems</a>. <em>Science</em>, 269, 1257–1260.
+            </div>
+            <div id="ref-DeLong2021PreEco" class="csl-entry"
+            role="doc-biblioentry">
+            DeLong, J.P. (2021). <em>Predator Ecology: Evolutionary
+            Ecology of the Functional Response</em>. Oxford University
+            Press.
+            </div>
+            <div id="ref-Duffy2002BioEco" class="csl-entry"
+            role="doc-biblioentry">
+            Duffy, J.E. (2002). <a
+            href="https://doi.org/10.1034/j.1600-0706.2002.990201.x">Biodiversity
+            and ecosystem function: The consumer connection</a>.
+            <em>Oikos</em>, 99, 201–219.
+            </div>
+            <div id="ref-Estes2011TroDow" class="csl-entry"
+            role="doc-biblioentry">
+            Estes, J.A., Terborgh, J., Brashares, J.S., Power, M.E.,
+            Berger, J., Bond, W.J., <em>et al.</em> (2011). <a
+            href="https://doi.org/10.1126/science.1205106">Trophic
+            Downgrading of Planet Earth</a>. <em>Science</em>, 333,
+            301–306.
+            </div>
+            <div id="ref-Jordano2016ChaEco" class="csl-entry"
+            role="doc-biblioentry">
+            Jordano, P. (2016). <a
+            href="https://doi.org/10.1371/journal.pbio.1002559">Chasing
+            Ecological Interactions</a>. <em>PLOS Biology</em>, 14,
+            e1002559.
+            </div>
+            <div id="ref-Koltz2018WarRev" class="csl-entry"
+            role="doc-biblioentry">
+            Koltz, A.M., Classen, A.T. &amp; Wright, J.P. (2018). <a
+            href="https://doi.org/10.1073/pnas.1808754115">Warming
+            reverses top-down effects of predators on belowground
+            ecosystem function in Arctic tundra</a>. <em>Proceedings of
+            the National Academy of Sciences</em>, 115, E7541–E7549.
+            </div>
+            <div id="ref-Lindeman1942TroAsp" class="csl-entry"
+            role="doc-biblioentry">
+            Lindeman, R.L. (1942). <a
+            href="https://doi.org/10.2307/1930126">The Trophic-Dynamic
+            Aspect of Ecology</a>. <em>Ecology</em>, 23, 399–417.
+            </div>
+            <div id="ref-Lurgi2012NovCom" class="csl-entry"
+            role="doc-biblioentry">
+            Lurgi, M., López, B.C. &amp; Montoya, J.M. (2012). <a
+            href="https://doi.org/10.1098/rstb.2012.0238">Novel
+            communities from climate change</a>. <em>Philosophical
+            Transactions of the Royal Society B: Biological
+            Sciences</em>, 367, 2913–2922.
+            </div>
+            <div id="ref-Montoya2003FooWeb" class="csl-entry"
+            role="doc-biblioentry">
+            Montoya, J.M., Rodríguez, M.A. &amp; Hawkins, B.A. (2003).
+            <a
+            href="https://doi.org/10.1046/j.1461-0248.2003.00469.x">Food
+            web complexity and higher-level ecosystem services</a>.
+            <em>Ecology Letters</em>, 6, 587–593.
+            </div>
+            <div id="ref-Neutel2002StaRea" class="csl-entry"
+            role="doc-biblioentry">
+            Neutel, A.-M. (2002). <a
+            href="https://doi.org/10.1126/science.1068326">Stability in
+            Real Food Webs: Weak Links in Long Loops</a>.
+            <em>Science</em>, 296, 1120–1123.
+            </div>
+            <div id="ref-Nilsson2016IntStr" class="csl-entry"
+            role="doc-biblioentry">
+            Nilsson, K.A. &amp; McCann, K.S. (2016). <a
+            href="https://doi.org/10.1007/s12080-015-0282-8">Interaction
+            strength revisited—clarifying the role of energy flux for
+            food web stability</a>. <em>Theoretical Ecology</em>, 9,
+            59–71.
+            </div>
+            <div id="ref-Paine1992FooAna" class="csl-entry"
+            role="doc-biblioentry">
+            Paine, R.T. (1992). <a
+            href="https://doi.org/10.1038/355073a0">Food-web analysis
+            through field measurement of per capita interaction
+            strength</a>. <em>Nature</em>, 355, 73–75.
+            </div>
+            <div id="ref-Poisot2016DesUnd" class="csl-entry"
+            role="doc-biblioentry">
+            Poisot, T., Stouffer, D.B. &amp; Kéfi, S. (2016). <a
+            href="https://www.jstor.org/stable/48582345">Describe,
+            understand and predict: Why do we need networks in
+            ecology?</a> <em>Functional Ecology</em>, 30, 1878–1882.
+            </div>
+            <div id="ref-Portalier2019MecPre" class="csl-entry"
+            role="doc-biblioentry">
+            Portalier, S.M.J., Fussmann, G.F., Loreau, M. &amp; Cherif,
+            M. (2019). <a
+            href="https://doi.org/10.1111/1365-2435.13254">The mechanics
+            of predator–prey interactions: First principles of physics
+            predict predator–prey size ratios</a>. <em>Functional
+            Ecology</em>, 33, 323–334.
+            </div>
+            <div id="ref-Strydom2021RoaPre" class="csl-entry"
+            role="doc-biblioentry">
+            Strydom, T., Catchen, M.D., Banville, F., Caron, D.,
+            Dansereau, G., Desjardins-Proulx, P., <em>et al.</em>
+            (2021). <a href="https://doi.org/10.1098/rstb.2021.0063">A
+            roadmap towards predicting species interaction networks
+            (across space and time)</a>. <em>Philosophical Transactions
+            of the Royal Society B: Biological Sciences</em>, 376,
+            20210063.
+            </div>
+            <div id="ref-Williams2000SimRul" class="csl-entry"
+            role="doc-biblioentry">
+            Williams, R.J. &amp; Martinez, N.D. (2000). <a
+            href="https://doi.org/10.1038/35004572">Simple rules yield
+            complex food webs</a>. <em>Nature</em>, 404, 180–183.
+            </div>
+            <div id="ref-Wilmers2012TroCas" class="csl-entry"
+            role="doc-biblioentry">
+            Wilmers, C.C., Estes, J.A., Edwards, M., Laidre, K.L. &amp;
+            Konar, B. (2012). <a
+            href="https://doi.org/10.1890/110176">Do trophic cascades
+            affect the storage and flux of atmospheric carbon? An
+            analysis of sea otters and kelp forests</a>. <em>Frontiers
+            in Ecology and the Environment</em>, 10, 409–415.
+            </div>
+            <div id="ref-Wootton2005MeaInt" class="csl-entry"
+            role="doc-biblioentry">
+            Wootton, J.T. &amp; Emmerson, M. (2005). <a
+            href="https://www.jstor.org/stable/30033811">Measurement of
+            Interaction Strength in Nature</a>. <em>Annual Review of
+            Ecology, Evolution, and Systematics</em>, 36, 419–444.
+            </div>
+            </div>
         </article>
     </main>
 
     <footer>
                 <div class="container">
-            <h2>Supplementary Material</h2>
-            <span class="appendix--list">
-                <a href="appendix/Poisot_et_al_2024_template_prepare_s1.pdf" target="_blank">
-                    <b>1:</b>&nbsp;The metadata configuration file
-                </a><br />
-            </span><span class="appendix--list">
-                <a href="appendix/Poisot_et_al_2024_template_prepare_s2.pdf" target="_blank">
-                    <b>2:</b>&nbsp;Bibliography in supp. mat.
-                </a><br />
-            </span>
-        </div>
-                <div class="container">
             <h2>Affiliations</h2>
             <sup>1</sup>&nbsp;Université de
-            Montréal; <sup>2</sup>&nbsp;Québec Centre for Biodiversity
-            Sciences; <sup>3</sup>&nbsp;Inn of the Prancing
-            Pony; <sup>4</sup>&nbsp;Fellowship of the
-            Ring; <sup>5</sup>&nbsp;Green Dragon Inn
+            Sherbrooke; <sup>2</sup>&nbsp;Québec Centre for Biodiversity
+            Sciences
             <br />
             
         </div>
