@@ -87,28 +87,27 @@ The flow of biomass $F_{ij}$ depends on the available prey biomass $B_i$ and the
 Explicitely, only the consumer's mobility is considered as it searches for resources.
 For the purpose of comparison, model 1 hypothesizes that all consumers have the same space clearance rate $\alpha$.
 
-$$  F_{ij} = \alpha B_i N_j$$
+$$F_{ij} = \alpha B_i N_j$$
 
 ### Model 2 - Consumer-specific mass action
 
 Model 2 follows the previous one with the hypothesis that space clearance parameter $\alpha_j$ is a specific parameter for each consumer species $j$.
 
-$$  F_{ij} = \alpha_j B_i N_j$$
+$$F_{ij} = \alpha_j B_i N_j$$
 
 ### Model 3 - Single-species saturating model
 
 Model 3 keeps the assumptions of model 2 with the addition of handling time, thereby representing a single species Type II functional response.
 The space clearance rate parameter $\alpha_j$ and the handling time $h_j$ are both consumer-specific:
 
-$$  F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j B_i N_j}$$
+$$F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j B_i N_j}$$
 
 ### Model 4 - Multi-species saturating model
 
 Building on model 3, model 4 implements a multi-species version of Type II functional response [@Smout2010FunRes]. 
 Parameters are the same as the ones used in model 3, the difference is found at the denominator where handling is aggregated over all species in the food web : 
 
-$$  F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j \sum_{i=1}^{nprey}B_i N_j}$$
-
+$$F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j \sum_{i=1}^{nprey}B_i N_j}$$
 
 | Model name                      | Model equation                                                                 | Number of parameters |
 |---------------------------------|--------------------------------------------------------------------------------|----------------------|
