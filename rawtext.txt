@@ -196,9 +196,7 @@ does not portray any ecological realism of a trophic interaction. Model
 predator $j$ is constant with average $K$, irrespective of predator
 identity:
 
-::: {align="center"}
-$$F_{ij} = K$$
-:::
+$$ F_{ij} = K $$
 
 ### Model 1 - General mass action
 
