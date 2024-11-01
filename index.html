@@ -359,6 +359,192 @@ predation in complex trophic communities</div>
             interaction or not, and there is a pressing need to expand
             them to quantitative interactions, where the strength of
             interaction between any two organisms is described.</p>
+            <p>There are many definitions of interaction strength <span
+            class="citation" data-cites="Berlow2004IntStr">(Berlow
+            <em>et al.</em> 2004)</span>, and among them biomass flows
+            can be particularly suited for the development of predictive
+            models. Biomass flows between consumers and resources can be
+            derived from functional traits, with the promise of a
+            standardized measure independent of taxa involved <span
+            class="citation" data-cites="Berlow2004IntStr">(Berlow
+            <em>et al.</em> 2004)</span>. Quantitative predictive models
+            of biomass flows might also offer potential support to the
+            study of biodiversity and ecosystem functioning
+            relationship, as it seeks to depict all energy flows within
+            communities <span class="citation"
+            data-cites="Barnes2018EneFlu">(Barnes <em>et al.</em>
+            2018)</span>. Biomass flows are defined as a quantity of
+            resource biomass that is consumed by a consumer per unit
+            area and unit of time, reporting how energy circulates
+            through the food web <span class="citation"
+            data-cites="Lindeman1942TroAsp">(Lindeman 1942)</span>.
+            Interaction strengths between consumers and resources is
+            closely related to predation rate in a food web model,
+            namely the functional responses ]<span class="citation"
+            data-cites="Rall2012UniTem">(Rall <em>et al.</em>
+            2012)</span>. Functional response theory aims at describing
+            the change in feeding rate of a consumer, or how many prey
+            or resource a consumer can predate per unit area over time,
+            relative to prey or resource availability <span
+            class="citation"
+            data-cites="Holling1959ChaSim Holling1959ComPrea Solomon1949NatCon">(Holling
+            1959a, b; Solomon 1949)</span>. Where the functional
+            response describes the actual number of individual prey or
+            resource predated by a consumer per unit area over time,
+            biomass flows describes the amount of biomass flowing from a
+            prey or resource to a consumer per unit area over time.
+            Since both quantities report the rate of the same underlying
+            process that is predation, we anchored the development of
+            our modeling approach in functional response theory.</p>
+            <p>A fundamental principle underlying the majority of
+            functional responses is the mass action, stating that
+            predator and prey move randomly in an area and encounter at
+            a rate proportional to the product of their abundance and
+            their velocity. Here we will focus on the two most commonly
+            used types of functional responses. The type I functional
+            response describes mass action only, where the amount of
+            resource consumed depends on the resource and consumer
+            densities, and the rate (formerly reffered to as attack rate
+            and hereafter space clearance rate <span class="citation"
+            data-cites="DeLong2021PreEco">(DeLong 2021)</span>) at which
+            a consumer searches its home range for resources, leading to
+            random encounters followed by detection, attack and
+            consumption. The type II functional response describes the
+            same process as the type I, but with the addition that
+            consumption saturates with prey availability because of the
+            time required to process prey. These processes are
+            influenced by a multitude of functional traits and
+            environmental conditions <span class="citation"
+            data-cites="Beardsell2021DerPre Beardsell2022MecMod">(Beardsell
+            <em>et al.</em> 2021, 2022)</span>. The space clearance rate
+            parameter varies with consumers and resources intrinsic
+            characteristics such as absolute and relative velocities,
+            perception of the environment and cognitive abilities <span
+            class="citation" data-cites="DeLong2021PreEco">(DeLong
+            2021)</span>. It is also influenced by externalities such as
+            habitat complexity <span class="citation"
+            data-cites="Hall2000OrgMat Manatunge2000InfStr Barrios-ONeill2016ConSca">(Barrios-O’Neill
+            <em>et al.</em> 2016; Hall <em>et al.</em> 2000; Manatunge
+            <em>et al.</em> 2000)</span> and the presence of refugia
+            <span class="citation" data-cites="Hoddle2003EffPre">(Hoddle
+            2003)</span> impeding detection probability. The
+            dimensionality of an interaction, whether it takes place in
+            a two or three dimensional plane, also impacts encounter
+            rates and detection probability <span class="citation"
+            data-cites="Pawar2012DimCon Pawar2019IntDim">(Pawar <em>et
+            al.</em> 2012, 2019)</span>. For instance, a predatory bird
+            searching for preys from above or fishes grazing the benthic
+            surface are examples of 2D planes while aerial insectivorous
+            birds pursuing flying insects or fishes chasing preys in the
+            water column would be in a 3D plane. Functional response
+            theory therefore makes a good start to develop predictive
+            models of quantitative interactions since widely measured
+            functional traits can be combined with consumer and prey
+            density to predict biomass flows.</p>
+            <p>The space clearance rate, in units of space per time,
+            reports the amount of area search by the predator in a time
+            interval. As with many biological processes, the space
+            clearance rate was shown to vary with consumers body mass.
+            Indeed, multiple studies, summarized in the FoRAGE database
+            <span class="citation"
+            data-cites="Uiterwaal2022ForDat">(Uiterwaal <em>et al.</em>
+            2022)</span>, showed an allometric scaling between the space
+            clearance rate and the body mass of consumers. This
+            observation is coherent with <span class="citation"
+            data-cites="Hirt2017GenSca Hirt2020RetTro">(Hirt <em>et
+            al.</em> 2017, 2020)</span> who documented that the maximum
+            velocity of an organism scales with its body mass. Handling
+            time is also expected to follow the same scaling
+            relationship <span class="citation"
+            data-cites="DeLong2021PreEco">(DeLong 2021)</span>, although
+            recent studies are now suggesting that consumers handling
+            time would not be as important at natural resources
+            densities <span class="citation"
+            data-cites="Chan2017ImpAss Preston2018WhaDri Beardsell2021DerPre Coblentz2023PreFee">(Beardsell
+            <em>et al.</em> 2021; Chan <em>et al.</em> 2017; Coblentz
+            <em>et al.</em> 2023; Preston <em>et al.</em> 2018)</span>.
+            Ultimately, an accurate evaluation of these parameters is
+            necessary as they are widely used in theoretical models
+            <span class="citation"
+            data-cites="Brose2008ForThe Pawar2012DimCon Brose2006AllSca">(Brose
+            <em>et al.</em> 2006; Brose <em>et al.</em> 2008; Pawar
+            <em>et al.</em> 2012)</span>. Restraining the parameter
+            space could greatly bonify studies of species coexistence,
+            community stability and trophic regulation. It could also
+            help the parameterization of global ecosystem models used
+            for biodiversity scenarios <span class="citation"
+            data-cites="Harfoot2014EmeGlo">(Harfoot <em>et al.</em>
+            2014})</span>. Following <span class="citation"
+            data-cites="Yodzis1992BodSiz">(Yodzis &amp; Innes
+            1992)</span>, there are a few meta-analyses looking at the
+            scaling of feeding rates with body-mass <span
+            class="citation" data-cites="Rall2012UniTem">(Rall <em>et
+            al.</em> 2012)</span>. These are however concentrated on a
+            re-analysis of univariate functional responses, mostly from
+            experimental studies, and there is currently no study aiming
+            at reconstructing quantitative interaction networks.</p>
+            <p>Our main objective is to test if we could model
+            quantitative interactions in complex food webs with easily
+            accessible information such as abundance and body mass. We
+            compared statistical models derived from functional response
+            theory, including type I and type II forms. We also
+            investigate if allometric relationships between space
+            clearance rate, handling time and consumer body mass can
+            contribute to the prediction of biomass flows in diverse
+            food webs. To do so, we developed four hierarchical models
+            of pairwise quantitative interactions of increasing
+            complexity and evaluated them with empirical data of biomass
+            flows between consumers and resources. We curated Ecopath
+            networks <span class="citation"
+            data-cites="Christensen2005EcoEco">(Christensen <em>et
+            al.</em> 2005)</span> describing marine, aquatic and
+            terrestrial food webs and extracted 1380 pairwise trophic
+            interactions between consumers and resources. Each model
+            represents its own hypothesis and their comparison allow the
+            evaluation of different mechanisms driving interactions.</p>
+            <h1 id="material-and-methods">Material and methods</h1>
+            <p>A litterature search was performed to gather empirically
+            sampled trophic networks with measurements of biomass flows
+            from resources to consumers, along with population
+            densities. Food web data are notoriously heterogeneous <span
+            class="citation" data-cites="Mestre2022HumDis">(Mestre
+            <em>et al.</em> 2022)</span> and we therefore relied on
+            Ecopath models <span class="citation"
+            data-cites="Christensen2005EcoEco">(Christensen <em>et
+            al.</em> 2005)</span> to normalize data collection. Ecopath
+            is a modelling software that relies on a mass-balance
+            premiss and a multitude of parameters (production/biomass
+            ratio, consumption/biomass ratio, diet compositions etc.) to
+            provide a realistic static image of the flows of biomass
+            between resources and consumers in an ecosystem <span
+            class="citation"
+            data-cites="Christensen2005EcoEco">(Christensen <em>et
+            al.</em> 2005)</span>. It was shown the Ecopath methodology
+            reduces biases in comparative analyses among food webs
+            (Brimacombe, in review). We therefore collected openly
+            available models from Ecobase <span class="citation"
+            data-cites="Colleter2013EcoRep">(Colléter <em>et al.</em>
+            2013)</span> and worked with a subset of the models present
+            in <span class="citation"
+            data-cites="Jacquet2016NoCom">(Jacquet <em>et al.</em>
+            2016)</span>. Taxonomic resolution of Ecopath models is
+            highly variable and it is not uncommon that species are
+            lumped into functional groups. The models were therefore
+            selected based on the taxonomic resolution with the criteria
+            that most nodes must be resolved at the species level, or
+            that species within functional groups were taxonomically
+            resolved. We thus curated 19 Ecopath models (detailed list
+            in supplementary material) from aquatic, marine and
+            terrestrial environments fig. 1, and trophic guilds spanning
+            from mammal carnivores and herbivores, birds, pelagic
+            carnnivorous and herbivorous fish, demersal carnivorous and
+            herbivorous fish and invertebrates.</p>
+            <figure>
+            <img src="figures/network_map.png" id="fig:network_map"
+            alt="Figure 1: Map of Ecopath models locations used in the present study." />
+            <figcaption aria-hidden="true">Figure 1: Map of Ecopath
+            models locations used in the present study.</figcaption>
+            </figure>
             <h1 class="unnumbered" id="references">References</h1>
             <div id="refs"
             class="references csl-bib-body hanging-indent"
@@ -370,6 +556,23 @@ predation in complex trophic communities</div>
             href="https://doi.org/10.7717/peerj.7566">Revealing biases
             in the sampling of ecological interaction networks</a>.
             <em>PeerJ</em>, 7, e7566.
+            </div>
+            <div id="ref-Barnes2018EneFlu" class="csl-entry"
+            role="doc-biblioentry">
+            Barnes, A.D., Jochum, M., Lefcheck, J.S., Eisenhauer, N.,
+            Scherber, C., O’Connor, M.I., <em>et al.</em> (2018). <a
+            href="https://doi.org/10.1016/j.tree.2017.12.007">Energy
+            Flux: The Link between Multitrophic Biodiversity and
+            Ecosystem Functioning</a>. <em>Trends in Ecology &amp;
+            Evolution</em>, 33, 186–197.
+            </div>
+            <div id="ref-Barrios-ONeill2016ConSca" class="csl-entry"
+            role="doc-biblioentry">
+            Barrios-O’Neill, D., Kelly, R., Dick, J.T.A., Ricciardi, A.,
+            MacIsaac, H.J. &amp; Emmerson, M.C. (2016). <a
+            href="https://doi.org/10.1111/ele.12605">On the
+            context-dependent scaling of consumer feeding rates</a>.
+            <em>Ecology Letters</em>, 19, 668–678.
             </div>
             <div id="ref-Bartomeus2016ComFra" class="csl-entry"
             role="doc-biblioentry">
@@ -388,12 +591,53 @@ predation in complex trophic communities</div>
             web</a>. <em>Proceedings of the National Academy of
             Sciences</em>, 102, 5443–5447.
             </div>
+            <div id="ref-Beardsell2021DerPre" class="csl-entry"
+            role="doc-biblioentry">
+            Beardsell, A., Gravel, D., Berteaux, D., Gauthier, G.,
+            Clermont, J., Careau, V., <em>et al.</em> (2021). <a
+            href="https://doi.org/10.3389/fevo.2021.630944">Derivation
+            of Predator Functional Responses Using a Mechanistic
+            Approach in a Natural System</a>. <em>Frontiers in Ecology
+            and Evolution</em>, 9.
+            </div>
+            <div id="ref-Beardsell2022MecMod" class="csl-entry"
+            role="doc-biblioentry">
+            Beardsell, A., Gravel, D., Clermont, J., Berteaux, D.,
+            Gauthier, G. &amp; Bêty, J. (2022). <a
+            href="https://doi.org/10.1002/ecy.3734">A mechanistic model
+            of functional response provides new insights into indirect
+            interactions among arctic tundra prey</a>. <em>Ecology</em>,
+            103.
+            </div>
             <div id="ref-Bellingeri2016FooWeb" class="csl-entry"
             role="doc-biblioentry">
             Bellingeri, M. &amp; Bodini, A. (2016). <a
             href="https://doi.org/10.1111/oik.02244">Food web’s
             backbones and energy delivery in ecosystems</a>.
             <em>Oikos</em>, 125, 586–594.
+            </div>
+            <div id="ref-Berlow2004IntStr" class="csl-entry"
+            role="doc-biblioentry">
+            Berlow, E.L., Neutel, A.-M., Cohen, J.E., de Ruiter, P.C.,
+            Ebenman, B., Emmerson, M., <em>et al.</em> (2004). <a
+            href="https://doi.org/10.1111/j.0021-8790.2004.00833.x">Interaction
+            strengths in food webs: Issues and opportunities</a>.
+            <em>Journal of Animal Ecology</em>, 73, 585–598.
+            </div>
+            <div id="ref-Brose2008ForThe" class="csl-entry"
+            role="doc-biblioentry">
+            Brose, U., Ehnes, R.B., Rall, B.C., Vucic-Pestic, O.,
+            Berlow, E.L. &amp; Scheu, S. (2008). <a
+            href="https://doi.org/10.1111/j.1365-2656.2008.01408.x">Foraging
+            theory predicts predator–prey energy fluxes</a>. <em>Journal
+            of Animal Ecology</em>, 77, 1072–1078.
+            </div>
+            <div id="ref-Brose2006AllSca" class="csl-entry"
+            role="doc-biblioentry">
+            Brose, U., Williams, R.J. &amp; Martinez, N.D. (2006). <a
+            href="https://doi.org/10.1111/j.1461-0248.2006.00978.x">Allometric
+            scaling enhances stability in complex food webs</a>.
+            <em>Ecology Letters</em>, 9, 1228–1236.
             </div>
             <div id="ref-Cattin2004PhyCon" class="csl-entry"
             role="doc-biblioentry">
@@ -402,6 +646,37 @@ predation in complex trophic communities</div>
             href="https://doi.org/10.1038/nature02327">Phylogenetic
             constraints and adaptation explain food-web structure</a>.
             <em>Nature</em>, 427, 835–839.
+            </div>
+            <div id="ref-Chan2017ImpAss" class="csl-entry"
+            role="doc-biblioentry">
+            Chan, K., Boutin, S., Hossie, T.J., Krebs, C.J., O’Donoghue,
+            M. &amp; Murray, D.L. (2017). <a
+            href="https://doi.org/10.1002/ecy.1828">Improving the
+            assessment of predator functional responses by considering
+            alternate prey and predator interactions</a>.
+            <em>Ecology</em>, 98, 1787–1796.
+            </div>
+            <div id="ref-Christensen2005EcoEco" class="csl-entry"
+            role="doc-biblioentry">
+            Christensen, V., Walters, C. &amp; Pauly, D. (2005). Ecopath
+            with Ecosim: A User’s Guide. <em>Fisheries Centre,
+            University of British Columbia, Vancouver, Canada and
+            ICLARM, Penang, Malaysia</em>, 12.
+            </div>
+            <div id="ref-Coblentz2023PreFee" class="csl-entry"
+            role="doc-biblioentry">
+            Coblentz, K.E., Novak, M. &amp; DeLong, J.P. (2023). <a
+            href="https://doi.org/10.1111/ele.14151">Predator feeding
+            rates may often be unsaturated under typical prey
+            densities</a>. <em>Ecology Letters</em>, 26, 302–312.
+            </div>
+            <div id="ref-Colleter2013EcoRep" class="csl-entry"
+            role="doc-biblioentry">
+            Colléter, M., Valls, A., Guitton, J., Lyne, M., Sánchez,
+            F.A.-., Christensen, V., <em>et al.</em> (2013).
+            <em>EcoBase: A repository solution to gather and communicate
+            information from EwE models</em> (Research Report No. 21).
+            Fisheries Centre, University of British Columbia, Canada.
             </div>
             <div id="ref-Curtsdotter2019EcoFun" class="csl-entry"
             role="doc-biblioentry">
@@ -440,6 +715,72 @@ predation in complex trophic communities</div>
             Downgrading of Planet Earth</a>. <em>Science</em>, 333,
             301–306.
             </div>
+            <div id="ref-Hall2000OrgMat" class="csl-entry"
+            role="doc-biblioentry">
+            Hall, R.O., Wallace, J.B. &amp; Eggert, S.L. (2000). <a
+            href="https://doi.org/10.1890/0012-9658(2000)081[3445:OMFISF]2.0.CO;2">Organic
+            matter flow in stream food webs with reduced detrital
+            resource base</a>. <em>Ecology</em>, 81, 3445–3463.
+            </div>
+            <div id="ref-Harfoot2014EmeGlo" class="csl-entry"
+            role="doc-biblioentry">
+            Harfoot, M.B.J., Newbold, T., Tittensor, D.P., Emmott, S.,
+            Hutton, J., Lyutsarev, V., <em>et al.</em> (2014). <a
+            href="https://doi.org/10.1371/journal.pbio.1001841">Emergent
+            Global Patterns of Ecosystem Structure and Function from a
+            Mechanistic General Ecosystem Model</a>. <em>PLOS
+            Biology</em>, 12, e1001841.
+            </div>
+            <div id="ref-Hirt2017GenSca" class="csl-entry"
+            role="doc-biblioentry">
+            Hirt, M.R., Jetz, W., Rall, B.C. &amp; Brose, U. (2017). <a
+            href="https://doi.org/10.1038/s41559-017-0241-4">A general
+            scaling law reveals why the largest animals are not the
+            fastest</a>. <em>Nature Ecology &amp; Evolution</em>, 1,
+            1116–1122.
+            </div>
+            <div id="ref-Hirt2020RetTro" class="csl-entry"
+            role="doc-biblioentry">
+            Hirt, M.R., Tucker, M., Müller, T., Rosenbaum, B. &amp;
+            Brose, U. (2020). <a
+            href="https://doi.org/10.1002/ece3.6411">Rethinking trophic
+            niches: Speed and body mass colimit prey space of mammalian
+            predators</a>. <em>Ecology and Evolution</em>, 10,
+            7094–7105.
+            </div>
+            <div id="ref-Hoddle2003EffPre" class="csl-entry"
+            role="doc-biblioentry">
+            Hoddle, M.S. (2003). <a
+            href="https://doi.org/10.1046/j.1365-2311.2003.00518.x">The
+            effect of prey species and environmental complexity on the
+            functional response of Franklinothrips orizabensis: A test
+            of the fractal foraging model</a>. <em>Ecological
+            Entomology</em>, 28, 309–318.
+            </div>
+            <div id="ref-Holling1959ChaSim" class="csl-entry"
+            role="doc-biblioentry">
+            Holling, C.S. (1959a). <a
+            href="https://doi.org/10.4039/Ent91385-7">Some
+            Characteristics of Simple Types of Predation and
+            Parasitism</a>. <em>The Canadian Entomologist</em>, 91,
+            385–398.
+            </div>
+            <div id="ref-Holling1959ComPrea" class="csl-entry"
+            role="doc-biblioentry">
+            Holling, C.S. (1959b). <a
+            href="https://doi.org/10.4039/Ent91293-5">The Components of
+            Predation as Revealed by a Study of Small-Mammal Predation
+            of the European Pine Sawfly</a>. <em>The Canadian
+            Entomologist</em>, 91, 293–320.
+            </div>
+            <div id="ref-Jacquet2016NoCom" class="csl-entry"
+            role="doc-biblioentry">
+            Jacquet, C., Moritz, C., Morissette, L., Legagneux, P.,
+            Massol, F., Archambault, P., <em>et al.</em> (2016). <a
+            href="https://doi.org/10.1038/ncomms12573">No
+            complexity–stability relationship in empirical
+            ecosystems</a>. <em>Nature Communications</em>, 7, 12573.
+            </div>
             <div id="ref-Jordano2016ChaEco" class="csl-entry"
             role="doc-biblioentry">
             Jordano, P. (2016). <a
@@ -468,6 +809,21 @@ predation in complex trophic communities</div>
             communities from climate change</a>. <em>Philosophical
             Transactions of the Royal Society B: Biological
             Sciences</em>, 367, 2913–2922.
+            </div>
+            <div id="ref-Manatunge2000InfStr" class="csl-entry"
+            role="doc-biblioentry">
+            Manatunge, J., Asaeda, T. &amp; Priyadarshana, T. (2000). <a
+            href="https://doi.org/10.1023/A:1007691425268">The Influence
+            of Structural Complexity on Fish–zooplankton Interactions: A
+            Study Using Artificial Submerged Macrophytes</a>.
+            <em>Environmental Biology of Fishes</em>, 58, 425–438.
+            </div>
+            <div id="ref-Mestre2022HumDis" class="csl-entry"
+            role="doc-biblioentry">
+            Mestre, F., Rozenfeld, A. &amp; Araújo, M.B. (2022). <a
+            href="https://doi.org/10.1111/ele.14107">Human disturbances
+            affect the topology of food webs</a>. <em>Ecology
+            Letters</em>, 25, 2476–2488.
             </div>
             <div id="ref-Montoya2003FooWeb" class="csl-entry"
             role="doc-biblioentry">
@@ -499,6 +855,23 @@ predation in complex trophic communities</div>
             through field measurement of per capita interaction
             strength</a>. <em>Nature</em>, 355, 73–75.
             </div>
+            <div id="ref-Pawar2019IntDim" class="csl-entry"
+            role="doc-biblioentry">
+            Pawar, S., Dell, A.I., Lin, T., Wieczynski, D.J. &amp;
+            Savage, V.M. (2019). <a
+            href="https://doi.org/10.3389/fevo.2019.00202">Interaction
+            Dimensionality Scales Up to Generate Bimodal
+            Consumer-Resource Size-Ratio Distributions in Ecological
+            Communities</a>. <em>Frontiers in Ecology and
+            Evolution</em>, 7, 202.
+            </div>
+            <div id="ref-Pawar2012DimCon" class="csl-entry"
+            role="doc-biblioentry">
+            Pawar, S., Dell, A.I. &amp; Van M. Savage. (2012). <a
+            href="https://doi.org/10.1038/nature11131">Dimensionality of
+            consumer search space drives trophic interaction
+            strengths</a>. <em>Nature</em>, 486, 485–489.
+            </div>
             <div id="ref-Poisot2016DesUnd" class="csl-entry"
             role="doc-biblioentry">
             Poisot, T., Stouffer, D.B. &amp; Kéfi, S. (2016). <a
@@ -515,6 +888,31 @@ predation in complex trophic communities</div>
             predict predator–prey size ratios</a>. <em>Functional
             Ecology</em>, 33, 323–334.
             </div>
+            <div id="ref-Preston2018WhaDri" class="csl-entry"
+            role="doc-biblioentry">
+            Preston, D.L., Henderson, J.S., Falke, L.P., Segui, L.M.,
+            Layden, T.J. &amp; Novak, M. (2018). <a
+            href="https://doi.org/10.1002/ecy.2387">What drives
+            interaction strengths in complex food webs? A test with
+            feeding rates of a generalist stream predator</a>.
+            <em>Ecology</em>, 99, 1591–1601.
+            </div>
+            <div id="ref-Rall2012UniTem" class="csl-entry"
+            role="doc-biblioentry">
+            Rall, B.C., Brose, U., Hartvig, M., Kalinkat, G.,
+            Schwarzmüller, F., Vucic-Pestic, O., <em>et al.</em> (2012).
+            <a href="https://doi.org/10.1098/rstb.2012.0242">Universal
+            temperature and body-mass scaling of feeding rates</a>.
+            <em>Philosophical Transactions of the Royal Society B:
+            Biological Sciences</em>, 367, 2923–2934.
+            </div>
+            <div id="ref-Solomon1949NatCon" class="csl-entry"
+            role="doc-biblioentry">
+            Solomon, M.E. (1949). <a
+            href="https://doi.org/10.2307/1578">The Natural Control of
+            Animal Populations</a>. <em>Journal of Animal Ecology</em>,
+            18, 1–35.
+            </div>
             <div id="ref-Strydom2021RoaPre" class="csl-entry"
             role="doc-biblioentry">
             Strydom, T., Catchen, M.D., Banville, F., Caron, D.,
@@ -524,6 +922,14 @@ predation in complex trophic communities</div>
             (across space and time)</a>. <em>Philosophical Transactions
             of the Royal Society B: Biological Sciences</em>, 376,
             20210063.
+            </div>
+            <div id="ref-Uiterwaal2022ForDat" class="csl-entry"
+            role="doc-biblioentry">
+            Uiterwaal, S.F., Lagerstrom, I.T., Lyon, S.R. &amp; DeLong,
+            J.P. (2022). <a
+            href="https://doi.org/10.1002/ecy.3706">FoRAGE database: A
+            compilation of functional responses for consumers and
+            parasitoids</a>. <em>Ecology</em>, 103, e3706.
             </div>
             <div id="ref-Williams2000SimRul" class="csl-entry"
             role="doc-biblioentry">
@@ -547,11 +953,26 @@ predation in complex trophic communities</div>
             Interaction Strength in Nature</a>. <em>Annual Review of
             Ecology, Evolution, and Systematics</em>, 36, 419–444.
             </div>
+            <div id="ref-Yodzis1992BodSiz" class="csl-entry"
+            role="doc-biblioentry">
+            Yodzis, P. &amp; Innes, S. (1992). <a
+            href="https://doi.org/10.1086/285380">Body Size and
+            Consumer-Resource Dynamics</a>. <em>The American
+            Naturalist</em>, 139, 1151–1175.
+            </div>
             </div>
         </article>
     </main>
 
     <footer>
+                <div class="container">
+            <h2>Supplementary Material</h2>
+            <span class="appendix--list">
+                <a href="appendix/Mercier_et_al_2024_hierarchical_models_s1.pdf" target="_blank">
+                    <b>1:</b>&nbsp;List of Ecopath models
+                </a><br />
+            </span>
+        </div>
                 <div class="container">
             <h2>Affiliations</h2>
             <sup>1</sup>&nbsp;Université de
