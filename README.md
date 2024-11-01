@@ -76,7 +76,7 @@ The functional form of these relationships are presented below.
 ### Model 0 - Null model
 
 The null model acts as a basis of comparison with the other models and does not portray any ecological realism of a trophic interaction.
-Model 0 hypothesizes that the flow of biomass $F_{ij}$ from a prey $i$ to its predator $j$ is constant with average $K$, irrespective of predator identity.
+Model 0 hypothesizes that the flow of biomass $F_{ij}$ from a prey $i$ to its predator $j$ is constant with average $K$, irrespective of predator identity:
 
 $$F_{ij} = K$$
 
@@ -85,13 +85,13 @@ $$F_{ij} = K$$
 Model 1 implements a general version of the type I functional response and thereby focuses on the law of mass action.
 The flow of biomass $F_{ij}$ depends on the available prey biomass $B_i$ and the abundance of the predator $N_j$ where they encounter each other at a given the $\alpha$ space clearance rate of the consumer $N_j$.
 Explicitely, only the consumer's mobility is considered as it searches for resources.
-For the purpose of comparison, model 1 hypothesizes that all consumers have the same space clearance rate $\alpha$.
+For the purpose of comparison, model 1 hypothesizes that all consumers have the same space clearance rate $\alpha$:
 
 $$F_{ij} = \alpha B_i N_j$$
 
 ### Model 2 - Consumer-specific mass action
 
-Model 2 follows the previous one with the hypothesis that space clearance parameter $\alpha_j$ is a specific parameter for each consumer species $j$.
+Model 2 follows the previous one with the hypothesis that space clearance parameter $\alpha_j$ is a specific parameter for each consumer species $j$:
 
 $$F_{ij} = \alpha_j B_i N_j$$
 
@@ -105,9 +105,10 @@ $$F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j B_i N_j}$$
 ### Model 4 - Multi-species saturating model
 
 Building on model 3, model 4 implements a multi-species version of Type II functional response [@Smout2010FunRes]. 
-Parameters are the same as the ones used in model 3, the difference is found at the denominator where handling is aggregated over all species in the food web : 
+Parameters are the same as the ones used in model 3, the difference is found at the denominator where handling is aggregated over all species in the food web: 
 
 $$F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j \sum_{i=1}^{nprey}B_i N_j}$$
+
 
 | Model name                      | Model equation                                                                 | Number of parameters |
 |---------------------------------|--------------------------------------------------------------------------------|----------------------|
