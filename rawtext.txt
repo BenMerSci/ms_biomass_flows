@@ -154,9 +154,9 @@ resolution with the criteria that most nodes must be resolved at the
 species level, or that species within functional groups were
 taxonomically resolved. We thus curated 19 Ecopath models (detailed list
 in supplementary material) from aquatic, marine and terrestrial
-environments fig. 1, and trophic guilds spanning from mammal carnivores
-and herbivores, birds, pelagic carnnivorous and herbivorous fish,
-demersal carnivorous and herbivorous fish and invertebrates.
+environments (fig. 1), and trophic guilds spanning from mammal
+carnivores and herbivores, birds, pelagic carnnivorous and herbivorous
+fish, demersal carnivorous and herbivorous fish and invertebrates.
 
 ![Figure 1: Map of Ecopath models locations used in the present
 study.](figures/network_map.png){#fig:network_map}
