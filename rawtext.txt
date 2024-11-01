@@ -196,10 +196,13 @@ does not portray any ecological realism of a trophic interaction. Model
 predator $j$ is constant with average $K$, irrespective of predator
 identity:
 
-$$
-F_{ij} = K
-$$
-
+```{=html}
+<center>
+```
+$$F_{ij} = K$$
+```{=html}
+</center>
+```
 ### Model 1 - General mass action
 
 Model 1 implements a general version of the type I functional response
