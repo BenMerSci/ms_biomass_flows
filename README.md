@@ -55,7 +55,7 @@ It was shown the Ecopath methodology reduces biases in comparative analyses amon
 We therefore collected openly available models from Ecobase [@Colleter2013EcoRep] and worked with a subset of the models present in [@Jacquet2016NoCom].
 Taxonomic resolution of Ecopath models is highly variable and it is not uncommon that species are lumped into functional groups.
 The models were therefore selected based on the taxonomic resolution with the criteria that most nodes must be resolved at the species level, or that species within functional groups were taxonomically resolved.
-We thus curated 19 Ecopath models (detailed list in supplementary material) from aquatic, marine and terrestrial environments [@fig:network_map], and trophic guilds spanning from mammal carnivores and herbivores, birds, pelagic carnnivorous and herbivorous fish, demersal carnivorous and herbivorous fish and invertebrates.
+We thus curated 19 Ecopath models (detailed list in supplementary material) from aquatic, marine and terrestrial environments ([@fig:network_map]), and trophic guilds spanning from mammal carnivores and herbivores, birds, pelagic carnnivorous and herbivorous fish, demersal carnivorous and herbivorous fish and invertebrates.
 
 ![Map of Ecopath models locations used in the present study.](figures/network_map.png){#fig:network_map}
 
