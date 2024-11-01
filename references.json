@@ -524,6 +524,25 @@
         "type": "article-journal"
     },
     {
+        "author": [
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            }
+        ],
+        "publisher-place": "German Centre for Integrative Biodiversity Research (iDiv) Halle-Jena-Leipzig.",
+        "id": "Brose2018GloDat",
+        "title": "GlobAL daTabasE of traits and food Web Architecture (GATEWAy) version 1.0",
+        "issued": {
+            "date-parts": [
+                [
+                    2018
+                ]
+            ]
+        },
+        "type": ""
+    },
+    {
         "publisher": "Nature Publishing Group",
         "issue": "6977",
         "issued": {
@@ -969,6 +988,68 @@
         "volume": "333",
         "page": "301-306",
         "title": "Trophic Downgrading of Planet Earth",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "www.fishbase.ca, version (06/2023).",
+        "author": [
+            {
+                "family": "Froese",
+                "given": "Rainer"
+            },
+            {
+                "family": "Pauly",
+                "given": "Daniel"
+            },
+            {
+                "family": "Editors."
+            }
+        ],
+        "id": "Froese2023Fis",
+        "title": "FishBase",
+        "issued": {
+            "date-parts": [
+                [
+                    2023
+                ]
+            ]
+        },
+        "type": ""
+    },
+    {
+        "issue": "3",
+        "issued": {
+            "date-parts": [
+                [
+                    2019,
+                    7
+                ]
+            ]
+        },
+        "container-title": "The American Statistician",
+        "author": [
+            {
+                "family": "Gelman",
+                "given": "Andrew"
+            },
+            {
+                "family": "Goodrich",
+                "given": "Ben"
+            },
+            {
+                "family": "Gabry",
+                "given": "Jonah"
+            },
+            {
+                "family": "Vehtari",
+                "given": "Aki"
+            }
+        ],
+        "id": "Gelman2019RsqBay",
+        "DOI": "10.1080/00031305.2018.1549100",
+        "volume": "73",
+        "page": "307-309",
+        "title": "R-squared for Bayesian Regression Models",
         "type": "article-journal"
     },
     {
@@ -1441,6 +1522,44 @@
         "type": "article-journal"
     },
     {
+        "issue": "3",
+        "issued": {
+            "date-parts": [
+                [
+                    2017,
+                    3
+                ]
+            ]
+        },
+        "container-title": "Methods in Ecology and Evolution",
+        "author": [
+            {
+                "family": "Monnahan",
+                "given": "Cole C."
+            },
+            {
+                "family": "Thorson",
+                "given": "James T."
+            },
+            {
+                "family": "Branch",
+                "given": "Trevor A."
+            }
+        ],
+        "id": "Monnahan2017FasEst",
+        "editor": [
+            {
+                "family": "O’Hara",
+                "given": "Robert B."
+            }
+        ],
+        "DOI": "10.1111/2041-210X.12681",
+        "volume": "8",
+        "page": "339-348",
+        "title": "Faster estimation of Bayesian models in ecology using Hamiltonian Monte Carlo",
+        "type": "article-journal"
+    },
+    {
         "issue": "7",
         "issued": {
             "date-parts": [
@@ -1548,6 +1667,32 @@
         "page": "73-75",
         "title": "Food-web analysis through field measurement of per capita interaction strength",
         "type": "article-journal"
+    },
+    {
+        "publisher": "www.sealifebase.ca, version( (08/2023)",
+        "author": [
+            {
+                "family": "Palomares",
+                "given": "Maria Lourdes D."
+            },
+            {
+                "family": "Pauly",
+                "given": "Daniel"
+            },
+            {
+                "family": "Editors."
+            }
+        ],
+        "id": "Palomares2023Sea",
+        "title": "SeaLifeBase",
+        "issued": {
+            "date-parts": [
+                [
+                    2023
+                ]
+            ]
+        },
+        "type": ""
     },
     {
         "publisher": "Nature Publishing Group",
@@ -1782,6 +1927,75 @@
         "type": "article-journal"
     },
     {
+        "publisher": "R Foundation for Statistical Computing",
+        "author": [
+            {
+                "literal": "R Core Team"
+            }
+        ],
+        "publisher-place": "Vienna, Austria",
+        "id": "RCoreTeam2024LanEnv",
+        "title": "R: A Language and Environment for Statistical Computing",
+        "issued": {
+            "date-parts": [
+                [
+                    2024
+                ]
+            ]
+        },
+        "type": ""
+    },
+    {
+        "publisher": "Public Library of Science",
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    2010,
+                    5
+                ]
+            ]
+        },
+        "container-title": "PLOS ONE",
+        "author": [
+            {
+                "family": "Smout",
+                "given": "Sophie"
+            },
+            {
+                "family": "Asseburg",
+                "given": "Christian"
+            },
+            {
+                "family": "Matthiopoulos",
+                "given": "Jason"
+            },
+            {
+                "family": "Fernández",
+                "given": "Carmen"
+            },
+            {
+                "family": "Redpath",
+                "given": "Stephen"
+            },
+            {
+                "family": "Thirgood",
+                "given": "Simon"
+            },
+            {
+                "family": "Harwood",
+                "given": "John"
+            }
+        ],
+        "id": "Smout2010FunRes",
+        "DOI": "10.1371/journal.pone.0010761",
+        "keyword": "Death rates,Grouse,Nesting habits,Population density,Population dynamics,Predation,Predator-prey dynamics,Voles",
+        "volume": "5",
+        "page": "e10761",
+        "title": "The Functional Response of a Generalist Predator",
+        "type": "article-journal"
+    },
+    {
         "publisher": "[Wiley, British Ecological Society]",
         "issue": "1",
         "issued": {
@@ -1805,6 +2019,23 @@
         "page": "1-35",
         "title": "The Natural Control of Animal Populations",
         "type": "article-journal"
+    },
+    {
+        "author": [
+            {
+                "literal": "Stan Development Team"
+            }
+        ],
+        "id": "StanDevelopmentTeam2024StaMod",
+        "title": "Stan Modeling Language Users Guide and Reference Manual",
+        "issued": {
+            "date-parts": [
+                [
+                    2024
+                ]
+            ]
+        },
+        "type": ""
     },
     {
         "publisher": "Royal Society",
@@ -1915,6 +2146,81 @@
         "page": "e3706",
         "title": "FoRAGE database: A compilation of functional responses for consumers and parasitoids",
         "type": "article-journal"
+    },
+    {
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    2017,
+                    9
+                ]
+            ]
+        },
+        "container-title": "Statistics and Computing",
+        "author": [
+            {
+                "family": "Vehtari",
+                "given": "Aki"
+            },
+            {
+                "family": "Gelman",
+                "given": "Andrew"
+            },
+            {
+                "family": "Gabry",
+                "given": "Jonah"
+            }
+        ],
+        "id": "Vehtari2017PraBay",
+        "DOI": "10.1007/s11222-016-9696-4",
+        "keyword": "Bayesian computation,K-fold cross-validation,Leave-one-out cross-validation (LOO),Pareto smoothed importance sampling (PSIS),Stan,Widely applicable information criterion (WAIC)",
+        "volume": "27",
+        "page": "1413-1432",
+        "title": "Practical Bayesian model evaluation using leave-one-out cross-validation and WAIC",
+        "type": "article-journal"
+    },
+    {
+        "author": [
+            {
+                "family": "Vehtari",
+                "given": "Aki"
+            },
+            {
+                "family": "Gabry",
+                "given": "Jonah"
+            },
+            {
+                "family": "Magnusson",
+                "given": "Mans"
+            },
+            {
+                "family": "Yao",
+                "given": "Yuling"
+            },
+            {
+                "family": "Bürkner",
+                "given": "Paul-Christian"
+            },
+            {
+                "family": "Paananen",
+                "given": "Topi"
+            },
+            {
+                "family": "Gelman",
+                "given": "Andrew"
+            }
+        ],
+        "id": "Vehtari2024LooEff",
+        "title": "Loo: Efficient leave-one-out cross-validation and WAIC for Bayesian models",
+        "issued": {
+            "date-parts": [
+                [
+                    2024
+                ]
+            ]
+        },
+        "type": ""
     },
     {
         "publisher": "Nature Publishing Group",

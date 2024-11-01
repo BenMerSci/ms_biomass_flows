@@ -161,4 +161,218 @@ demersal carnivorous and herbivorous fish and invertebrates.
 ![Figure 1: Map of Ecopath models locations used in the present
 study.](figures/network_map.png){#fig:network_map}
 
+Species identity in the Ecopath models were validated with the original
+publication and estimates of adult mean body mass was retrived from
+literature. Body mass for terrestrial species came from different
+sources such as the GATEWAy database [@Brose2018GloDat], the original
+publication for which the Ecopath model was developped or grey
+literature. Body mass for marine and freshwater species came from
+Fishbase [@Froese2023Fis] and Sealifebase [@Palomares2023Sea]. When only
+body length was available, Fishbase and Sealifebase calculated weight
+from body length using a bayesian length-weight model. The midpoint
+between the minimum and maximum measurements was taken when a mean was
+not available. Density (number of individuals per unit surface,
+$N/\text{km}^2$) was computed by dividing total biomass per unit surface
+$B$ ($\text{metric tons}/\text{km}^2$) by mean body mass $M$
+($\text{metric tons}$). The 19 Ecopath models were aggregated in an edge
+list with quantitative biomass flows
+($\text{metric tons}/\text{km}^2/\text{year}$), for a total of 1380
+interactions between 154 consumer species and 153 resource species.
+
+## Model description
+
+We developed four different hierarchical models of increasing complexity
+based on the type I and type II functional responses, and a null model.
+Models were then parametrized with Hamiltonian Monte Carlo
+[@Monnahan2017FasEst], compared and ranked from better to worst based on
+their prediction accuracy. The functional form of these relationships
+are presented below.
+
+### Model 0 - Null model
+
+The null model acts as a basis of comparison with the other models and
+does not portray any ecological realism of a trophic interaction. Model
+0 hypothesizes that the flow of biomass $F_{ij}$ from a prey $i$ to its
+predator $j$ is constant with average $K$, irrespective of predator
+identity.
+
+$$F_{ij} = K$$
+
+### Model 1 - General mass action
+
+Model 1 implements a general version of the type I functional response
+and thereby focuses on the law of mass action. The flow of biomass
+$F_{ij}$ depends on the available prey biomass $B_i$ and the abundance
+of the predator $N_j$ where they encounter each other at a given the
+$\alpha$ space clearance rate of the consumer $N_j$. Explicitely, only
+the consumer's mobility is considered as it searches for resources. For
+the purpose of comparison, model 1 hypothesizes that all consumers have
+the same space clearance rate $\alpha$.
+
+$$  F_{ij} = \alpha B_i N_j$$
+
+### Model 2 - Consumer-specific mass action
+
+Model 2 follows the previous one with the hypothesis that space
+clearance parameter $\alpha_j$ is a specific parameter for each consumer
+species $j$.
+
+$$  F_{ij} = \alpha_j B_i N_j$$
+
+### Model 3 - Single-species saturating model
+
+Model 3 keeps the assumptions of model 2 with the addition of handling
+time, thereby representing a single species Type II functional response.
+The space clearance rate parameter $\alpha_j$ and the handling time
+$h_j$ are both consumer-specific:
+
+$$  F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j B_i N_j}$$
+
+### Model 4 - Multi-species saturating model
+
+Building on model 3, model 4 implements a multi-species version of Type
+II functional response [@Smout2010FunRes]. Parameters are the same as
+the ones used in model 3, the difference is found at the denominator
+where handling is aggregated over all species in the food web :
+
+$$  F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j \sum_{i=1}^{nprey}B_i N_j}$$
+
+  ---------------------------------------------------------------------------------------------------------------
+  Model name        Model equation                                                                   Number of
+                                                                                                     parameters
+  ----------------- -------------------------------------------------------------------------------- ------------
+  Null model        $F_{ij} = K$                                                                     2
+
+  General mass      $F_{ij} = \alpha B_i N_j$                                                        2
+  action                                                                                             
+
+  Predator specific $F_{ij} = \alpha_{j} B_i N_j$                                                    157
+  mass action                                                                                        
+
+  Single species    $F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j B_i N_j}$                     313
+  saturating model                                                                                   
+
+  Multi species     $F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j \sum_{i=1}^{nprey}B_i N_j}$   313
+  saturating model                                                                                   
+  ---------------------------------------------------------------------------------------------------------------
+
+$F_{ij}$ represents the flux of biomass
+($\text{metric tons}/\text{km}²/\text{year}$), $K$ is a parameter
+representing mean biomass flow
+($\text{metric tons}/\text{km}²/\text{year}$), $\alpha$ is the general
+space clearance rate ($\text{km}²/\text{consumer}/\text{year}$),
+$\alpha_j$ is the consumer-specific space clearance rate
+($\text{km}²/\text{consumer}/\text{year}$), $B_i$ is the prey biomass
+($\text{metric tons}/\text{km}²$), $N_j$ is the consumer abundance
+($\text{individual}/\text{km}²$) and $h_j$ is the consumer handling time
+($\text{metric tons of resource biomass}/\text{km}²/\text{year}$).
+{#tbl:table_model}
+
+## Model evaluation
+
+All biomass fluxes and body-mass were log-transformed. Biomass fluxes
+were modelled with a hierarchical bayesian approach where $F_{ij}$
+follows, after being log-transformed, a normal distribution with mean
+$\mu$ and standard deviation $\sigma$, where the mean corresponds to the
+five different models described above respectively. Species-specific
+parameters $\alpha_j$ and $h_j$ were considered as random effects
+following normal distributions. As we lacked prior knowledge on
+potentiel distribution for the parameters, we opted for generic weakly
+informative priors. The mean and standard deviation for $\alpha$ and
+$h_j$ were 0 and 1 respectively and were the same for all models. The
+analysis was performed with Stan version 2.32.2
+[@StanDevelopmentTeam2024StaMod] via the package rstan in R version
+4.3.3 [@RCoreTeam2024LanEnv].
+
+After fitting the data to each model respectively, we used the LOO
+package [@Vehtari2024LooEff] to compute the expected log pointwise
+predictive density (ELPD) to perform a leave-one-out (LOO) cross
+validation based on [@Vehtari2017PraBay] to estimate prediction
+accuracy. We computed Pareto diagnostic values per model to evaluate
+reliability. Models were ranked by predictive accuracy based on their
+respective ELPD score. We also compared the ELPD score between models to
+evaluate prediction accuracy and their bayesian R² [@Gelman2019RsqBay].
+Finally, we tested with linear regression allometric relationships of
+the space clearance rate parameter $\alpha$ and handling time $h_j$ with
+consumer body mass.
+
+## Code and data availibility
+
+All the R scripts for model evaluation and figures are available on
+Github at <https://github.com/BenMerSci/master>.
+
+# Results
+
+All models (with the exception of the null hypothesis) had good fit to
+the data, with $\text{R}^2$ ranging from 0.697 (model 1 - details at
+tbl. **¿tbl:table_ranking?** and $\text{R}^2$ posterior distributions in
+fig. **¿fig:rsq_plot?**) to 0.835 (model 3). The model ranking based on
+the predictive accuracy with LOO, where higher values are better,
+revealed that the best performing model is the single species saturating
+model (model 3) with an ELPD score of -2452.8, almost equal to the multi
+species saturating model (model 4) and the consumer specific mass action
+model (model 2) with ELPD scores of -2713.5 and -2749.4 respectively.
+The the null model (model 0) and the general mass action model (model 1)
+followed with ELPD score of -3529.1 and -4056.1, respectively. Model
+ranking reveals that, with the exception of model 4, every hypothesis
+that is added to the model contribute significantly to ELPD and
+$\text{R}^2$. The most significant increases is observed between model 1
+and model 2, indicating that, once we account for mass action (model 1),
+the most important element is predator specific consumption rate (model
+2). Adding saturation only marginaly improves the fit (model 3), while
+accounting for multi-species saturation has no significant impact (model
+4).\
+It is to be noted that both model 3 and model 4 had higher Pareto K
+diagnostic values (\> 0.7), which might indicate non-robust model or
+highly influential observations [@Vehtari2017PraBay].
+
+  -----------------------------------------------------------------------------------------------------
+  Model   Expected log         $\Delta$ELPD   Standard     Effective number Number of    mean
+          pointwise predictive                error        of parameters    parameters   $\text{R}^2$
+          density (ELPD)                      difference   (p-LOO)                       
+  ------- -------------------- -------------- ------------ ---------------- ------------ --------------
+  model 3 -2455.4              0.0            0.0          202.5            313          0.833
+
+  model 4 -2717.7              -262.3         28.8         149.5            313          0.795
+
+  model 2 -2751.3              -295.9         30.2         142.2            157          0.803
+
+  model 0 -3529.1              -1073.7        35.7         2.4              2            0.000
+
+  model 1 -4056.5              -1601.1        37.3         2.1              2            0.696
+  -----------------------------------------------------------------------------------------------------
+
+Model ranking based on ELPD with LOO. Models are ranked from best to
+worst based on their predictive accuracy with the LOO package.
+{#tbl:table_ranking}
+
+Model comparison suggests that mass action only catches most of the
+variability in biomass fluxes, but the graphical representation of
+predicted biomass flows against observed biomass flows reveals a very
+significant bias that is solved with species-specific space clearance
+rates (figure fig. 2). Since the bias in predictions disappears in all
+three species-specific models and that model 1 ranked below our null
+model, it was dismissed. Model ranking and the $\text{R}²$ suggest the
+single species saturating model (model 3) is better than model 2 and 4,
+but the difference is hardly significant both from statistics (Table
+tbl. **¿tbl:table_ranking?**) and graphical representation (figure
+fig. 2). The consumer specific mass action model (model 2) and the
+multi-species saturating model (model 4) are the closest together
+regarding their ELPD score. Furthermore, the added multi-species aspect
+of model 4, relative to the single-species model 3, does not improve the
+fit, neither from statistics nor from graphical representation,
+therefore dismissing model 4. The *extreme* Pareto K values of model 3
+and 4 would also suggest that both models might not be suited to make
+prediction as is [@Vehtari2017PraBay].
+
+![Figure 2: Models prediction of biomass fluxes compared to the observed
+biomass fluxes (log-scale)
+($\text{metric tons}/\text{km}^2/\text{year}$). The black line
+represents a one for one line. Points represent the mean predicted value
+and thick and fine error bars represent the 0.66 and 0.95 quantile
+distribution respectively. \`Marine and freshwater' points represent
+biomass fluxes from consumers that are present both in marine and
+freshwater ecosystems such as Zooplankton and
+Zoobenthos.](figures/oneone_plots.png){#fig:oneone_plot}
+
 # References
