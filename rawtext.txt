@@ -196,7 +196,7 @@ does not portray any ecological realism of a trophic interaction. Model
 predator $j$ is constant with average $K$, irrespective of predator
 identity:
 
-$$F_{ij} = K$$
+$$F_{ij} = K $$
 
 ### Model 3 - Single-species saturating model
 
