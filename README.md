@@ -78,7 +78,7 @@ The functional form of these relationships are presented below.
 The null model acts as a basis of comparison with the other models and does not portray any ecological realism of a trophic interaction.
 Model 0 hypothesizes that the flow of biomass $F_{ij}$ from a prey $i$ to its predator $j$ is constant with average $K$, irrespective of predator identity:
 
-$$F_{ij} = K$$
+$$F_{ij} = K $$
 
 ### Model 3 - Single-species saturating model
 
