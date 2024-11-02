@@ -196,7 +196,9 @@ does not portray any ecological realism of a trophic interaction. Model
 predator $j$ is constant with average $K$, irrespective of predator
 identity:
 
-$$F_{ij} = K$$
+$$
+F_{ij} = K
+$$
 
 ### Model 3 - Single-species saturating model
 
@@ -205,6 +207,8 @@ time, thereby representing a single species Type II functional response.
 The space clearance rate parameter $\alpha_j$ and the handling time
 $h_j$ are both consumer-specific:
 
-$$F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j B_i N_j}$$
+$$
+F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j B_i N_j}
+$$
 
 # References
