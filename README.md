@@ -79,7 +79,9 @@ The null model acts as a basis of comparison with the other models and does not 
 Model 0 hypothesizes that the flow of biomass $F_{ij}$ from a prey $i$ to its predator $j$ is constant with average $K$, irrespective of predator identity:
 
 
-$$F_{ij} = K$$
+$$
+F_{ij} = K
+$$
 
 
 ### Model 3 - Single-species saturating model
@@ -87,6 +89,10 @@ $$F_{ij} = K$$
 Model 3 keeps the assumptions of model 2 with the addition of handling time, thereby representing a single species Type II functional response.
 The space clearance rate parameter $\alpha_j$ and the handling time $h_j$ are both consumer-specific:
 
-$$F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j B_i N_j}$$
+
+$$
+F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j B_i N_j}
+$$
+
 
 # References
