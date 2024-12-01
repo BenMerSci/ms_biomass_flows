@@ -1,91 +1,103 @@
 [
     {
-        "issue": "2",
+        "publisher": "PeerJ Inc.",
         "issued": {
             "date-parts": [
                 [
-                    1932,
-                    2
+                    2019,
+                    9
                 ]
             ]
         },
-        "container-title": "Journal of Experimental Zoology",
+        "container-title": "PeerJ",
         "author": [
             {
-                "family": "Allee",
-                "given": "W. C."
+                "family": "Aguiar",
+                "given": "Marcus A. M.",
+                "dropping-particle": "de"
             },
             {
-                "family": "Bowen",
-                "given": "Edith S."
+                "family": "Newman",
+                "given": "Erica A."
+            },
+            {
+                "family": "Pires",
+                "given": "Mathias M."
+            },
+            {
+                "family": "Yeakel",
+                "given": "Justin D."
+            },
+            {
+                "family": "Boettiger",
+                "given": "Carl"
+            },
+            {
+                "family": "Burkle",
+                "given": "Laura A."
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Jr",
+                "given": "Paulo R. Guimarães"
+            },
+            {
+                "family": "O’Donnell",
+                "given": "James L."
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Fortin",
+                "given": "Marie-Josée"
+            },
+            {
+                "family": "Hembry",
+                "given": "David H."
             }
         ],
-        "id": "Allee1932StuAni",
-        "DOI": "10.1002/jez.1400610202",
-        "volume": "61",
-        "page": "185-207",
-        "title": "Studies in animal aggregations: Mass protection against colloidal silver among goldfishes",
+        "id": "Aguiar2019RevBia",
+        "DOI": "10.7717/peerj.7566",
+        "volume": "7",
+        "page": "e7566",
+        "title": "Revealing biases in the sampling of ecological interaction networks",
         "type": "article-journal"
     },
     {
-        "volume": "15",
-        "author": [
-            {
-                "family": "Camerano",
-                "given": "Lorenzo"
-            }
-        ],
-        "id": "Camerano1880EquViv",
-        "page": "393-414",
-        "title": "Dell’equilibrio dei viventi merce la reciproca distruzione",
+        "issue": "4",
         "issued": {
             "date-parts": [
                 [
-                    1880
+                    2021
                 ]
             ]
         },
-        "container-title": "Atti Della R. Accad. Delle Sci. Torino",
-        "type": "article-journal"
-    },
-    {
-        "publisher": "University of Chicago Press",
+        "container-title": "Oikos",
         "author": [
             {
-                "family": "Elton",
-                "given": "Charles S"
-            }
-        ],
-        "id": "Elton1927AniEco",
-        "title": "Animal ecology",
-        "issued": {
-            "date-parts": [
-                [
-                    1927
-                ]
-            ]
-        },
-        "type": "book"
-    },
-    {
-        "volume": "41",
-        "author": [
+                "family": "Barbier",
+                "given": "Matthieu"
+            },
             {
-                "family": "Fahrenholz",
-                "given": "H."
+                "family": "Wojcik",
+                "given": "Laurie"
+            },
+            {
+                "family": "Loreau",
+                "given": "Michel"
             }
         ],
-        "id": "Fahrenholz1913EctUnd",
-        "page": "371-374",
-        "title": "Ectoparasiten und abstammungslehre",
-        "issued": {
-            "date-parts": [
-                [
-                    1913
-                ]
-            ]
-        },
-        "container-title": "Zool. Anz.",
+        "id": "Barbier2021MacApp",
+        "DOI": "10.1111/oik.08043",
+        "keyword": "functional response,macroecology,predation,scaling laws,trophic ecology",
+        "volume": "130",
+        "page": "553-570",
+        "title": "A macro-ecological approach to predation density-dependence",
         "type": "article-journal"
     },
     {
@@ -93,27 +105,2906 @@
         "issued": {
             "date-parts": [
                 [
-                    1935,
+                    2018,
+                    3
+                ]
+            ]
+        },
+        "container-title": "Trends in Ecology & Evolution",
+        "author": [
+            {
+                "family": "Barnes",
+                "given": "Andrew D."
+            },
+            {
+                "family": "Jochum",
+                "given": "Malte"
+            },
+            {
+                "family": "Lefcheck",
+                "given": "Jonathan S."
+            },
+            {
+                "family": "Eisenhauer",
+                "given": "Nico"
+            },
+            {
+                "family": "Scherber",
+                "given": "Christoph"
+            },
+            {
+                "family": "O’Connor",
+                "given": "Mary I."
+            },
+            {
+                "family": "De Ruiter",
+                "given": "Peter"
+            },
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            }
+        ],
+        "id": "Barnes2018EneFlu",
+        "DOI": "10.1016/j.tree.2017.12.007",
+        "volume": "33",
+        "page": "186-197",
+        "title": "Energy Flux: The Link between Multitrophic Biodiversity and Ecosystem Functioning",
+        "type": "article-journal"
+    },
+    {
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    2016
+                ]
+            ]
+        },
+        "container-title": "Ecology Letters",
+        "author": [
+            {
+                "family": "Barrios-O’Neill",
+                "given": "Daniel"
+            },
+            {
+                "family": "Kelly",
+                "given": "Ruth"
+            },
+            {
+                "family": "Dick",
+                "given": "Jaimie T. A."
+            },
+            {
+                "family": "Ricciardi",
+                "given": "Anthony"
+            },
+            {
+                "family": "MacIsaac",
+                "given": "Hugh J."
+            },
+            {
+                "family": "Emmerson",
+                "given": "Mark C."
+            }
+        ],
+        "id": "Barrios-ONeill2016ConSca",
+        "DOI": "10.1111/ele.12605",
+        "keyword": "Body size,density dependence,functional response,habitat complexity,invasive species,population stability,predator-prey dynamics,scaling,Type II,Type III",
+        "volume": "19",
+        "page": "668-678",
+        "title": "On the context-dependent scaling of consumer feeding rates",
+        "type": "article-journal"
+    },
+    {
+        "issue": "12",
+        "issued": {
+            "date-parts": [
+                [
+                    2016
+                ]
+            ]
+        },
+        "container-title": "Functional Ecology",
+        "author": [
+            {
+                "family": "Bartomeus",
+                "given": "Ignasi"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Tylianakis",
+                "given": "Jason M."
+            },
+            {
+                "family": "Aizen",
+                "given": "Marcelo A."
+            },
+            {
+                "family": "Dickie",
+                "given": "Ian A."
+            },
+            {
+                "family": "Bernard-Verdier",
+                "given": "Maud"
+            }
+        ],
+        "id": "Bartomeus2016ComFra",
+        "DOI": "10.1111/1365-2435.12666",
+        "keyword": "functional traits,herbivory,interaction networks,mutualisms,parasitism,pollination,predation,trait matching,trophic interactions",
+        "volume": "30",
+        "page": "1894-1903",
+        "title": "A common framework for identifying linkage rules across different types of interactions",
+        "type": "article-journal"
+    },
+    {
+        "issue": "15",
+        "issued": {
+            "date-parts": [
+                [
+                    2005,
+                    4
+                ]
+            ]
+        },
+        "container-title": "Proceedings of the National Academy of Sciences",
+        "author": [
+            {
+                "family": "Bascompte",
+                "given": "J."
+            },
+            {
+                "family": "Melian",
+                "given": "C. J."
+            },
+            {
+                "family": "Sala",
+                "given": "E."
+            }
+        ],
+        "id": "Bascompte2005IntStr",
+        "DOI": "10.1073/pnas.0501562102",
+        "volume": "102",
+        "page": "5443-5447",
+        "title": "Interaction strength combinations and the overfishing of a marine food web",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Frontiers",
+        "issued": {
+            "date-parts": [
+                [
+                    2021,
+                    3
+                ]
+            ]
+        },
+        "container-title": "Frontiers in Ecology and Evolution",
+        "author": [
+            {
+                "family": "Beardsell",
+                "given": "Andréanne"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Berteaux",
+                "given": "Dominique"
+            },
+            {
+                "family": "Gauthier",
+                "given": "Gilles"
+            },
+            {
+                "family": "Clermont",
+                "given": "Jeanne"
+            },
+            {
+                "family": "Careau",
+                "given": "Vincent"
+            },
+            {
+                "family": "Lecomte",
+                "given": "Nicolas"
+            },
+            {
+                "family": "Juhasz",
+                "given": "Claire-Cécile"
+            },
+            {
+                "family": "Royer-Boutin",
+                "given": "Pascal"
+            },
+            {
+                "family": "Bêty",
+                "given": "Joël"
+            }
+        ],
+        "id": "Beardsell2021DerPre",
+        "DOI": "10.3389/fevo.2021.630944",
+        "keyword": "Arctic,Arctic fox (Vulpes lagopus),Functional Response,predation,predator-prey interactions,trophic interactions,Tundra",
+        "volume": "9",
+        "title": "Derivation of Predator Functional Responses Using a Mechanistic Approach in a Natural System",
+        "type": "article-journal"
+    },
+    {
+        "issue": "8",
+        "issued": {
+            "date-parts": [
+                [
+                    2022,
+                    8
+                ]
+            ]
+        },
+        "container-title": "Ecology",
+        "author": [
+            {
+                "family": "Beardsell",
+                "given": "Andréanne"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Clermont",
+                "given": "Jeanne"
+            },
+            {
+                "family": "Berteaux",
+                "given": "Dominique"
+            },
+            {
+                "family": "Gauthier",
+                "given": "Gilles"
+            },
+            {
+                "family": "Bêty",
+                "given": "Joël"
+            }
+        ],
+        "id": "Beardsell2022MecMod",
+        "DOI": "10.1002/ecy.3734",
+        "volume": "103",
+        "title": "A mechanistic model of functional response provides new insights into indirect interactions among arctic tundra prey",
+        "type": "article-journal"
+    },
+    {
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2006,
+                    1
+                ]
+            ]
+        },
+        "container-title": "Journal of Experimental Biology",
+        "author": [
+            {
+                "family": "Bejan",
+                "given": "Adrian"
+            },
+            {
+                "family": "Marden",
+                "given": "James H."
+            }
+        ],
+        "id": "Bejan2006UniCon",
+        "DOI": "10.1242/jeb.01974",
+        "volume": "209",
+        "page": "238-248",
+        "title": "Unifying constructal theory for scale effects in running, swimming and flying",
+        "type": "article-journal"
+    },
+    {
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2016
+                ]
+            ]
+        },
+        "container-title": "Oikos",
+        "author": [
+            {
+                "family": "Bellingeri",
+                "given": "Michele"
+            },
+            {
+                "family": "Bodini",
+                "given": "Antonio"
+            }
+        ],
+        "id": "Bellingeri2016FooWeb",
+        "DOI": "10.1111/oik.02244",
+        "volume": "125",
+        "page": "586-594",
+        "title": "Food web’s backbones and energy delivery in ecosystems",
+        "type": "article-journal"
+    },
+    {
+        "issue": "3",
+        "issued": {
+            "date-parts": [
+                [
+                    2004,
+                    5
+                ]
+            ]
+        },
+        "container-title": "Journal of Animal Ecology",
+        "author": [
+            {
+                "family": "Berlow",
+                "given": "Eric L."
+            },
+            {
+                "family": "Neutel",
+                "given": "Anje-Margiet"
+            },
+            {
+                "family": "Cohen",
+                "given": "Joel E."
+            },
+            {
+                "family": "Ruiter",
+                "given": "Peter C.",
+                "non-dropping-particle": "de"
+            },
+            {
+                "family": "Ebenman",
+                "given": "Bo"
+            },
+            {
+                "family": "Emmerson",
+                "given": "Mark"
+            },
+            {
+                "family": "Fox",
+                "given": "Jeremy W."
+            },
+            {
+                "family": "Jansen",
+                "given": "Vincent A. A."
+            },
+            {
+                "family": "Iwan Jones",
+                "given": "J."
+            },
+            {
+                "family": "Kokkoris",
+                "given": "Giorgos D."
+            },
+            {
+                "family": "Logofet",
+                "given": "Dmitrii O."
+            },
+            {
+                "family": "McKane",
+                "given": "Alan J."
+            },
+            {
+                "family": "Montoya",
+                "given": "Jose M."
+            },
+            {
+                "family": "Petchey",
+                "given": "Owen"
+            }
+        ],
+        "id": "Berlow2004IntStr",
+        "DOI": "10.1111/j.0021-8790.2004.00833.x",
+        "volume": "73",
+        "page": "585-598",
+        "title": "Interaction strengths in food webs: Issues and opportunities",
+        "type": "article-journal"
+    },
+    {
+        "issue": "11",
+        "issued": {
+            "date-parts": [
+                [
+                    2006
+                ]
+            ]
+        },
+        "container-title": "Ecology Letters",
+        "author": [
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            },
+            {
+                "family": "Williams",
+                "given": "Richard J."
+            },
+            {
+                "family": "Martinez",
+                "given": "Neo D."
+            }
+        ],
+        "id": "Brose2006AllSca",
+        "DOI": "10.1111/j.1461-0248.2006.00978.x",
+        "keyword": "Diversity-stability,interaction strength,metabolic theory,networks,population dynamics,predation,predator-prey,trophic interactions",
+        "volume": "9",
+        "page": "1228-1236",
+        "title": "Allometric scaling enhances stability in complex food webs",
+        "type": "article-journal"
+    },
+    {
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    2008
+                ]
+            ]
+        },
+        "container-title": "Journal of Animal Ecology",
+        "author": [
+            {
+                "family": "Brose",
+                "given": "U."
+            },
+            {
+                "family": "Ehnes",
+                "given": "R. B."
+            },
+            {
+                "family": "Rall",
+                "given": "B. C."
+            },
+            {
+                "family": "Vucic-Pestic",
+                "given": "O."
+            },
+            {
+                "family": "Berlow",
+                "given": "E. L."
+            },
+            {
+                "family": "Scheu",
+                "given": "S."
+            }
+        ],
+        "id": "Brose2008ForThe",
+        "DOI": "10.1111/j.1365-2656.2008.01408.x",
+        "keyword": "allometric scaling,biological control,body size,food webs,ingestion rates,interaction strength,metabolic theory,top-down control",
+        "volume": "77",
+        "page": "1072-1078",
+        "title": "Foraging theory predicts predator–prey energy fluxes",
+        "type": "article-journal"
+    },
+    {
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2010
+                ]
+            ]
+        },
+        "container-title": "Functional Ecology",
+        "author": [
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            }
+        ],
+        "id": "Brose2010BodCon",
+        "DOI": "10.1111/j.1365-2435.2009.01618.x",
+        "keyword": "allometric scaling,attack rate,food chain,functional response,handling time,metabolic theory,stability",
+        "volume": "24",
+        "page": "28-34",
+        "title": "Body-mass constraints on foraging behaviour determine population and food-web dynamics",
+        "type": "article-journal"
+    },
+    {
+        "author": [
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            }
+        ],
+        "publisher-place": "German Centre for Integrative Biodiversity Research (iDiv) Halle-Jena-Leipzig.",
+        "id": "Brose2018GloDat",
+        "title": "GlobAL daTabasE of traits and food Web Architecture (GATEWAy) version 1.0",
+        "issued": {
+            "date-parts": [
+                [
+                    2018
+                ]
+            ]
+        },
+        "type": ""
+    },
+    {
+        "publisher": "Nature Publishing Group",
+        "issue": "6977",
+        "issued": {
+            "date-parts": [
+                [
+                    2004,
+                    2
+                ]
+            ]
+        },
+        "container-title": "Nature",
+        "author": [
+            {
+                "family": "Cattin",
+                "given": "Marie-France"
+            },
+            {
+                "family": "Bersier",
+                "given": "Louis-Félix"
+            },
+            {
+                "family": "Banašek-Richter",
+                "given": "Carolin"
+            },
+            {
+                "family": "Baltensperger",
+                "given": "Richard"
+            },
+            {
+                "family": "Gabriel",
+                "given": "Jean-Pierre"
+            }
+        ],
+        "id": "Cattin2004PhyCon",
+        "DOI": "10.1038/nature02327",
+        "keyword": "Humanities and Social Sciences,multidisciplinary,Science",
+        "volume": "427",
+        "page": "835-839",
+        "title": "Phylogenetic constraints and adaptation explain food-web structure",
+        "type": "article-journal"
+    },
+    {
+        "issue": "7",
+        "issued": {
+            "date-parts": [
+                [
+                    2017,
+                    7
+                ]
+            ]
+        },
+        "container-title": "Ecology",
+        "author": [
+            {
+                "family": "Chan",
+                "given": "K."
+            },
+            {
+                "family": "Boutin",
+                "given": "S."
+            },
+            {
+                "family": "Hossie",
+                "given": "T. J."
+            },
+            {
+                "family": "Krebs",
+                "given": "C. J."
+            },
+            {
+                "family": "O’Donoghue",
+                "given": "M."
+            },
+            {
+                "family": "Murray",
+                "given": "D. L."
+            }
+        ],
+        "id": "Chan2017ImpAss",
+        "DOI": "10.1002/ecy.1828",
+        "volume": "98",
+        "page": "1787-1796",
+        "title": "Improving the assessment of predator functional responses by considering alternate prey and predator interactions",
+        "type": "article-journal"
+    },
+    {
+        "issue": "2-4",
+        "issued": {
+            "date-parts": [
+                [
+                    2004,
+                    3
+                ]
+            ]
+        },
+        "container-title": "Ecological Modelling",
+        "author": [
+            {
+                "family": "Christensen",
+                "given": "Villy"
+            },
+            {
+                "family": "Walters",
+                "given": "Carl J"
+            }
+        ],
+        "id": "Christensen2004EcoEco",
+        "DOI": "10.1016/j.ecolmodel.2003.09.003",
+        "volume": "172",
+        "page": "109-139",
+        "title": "Ecopath with Ecosim: Methods, capabilities and limitations",
+        "type": "article-journal"
+    },
+    {
+        "volume": "12",
+        "author": [
+            {
+                "family": "Christensen",
+                "given": "Villy"
+            },
+            {
+                "family": "Walters",
+                "given": "Carl"
+            },
+            {
+                "family": "Pauly",
+                "given": "Daniel"
+            }
+        ],
+        "id": "Christensen2005EcoEco",
+        "title": "Ecopath with Ecosim: A User’s Guide",
+        "issued": {
+            "date-parts": [
+                [
+                    2005,
+                    1
+                ]
+            ]
+        },
+        "container-title": "Fisheries Centre, University of British Columbia, Vancouver, Canada and ICLARM, Penang, Malaysia",
+        "type": "article-journal"
+    },
+    {
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2023
+                ]
+            ]
+        },
+        "container-title": "Ecology Letters",
+        "author": [
+            {
+                "family": "Coblentz",
+                "given": "Kyle E."
+            },
+            {
+                "family": "Novak",
+                "given": "Mark"
+            },
+            {
+                "family": "DeLong",
+                "given": "John P."
+            }
+        ],
+        "id": "Coblentz2023PreFee",
+        "DOI": "10.1111/ele.14151",
+        "keyword": "consumer-resource,functional response,interaction strength,mass-abundance scaling,nonlinearity,predator-prey interactions",
+        "volume": "26",
+        "page": "302-312",
+        "title": "Predator feeding rates may often be unsaturated under typical prey densities",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Fisheries Centre, University of British Columbia",
+        "number": "21",
+        "publisher-place": "Canada",
+        "issued": {
+            "date-parts": [
+                [
+                    2013
+                ]
+            ]
+        },
+        "genre": "Research Report",
+        "author": [
+            {
+                "family": "Colléter",
+                "given": "Mathieu"
+            },
+            {
+                "family": "Valls",
+                "given": "Audrey"
+            },
+            {
+                "family": "Guitton",
+                "given": "Jérôme"
+            },
+            {
+                "family": "Lyne",
+                "given": "Morissette"
+            },
+            {
+                "family": "Sánchez",
+                "given": "Francisco Arreguín-"
+            },
+            {
+                "family": "Christensen",
+                "given": "Villy"
+            },
+            {
+                "family": "Gascuel",
+                "given": "Didier D"
+            },
+            {
+                "family": "Pauly",
+                "given": "Daniel"
+            }
+        ],
+        "id": "Colleter2013EcoRep",
+        "page": "60",
+        "title": "EcoBase: A repository solution to gather and communicate information from EwE models",
+        "type": "report"
+    },
+    {
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2019,
+                    2
+                ]
+            ]
+        },
+        "container-title": "Journal of Animal Ecology",
+        "author": [
+            {
+                "family": "Curtsdotter",
+                "given": "Alva"
+            },
+            {
+                "family": "Banks",
+                "given": "H. Thomas"
+            },
+            {
+                "family": "Banks",
+                "given": "John E."
+            },
+            {
+                "family": "Jonsson",
+                "given": "Mattias"
+            },
+            {
+                "family": "Jonsson",
+                "given": "Tomas"
+            },
+            {
+                "family": "Laubmeier",
+                "given": "Amanda N."
+            },
+            {
+                "family": "Traugott",
+                "given": "Michael"
+            },
+            {
+                "family": "Bommarco",
+                "given": "Riccardo"
+            }
+        ],
+        "id": "Curtsdotter2019EcoFun",
+        "editor": [
+            {
+                "family": "Stouffer",
+                "given": "Daniel"
+            }
+        ],
+        "DOI": "10.1111/1365-2656.12892",
+        "volume": "88",
+        "page": "196-210",
+        "title": "Ecosystem function in predator–prey food webs—confronting dynamic models with empirical data",
+        "type": "article-journal"
+    },
+    {
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2014
+                ]
+            ]
+        },
+        "container-title": "Journal of Animal Ecology",
+        "author": [
+            {
+                "family": "Dell",
+                "given": "Anthony I."
+            },
+            {
+                "family": "Pawar",
+                "given": "Samraat"
+            },
+            {
+                "family": "Savage",
+                "given": "Van M."
+            }
+        ],
+        "id": "Dell2014TemDep",
+        "DOI": "10.1111/1365-2656.12081",
+        "keyword": "climate change,communities,consumer-resource dynamics,food webs,predator-prey,scaling,species interactions,temperature",
+        "volume": "83",
+        "page": "70-84",
+        "title": "Temperature dependence of trophic interactions are driven by asymmetry of species responses and foraging strategy",
+        "type": "article-journal"
+    },
+    {
+        "issue": "3",
+        "issued": {
+            "date-parts": [
+                [
+                    2012
+                ]
+            ]
+        },
+        "container-title": "Ecology",
+        "author": [
+            {
+                "family": "DeLong",
+                "given": "John P."
+            },
+            {
+                "family": "Vasseur",
+                "given": "David A."
+            }
+        ],
+        "id": "DeLong2012DynExpa",
+        "DOI": "10.1890/11-1138.1",
+        "keyword": "abundance,allometry,carnivores,consumer-resource models,macroecology,population dynamics,scaling,size-density relationships",
+        "volume": "93",
+        "page": "470-476",
+        "title": "A dynamic explanation of size–density scaling in carnivores",
+        "type": "article-journal"
+    },
+    {
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    2012
+                ]
+            ]
+        },
+        "container-title": "Journal of Animal Ecology",
+        "author": [
+            {
+                "family": "DeLong",
+                "given": "John P."
+            },
+            {
+                "family": "Vasseur",
+                "given": "David A."
+            }
+        ],
+        "id": "DeLong2012SizSca",
+        "DOI": "10.1111/j.1365-2656.2012.02013.x",
+        "keyword": "allometry,macroecology,optimal foraging,predator-prey dynamics,predator-prey size ratio",
+        "volume": "81",
+        "page": "1193-1201",
+        "title": "Size-density scaling in protists and the links between consumer–resource interaction parameters",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Oxford University Press",
+        "issued": {
+            "date-parts": [
+                [
+                    2021
+                ]
+            ]
+        },
+        "author": [
+            {
+                "family": "DeLong",
+                "given": "John P."
+            }
+        ],
+        "id": "DeLong2021PreEco",
+        "keyword": "Science / Life Sciences / Ecology,Science / Life Sciences / Evolution",
+        "title": "Predator Ecology: Evolutionary Ecology of the Functional Response",
+        "type": "book"
+    },
+    {
+        "issue": "5228",
+        "issued": {
+            "date-parts": [
+                [
+                    1995,
                     9
                 ]
             ]
         },
-        "container-title": "Proceedings of the Zoological Society of London",
+        "container-title": "Science",
         "author": [
             {
-                "family": "Nicholson",
-                "given": "A. J."
+                "family": "Ruiter",
+                "given": "P. C.",
+                "non-dropping-particle": "de"
             },
             {
-                "family": "Bailey",
-                "given": "V. A."
+                "family": "Neutel",
+                "given": "A.-M."
+            },
+            {
+                "family": "Moore",
+                "given": "J. C."
             }
         ],
-        "id": "Nicholson1935BalAni",
-        "DOI": "10.1111/j.1096-3642.1935.tb01680.x",
-        "volume": "105",
-        "page": "551-598",
-        "title": "The Balance of Animal Populations..",
+        "id": "deRuiter1995EnePat",
+        "DOI": "10.1126/science.269.5228.1257",
+        "volume": "269",
+        "page": "1257-1260",
+        "title": "Energetics, Patterns of Interaction Strengths, and Stability in Real Ecosystems",
+        "type": "article-journal"
+    },
+    {
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2002
+                ]
+            ]
+        },
+        "container-title": "Oikos",
+        "author": [
+            {
+                "family": "Duffy",
+                "given": "J. Emmett"
+            }
+        ],
+        "id": "Duffy2002BioEco",
+        "DOI": "10.1034/j.1600-0706.2002.990201.x",
+        "volume": "99",
+        "page": "201-219",
+        "title": "Biodiversity and ecosystem function: The consumer connection",
+        "type": "article-journal"
+    },
+    {
+        "issue": "6040",
+        "issued": {
+            "date-parts": [
+                [
+                    2011,
+                    7
+                ]
+            ]
+        },
+        "container-title": "Science",
+        "author": [
+            {
+                "family": "Estes",
+                "given": "James A."
+            },
+            {
+                "family": "Terborgh",
+                "given": "John"
+            },
+            {
+                "family": "Brashares",
+                "given": "Justin S."
+            },
+            {
+                "family": "Power",
+                "given": "Mary E."
+            },
+            {
+                "family": "Berger",
+                "given": "Joel"
+            },
+            {
+                "family": "Bond",
+                "given": "William J."
+            },
+            {
+                "family": "Carpenter",
+                "given": "Stephen R."
+            },
+            {
+                "family": "Essington",
+                "given": "Timothy E."
+            },
+            {
+                "family": "Holt",
+                "given": "Robert D."
+            },
+            {
+                "family": "Jackson",
+                "given": "Jeremy B. C."
+            },
+            {
+                "family": "Marquis",
+                "given": "Robert J."
+            },
+            {
+                "family": "Oksanen",
+                "given": "Lauri"
+            },
+            {
+                "family": "Oksanen",
+                "given": "Tarja"
+            },
+            {
+                "family": "Paine",
+                "given": "Robert T."
+            },
+            {
+                "family": "Pikitch",
+                "given": "Ellen K."
+            },
+            {
+                "family": "Ripple",
+                "given": "William J."
+            },
+            {
+                "family": "Sandin",
+                "given": "Stuart A."
+            },
+            {
+                "family": "Scheffer",
+                "given": "Marten"
+            },
+            {
+                "family": "Schoener",
+                "given": "Thomas W."
+            },
+            {
+                "family": "Shurin",
+                "given": "Jonathan B."
+            },
+            {
+                "family": "Sinclair",
+                "given": "Anthony R. E."
+            },
+            {
+                "family": "Soulé",
+                "given": "Michael E."
+            },
+            {
+                "family": "Virtanen",
+                "given": "Risto"
+            },
+            {
+                "family": "Wardle",
+                "given": "David A."
+            }
+        ],
+        "id": "Estes2011TroDow",
+        "DOI": "10.1126/science.1205106",
+        "volume": "333",
+        "page": "301-306",
+        "title": "Trophic Downgrading of Planet Earth",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "www.fishbase.ca, version (06/2023).",
+        "author": [
+            {
+                "family": "Froese",
+                "given": "Rainer"
+            },
+            {
+                "family": "Pauly",
+                "given": "Daniel"
+            },
+            {
+                "family": "Editors."
+            }
+        ],
+        "id": "Froese2023Fis",
+        "title": "FishBase",
+        "issued": {
+            "date-parts": [
+                [
+                    2023
+                ]
+            ]
+        },
+        "type": ""
+    },
+    {
+        "issue": "3",
+        "issued": {
+            "date-parts": [
+                [
+                    2019,
+                    7
+                ]
+            ]
+        },
+        "container-title": "The American Statistician",
+        "author": [
+            {
+                "family": "Gelman",
+                "given": "Andrew"
+            },
+            {
+                "family": "Goodrich",
+                "given": "Ben"
+            },
+            {
+                "family": "Gabry",
+                "given": "Jonah"
+            },
+            {
+                "family": "Vehtari",
+                "given": "Aki"
+            }
+        ],
+        "id": "Gelman2019RsqBay",
+        "DOI": "10.1080/00031305.2018.1549100",
+        "volume": "73",
+        "page": "307-309",
+        "title": "R-squared for Bayesian Regression Models",
+        "type": "article-journal"
+    },
+    {
+        "issue": "12",
+        "issued": {
+            "date-parts": [
+                [
+                    2000,
+                    12
+                ]
+            ]
+        },
+        "container-title": "Ecology",
+        "author": [
+            {
+                "family": "Hall",
+                "given": "Robert O."
+            },
+            {
+                "family": "Wallace",
+                "given": "J. Bruce"
+            },
+            {
+                "family": "Eggert",
+                "given": "Susan L."
+            }
+        ],
+        "id": "Hall2000OrgMat",
+        "DOI": "10.1890/0012-9658(2000)081[3445:OMFISF]2.0.CO;2",
+        "volume": "81",
+        "page": "3445-3463",
+        "title": "Organic matter flow in stream food webs with reduced detrital resource base",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Public Library of Science",
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2014,
+                    4
+                ]
+            ]
+        },
+        "container-title": "PLOS Biology",
+        "author": [
+            {
+                "family": "Harfoot",
+                "given": "Michael B. J."
+            },
+            {
+                "family": "Newbold",
+                "given": "Tim"
+            },
+            {
+                "family": "Tittensor",
+                "given": "Derek P."
+            },
+            {
+                "family": "Emmott",
+                "given": "Stephen"
+            },
+            {
+                "family": "Hutton",
+                "given": "Jon"
+            },
+            {
+                "family": "Lyutsarev",
+                "given": "Vassily"
+            },
+            {
+                "family": "Smith",
+                "given": "Matthew J."
+            },
+            {
+                "family": "Scharlemann",
+                "given": "Jörn P. W."
+            },
+            {
+                "family": "Purves",
+                "given": "Drew W."
+            }
+        ],
+        "id": "Harfoot2014EmeGlo",
+        "DOI": "10.1371/journal.pbio.1001841",
+        "keyword": "Biomass,Carnivory,Ecosystem modeling,Ecosystems,Herbivory,Marine biology,Marine ecosystems,Predation",
+        "volume": "12",
+        "page": "e1001841",
+        "title": "Emergent Global Patterns of Ecosystem Structure and Function from a Mechanistic General Ecosystem Model",
+        "type": "article-journal"
+    },
+    {
+        "issue": "8",
+        "issued": {
+            "date-parts": [
+                [
+                    2017,
+                    8
+                ]
+            ]
+        },
+        "container-title": "Nature Ecology & Evolution",
+        "author": [
+            {
+                "family": "Hirt",
+                "given": "Myriam R."
+            },
+            {
+                "family": "Jetz",
+                "given": "Walter"
+            },
+            {
+                "family": "Rall",
+                "given": "Björn C."
+            },
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            }
+        ],
+        "id": "Hirt2017GenSca",
+        "DOI": "10.1038/s41559-017-0241-4",
+        "volume": "1",
+        "page": "1116-1122",
+        "title": "A general scaling law reveals why the largest animals are not the fastest",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "John Wiley & Sons, Ltd",
+        "issue": "14",
+        "issued": {
+            "date-parts": [
+                [
+                    2020,
+                    7
+                ]
+            ]
+        },
+        "container-title": "Ecology and Evolution",
+        "author": [
+            {
+                "family": "Hirt",
+                "given": "Myriam R."
+            },
+            {
+                "family": "Tucker",
+                "given": "Marlee"
+            },
+            {
+                "family": "Müller",
+                "given": "Thomas"
+            },
+            {
+                "family": "Rosenbaum",
+                "given": "Benjamin"
+            },
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            }
+        ],
+        "id": "Hirt2020RetTro",
+        "DOI": "10.1002/ece3.6411",
+        "volume": "10",
+        "page": "7094-7105",
+        "title": "Rethinking trophic niches: Speed and body mass colimit prey space of mammalian predators",
+        "type": "article-journal"
+    },
+    {
+        "issue": "3",
+        "issued": {
+            "date-parts": [
+                [
+                    2003
+                ]
+            ]
+        },
+        "container-title": "Ecological Entomology",
+        "author": [
+            {
+                "family": "Hoddle",
+                "given": "Mark S."
+            }
+        ],
+        "id": "Hoddle2003EffPre",
+        "DOI": "10.1046/j.1365-2311.2003.00518.x",
+        "keyword": "Fractal,functional response,Heliothrips haemorrhoidalis,Koch curve,Scirtothrips perseae,spatial heterogeneity",
+        "volume": "28",
+        "page": "309-318",
+        "title": "The effect of prey species and environmental complexity on the functional response of Franklinothrips orizabensis: A test of the fractal foraging model",
+        "type": "article-journal"
+    },
+    {
+        "issue": "7",
+        "issued": {
+            "date-parts": [
+                [
+                    1959,
+                    7
+                ]
+            ]
+        },
+        "container-title": "The Canadian Entomologist",
+        "author": [
+            {
+                "family": "Holling",
+                "given": "C. S."
+            }
+        ],
+        "id": "Holling1959ChaSim",
+        "DOI": "10.4039/Ent91385-7",
+        "volume": "91",
+        "page": "385-398",
+        "title": "Some Characteristics of Simple Types of Predation and Parasitism",
+        "type": "article-journal"
+    },
+    {
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    1959,
+                    5
+                ]
+            ]
+        },
+        "container-title": "The Canadian Entomologist",
+        "author": [
+            {
+                "family": "Holling",
+                "given": "C. S."
+            }
+        ],
+        "id": "Holling1959ComPrea",
+        "DOI": "10.4039/Ent91293-5",
+        "volume": "91",
+        "page": "293-320",
+        "title": "The Components of Predation as Revealed by a Study of Small-Mammal Predation of the European Pine Sawfly",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Nature Publishing Group",
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2016,
+                    8
+                ]
+            ]
+        },
+        "container-title": "Nature Communications",
+        "author": [
+            {
+                "family": "Jacquet",
+                "given": "Claire"
+            },
+            {
+                "family": "Moritz",
+                "given": "Charlotte"
+            },
+            {
+                "family": "Morissette",
+                "given": "Lyne"
+            },
+            {
+                "family": "Legagneux",
+                "given": "Pierre"
+            },
+            {
+                "family": "Massol",
+                "given": "François"
+            },
+            {
+                "family": "Archambault",
+                "given": "Philippe"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            }
+        ],
+        "id": "Jacquet2016NoCom",
+        "DOI": "10.1038/ncomms12573",
+        "volume": "7",
+        "page": "12573",
+        "title": "No complexity–stability relationship in empirical ecosystems",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Public Library of Science",
+        "issue": "9",
+        "issued": {
+            "date-parts": [
+                [
+                    2016,
+                    9
+                ]
+            ]
+        },
+        "container-title": "PLOS Biology",
+        "author": [
+            {
+                "family": "Jordano",
+                "given": "Pedro"
+            }
+        ],
+        "id": "Jordano2016ChaEco",
+        "DOI": "10.1371/journal.pbio.1002559",
+        "keyword": "Biodiversity,Ecosystem functioning,Ecosystems,Plant-animal interactions,Seeds,Species extinction,Species interactions,Trophic interactions",
+        "volume": "14",
+        "page": "e1002559",
+        "title": "Chasing Ecological Interactions",
+        "type": "article-journal"
+    },
+    {
+        "issue": "9",
+        "issued": {
+            "date-parts": [
+                [
+                    2013
+                ]
+            ]
+        },
+        "container-title": "Ecology Letters",
+        "author": [
+            {
+                "family": "Kalinkat",
+                "given": "Gregor"
+            },
+            {
+                "family": "Schneider",
+                "given": "Florian D."
+            },
+            {
+                "family": "Digel",
+                "given": "Christoph"
+            },
+            {
+                "family": "Guill",
+                "given": "Christian"
+            },
+            {
+                "family": "Rall",
+                "given": "Björn C."
+            },
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            }
+        ],
+        "id": "Kalinkat2013BodMas",
+        "DOI": "10.1111/ele.12147",
+        "keyword": "Allometric scaling,body size,consumer-resource,ecological modelling,feeding rate,food webs,interaction strength,metabolic theory",
+        "volume": "16",
+        "page": "1126-1134",
+        "title": "Body masses, functional responses and predator–prey stability",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Proceedings of the National Academy of Sciences",
+        "issue": "32",
+        "issued": {
+            "date-parts": [
+                [
+                    2018,
+                    8
+                ]
+            ]
+        },
+        "container-title": "Proceedings of the National Academy of Sciences",
+        "author": [
+            {
+                "family": "Koltz",
+                "given": "Amanda M."
+            },
+            {
+                "family": "Classen",
+                "given": "Aimée T."
+            },
+            {
+                "family": "Wright",
+                "given": "Justin P."
+            }
+        ],
+        "id": "Koltz2018WarRev",
+        "DOI": "10.1073/pnas.1808754115",
+        "volume": "115",
+        "page": "E7541-E7549",
+        "title": "Warming reverses top-down effects of predators on belowground ecosystem function in Arctic tundra",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Ecological Society of America",
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    1942
+                ]
+            ]
+        },
+        "container-title": "Ecology",
+        "author": [
+            {
+                "family": "Lindeman",
+                "given": "Raymond L."
+            }
+        ],
+        "id": "Lindeman1942TroAsp",
+        "DOI": "10.2307/1930126",
+        "volume": "23",
+        "URL": "https://www.jstor.org/stable/1930126",
+        "page": "399-417",
+        "title": "The Trophic-Dynamic Aspect of Ecology",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Royal Society",
+        "issue": "1605",
+        "issued": {
+            "date-parts": [
+                [
+                    2012,
+                    11
+                ]
+            ]
+        },
+        "container-title": "Philosophical Transactions of the Royal Society B: Biological Sciences",
+        "author": [
+            {
+                "family": "Lurgi",
+                "given": "Miguel"
+            },
+            {
+                "family": "López",
+                "given": "Bernat C."
+            },
+            {
+                "family": "Montoya",
+                "given": "José M."
+            }
+        ],
+        "id": "Lurgi2012NovCom",
+        "DOI": "10.1098/rstb.2012.0238",
+        "volume": "367",
+        "page": "2913-2922",
+        "title": "Novel communities from climate change",
+        "type": "article-journal"
+    },
+    {
+        "issue": "7",
+        "issued": {
+            "date-parts": [
+                [
+                    2020,
+                    10
+                ]
+            ]
+        },
+        "container-title": "Patterns",
+        "author": [
+            {
+                "family": "MacDonald",
+                "given": "Arthur Andrew Meahan"
+            },
+            {
+                "family": "Banville",
+                "given": "Francis"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            }
+        ],
+        "id": "MacDonald2020RevLin",
+        "DOI": "10.1016/j.patter.2020.100079",
+        "volume": "1",
+        "page": "100079",
+        "title": "Revisiting the Links-Species Scaling Relationship in Food Webs",
+        "type": "article-journal"
+    },
+    {
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2000,
+                    8
+                ]
+            ]
+        },
+        "container-title": "Environmental Biology of Fishes",
+        "author": [
+            {
+                "family": "Manatunge",
+                "given": "Jagath"
+            },
+            {
+                "family": "Asaeda",
+                "given": "Takashi"
+            },
+            {
+                "family": "Priyadarshana",
+                "given": "Tilak"
+            }
+        ],
+        "id": "Manatunge2000InfStr",
+        "DOI": "10.1023/A:1007691425268",
+        "volume": "58",
+        "page": "425-438",
+        "title": "The Influence of Structural Complexity on Fish–zooplankton Interactions: A Study Using Artificial Submerged Macrophytes",
+        "type": "article-journal"
+    },
+    {
+        "issue": "11",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "container-title": "Ecology Letters",
+        "author": [
+            {
+                "family": "Mestre",
+                "given": "Frederico"
+            },
+            {
+                "family": "Rozenfeld",
+                "given": "Alejandro"
+            },
+            {
+                "family": "Araújo",
+                "given": "Miguel B."
+            }
+        ],
+        "id": "Mestre2022HumDis",
+        "DOI": "10.1111/ele.14107",
+        "keyword": "anthropogenic disturbance,ecosystem functioning,network topology,trophic interactions",
+        "volume": "25",
+        "page": "2476-2488",
+        "title": "Human disturbances affect the topology of food webs",
+        "type": "article-journal"
+    },
+    {
+        "issue": "3",
+        "issued": {
+            "date-parts": [
+                [
+                    2017,
+                    3
+                ]
+            ]
+        },
+        "container-title": "Methods in Ecology and Evolution",
+        "author": [
+            {
+                "family": "Monnahan",
+                "given": "Cole C."
+            },
+            {
+                "family": "Thorson",
+                "given": "James T."
+            },
+            {
+                "family": "Branch",
+                "given": "Trevor A."
+            }
+        ],
+        "id": "Monnahan2017FasEst",
+        "editor": [
+            {
+                "family": "O’Hara",
+                "given": "Robert B."
+            }
+        ],
+        "DOI": "10.1111/2041-210X.12681",
+        "volume": "8",
+        "page": "339-348",
+        "title": "Faster estimation of Bayesian models in ecology using Hamiltonian Monte Carlo",
+        "type": "article-journal"
+    },
+    {
+        "issue": "7",
+        "issued": {
+            "date-parts": [
+                [
+                    2003
+                ]
+            ]
+        },
+        "container-title": "Ecology Letters",
+        "author": [
+            {
+                "family": "Montoya",
+                "given": "José M."
+            },
+            {
+                "family": "Rodríguez",
+                "given": "Miguel A."
+            },
+            {
+                "family": "Hawkins",
+                "given": "Bradford A."
+            }
+        ],
+        "id": "Montoya2003FooWeb",
+        "DOI": "10.1046/j.1461-0248.2003.00469.x",
+        "keyword": "Biodiversity,clustering,ecosystem function,food web structure,higher-level interactions,indirect effects,omnivory,parasitoids",
+        "volume": "6",
+        "page": "587-593",
+        "title": "Food web complexity and higher-level ecosystem services",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Royal Society",
+        "issue": "1549",
+        "issued": {
+            "date-parts": [
+                [
+                    2010,
+                    7
+                ]
+            ]
+        },
+        "container-title": "Philosophical Transactions of the Royal Society B: Biological Sciences",
+        "author": [
+            {
+                "family": "Montoya",
+                "given": "José M."
+            },
+            {
+                "family": "Raffaelli",
+                "given": "Dave"
+            }
+        ],
+        "id": "Montoya2010CliCha",
+        "DOI": "10.1098/rstb.2010.0114",
+        "volume": "365",
+        "page": "2013-2018",
+        "title": "Climate change, biotic interactions and ecosystem services",
+        "type": "article-journal"
+    },
+    {
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    2015,
+                    6
+                ]
+            ]
+        },
+        "container-title": "Trends in Ecology & Evolution",
+        "author": [
+            {
+                "family": "Morales-Castilla",
+                "given": "Ignacio"
+            },
+            {
+                "family": "Matias",
+                "given": "Miguel G."
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Araújo",
+                "given": "Miguel B."
+            }
+        ],
+        "id": "Morales-Castilla2015InfBio",
+        "DOI": "10.1016/j.tree.2015.03.014",
+        "volume": "30",
+        "page": "347-356",
+        "title": "Inferring biotic interactions from proxies",
+        "type": "article-journal"
+    },
+    {
+        "issue": "5570",
+        "issued": {
+            "date-parts": [
+                [
+                    2002,
+                    5
+                ]
+            ]
+        },
+        "container-title": "Science",
+        "author": [
+            {
+                "family": "Neutel",
+                "given": "A.-M."
+            }
+        ],
+        "id": "Neutel2002StaRea",
+        "DOI": "10.1126/science.1068326",
+        "volume": "296",
+        "page": "1120-1123",
+        "title": "Stability in Real Food Webs: Weak Links in Long Loops",
+        "type": "article-journal"
+    },
+    {
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2016,
+                    2
+                ]
+            ]
+        },
+        "container-title": "Theoretical Ecology",
+        "author": [
+            {
+                "family": "Nilsson",
+                "given": "Karin A."
+            },
+            {
+                "family": "McCann",
+                "given": "Kevin S."
+            }
+        ],
+        "id": "Nilsson2016IntStr",
+        "DOI": "10.1007/s12080-015-0282-8",
+        "keyword": "Hydra effect,Logistic growth,Lotka-Volterra,Paradox of attack rate,Paradox of searching efficiency,Rosenzweig-MacArthur",
+        "volume": "9",
+        "page": "59-71",
+        "title": "Interaction strength revisited—clarifying the role of energy flux for food web stability",
+        "type": "article-journal"
+    },
+    {
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2019,
+                    11
+                ]
+            ]
+        },
+        "container-title": "Nature Ecology & Evolution",
+        "author": [
+            {
+                "family": "O’Dwyer",
+                "given": "James P."
+            }
+        ],
+        "id": "ODwyer2019EcoIde",
+        "DOI": "10.1038/s41559-019-1066-0",
+        "volume": "4",
+        "page": "14-15",
+        "title": "Beyond an ecological ideal gas law",
+        "type": "article-journal"
+    },
+    {
+        "issue": "6355",
+        "issued": {
+            "date-parts": [
+                [
+                    1992,
+                    1
+                ]
+            ]
+        },
+        "container-title": "Nature",
+        "author": [
+            {
+                "family": "Paine",
+                "given": "R. T."
+            }
+        ],
+        "id": "Paine1992FooAna",
+        "DOI": "10.1038/355073a0",
+        "volume": "355",
+        "page": "73-75",
+        "title": "Food-web analysis through field measurement of per capita interaction strength",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "www.sealifebase.ca, version( (08/2023)",
+        "author": [
+            {
+                "family": "Palomares",
+                "given": "Maria Lourdes D."
+            },
+            {
+                "family": "Pauly",
+                "given": "Daniel"
+            },
+            {
+                "family": "Editors."
+            }
+        ],
+        "id": "Palomares2023Sea",
+        "title": "SeaLifeBase",
+        "issued": {
+            "date-parts": [
+                [
+                    2023
+                ]
+            ]
+        },
+        "type": ""
+    },
+    {
+        "publisher": "Nature Publishing Group",
+        "issue": "7404",
+        "issued": {
+            "date-parts": [
+                [
+                    2012,
+                    6
+                ]
+            ]
+        },
+        "container-title": "Nature",
+        "author": [
+            {
+                "family": "Pawar",
+                "given": "Samraat"
+            },
+            {
+                "family": "Dell",
+                "given": "Anthony I."
+            },
+            {
+                "literal": "Van M. Savage"
+            }
+        ],
+        "id": "Pawar2012DimCon",
+        "DOI": "10.1038/nature11131",
+        "volume": "486",
+        "page": "485-489",
+        "title": "Dimensionality of consumer search space drives trophic interaction strengths",
+        "type": "article-journal"
+    },
+    {
+        "issued": {
+            "date-parts": [
+                [
+                    2019
+                ]
+            ]
+        },
+        "container-title": "Frontiers in Ecology and Evolution",
+        "author": [
+            {
+                "family": "Pawar",
+                "given": "Samraat"
+            },
+            {
+                "family": "Dell",
+                "given": "Anthony I."
+            },
+            {
+                "family": "Lin",
+                "given": "Tianyun"
+            },
+            {
+                "family": "Wieczynski",
+                "given": "Daniel J."
+            },
+            {
+                "family": "Savage",
+                "given": "Van M."
+            }
+        ],
+        "id": "Pawar2019IntDim",
+        "DOI": "10.3389/fevo.2019.00202",
+        "volume": "7",
+        "page": "202",
+        "title": "Interaction Dimensionality Scales Up to Generate Bimodal Consumer-Resource Size-Ratio Distributions in Ecological Communities",
+        "type": "article-journal"
+    },
+    {
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2020
+                ]
+            ]
+        },
+        "container-title": "Methods in Ecology and Evolution",
+        "author": [
+            {
+                "family": "Pichler",
+                "given": "Maximilian"
+            },
+            {
+                "family": "Boreux",
+                "given": "Virginie"
+            },
+            {
+                "family": "Klein",
+                "given": "Alexandra-Maria"
+            },
+            {
+                "family": "Schleuning",
+                "given": "Matthias"
+            },
+            {
+                "family": "Hartig",
+                "given": "Florian"
+            }
+        ],
+        "id": "Pichler2020MacLea",
+        "DOI": "10.1111/2041-210X.13329",
+        "keyword": "bipartite networks,causal inference,deep learning,hummingbirds,insect pollinators,machine learning,pollination syndromes,predictive modelling",
+        "volume": "11",
+        "page": "281-293",
+        "title": "Machine learning algorithms to infer trait-matching and predict species interactions in ecological networks",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "[British Ecological Society, Wiley]",
+        "issue": "12",
+        "issued": {
+            "date-parts": [
+                [
+                    2016
+                ]
+            ]
+        },
+        "container-title": "Functional Ecology",
+        "author": [
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Stouffer",
+                "given": "Daniel B."
+            },
+            {
+                "family": "Kéfi",
+                "given": "Sonia"
+            }
+        ],
+        "id": "Poisot2016DesUnd",
+        "volume": "30",
+        "URL": "https://www.jstor.org/stable/48582345",
+        "page": "1878-1882",
+        "title": "Describe, understand and predict: Why do we need networks in ecology?",
+        "type": "article-journal"
+    },
+    {
+        "issue": "7",
+        "issued": {
+            "date-parts": [
+                [
+                    2021,
+                    7
+                ]
+            ]
+        },
+        "container-title": "Journal of Biogeography",
+        "author": [
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            },
+            {
+                "family": "Bergeron",
+                "given": "Gabriel"
+            },
+            {
+                "family": "Cazelles",
+                "given": "Kevin"
+            },
+            {
+                "family": "Dallas",
+                "given": "Tad"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "MacDonald",
+                "given": "Andrew"
+            },
+            {
+                "family": "Mercier",
+                "given": "Benjamin"
+            },
+            {
+                "family": "Violet",
+                "given": "Clément"
+            },
+            {
+                "family": "Vissault",
+                "given": "Steve"
+            }
+        ],
+        "id": "Poisot2021GloKno",
+        "DOI": "10.1111/jbi.14127",
+        "volume": "48",
+        "page": "1552-1563",
+        "title": "Global knowledge gaps in species interaction networks data",
+        "type": "article-journal"
+    },
+    {
+        "issue": "2",
+        "issued": {
+            "date-parts": [
+                [
+                    2019
+                ]
+            ]
+        },
+        "container-title": "Functional Ecology",
+        "author": [
+            {
+                "family": "Portalier",
+                "given": "Sébastien M. J."
+            },
+            {
+                "family": "Fussmann",
+                "given": "Gregor F."
+            },
+            {
+                "family": "Loreau",
+                "given": "Michel"
+            },
+            {
+                "family": "Cherif",
+                "given": "Mehdi"
+            }
+        ],
+        "id": "Portalier2019MecPre",
+        "DOI": "10.1111/1365-2435.13254",
+        "keyword": "body size,energy,mechanics,predation,trophic link",
+        "volume": "33",
+        "page": "323-334",
+        "title": "The mechanics of predator–prey interactions: First principles of physics predict predator–prey size ratios",
+        "type": "article-journal"
+    },
+    {
+        "author": [
+            {
+                "family": "Portalier",
+                "given": "Sébastien M. J."
+            },
+            {
+                "family": "Fussmann",
+                "given": "Gregor F."
+            },
+            {
+                "family": "Loreau",
+                "given": "Michel"
+            },
+            {
+                "family": "Cherif",
+                "given": "Mehdi"
+            }
+        ],
+        "volume": "9",
+        "id": "Portalier2022InfSiz",
+        "title": "Inferring Size-Based Functional Responses From the Physical Properties of the Medium",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "container-title": "Frontiers in Ecology and Evolution",
+        "type": "article-journal"
+    },
+    {
+        "issue": "7",
+        "issued": {
+            "date-parts": [
+                [
+                    2018
+                ]
+            ]
+        },
+        "container-title": "Ecology",
+        "author": [
+            {
+                "family": "Preston",
+                "given": "Daniel L."
+            },
+            {
+                "family": "Henderson",
+                "given": "Jeremy S."
+            },
+            {
+                "family": "Falke",
+                "given": "Landon P."
+            },
+            {
+                "family": "Segui",
+                "given": "Leah M."
+            },
+            {
+                "family": "Layden",
+                "given": "Tamara J."
+            },
+            {
+                "family": "Novak",
+                "given": "Mark"
+            }
+        ],
+        "id": "Preston2018WhaDri",
+        "DOI": "10.1002/ecy.2387",
+        "keyword": "body size,feeding rate,food web,functional response,predation,predator-prey,species interaction strength,trophic dynamics",
+        "volume": "99",
+        "page": "1591-1601",
+        "title": "What drives interaction strengths in complex food webs? A test with feeding rates of a generalist stream predator",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Royal Society",
+        "issue": "1605",
+        "issued": {
+            "date-parts": [
+                [
+                    2012,
+                    11
+                ]
+            ]
+        },
+        "container-title": "Philosophical Transactions of the Royal Society B: Biological Sciences",
+        "author": [
+            {
+                "family": "Rall",
+                "given": "Björn C."
+            },
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            },
+            {
+                "family": "Hartvig",
+                "given": "Martin"
+            },
+            {
+                "family": "Kalinkat",
+                "given": "Gregor"
+            },
+            {
+                "family": "Schwarzmüller",
+                "given": "Florian"
+            },
+            {
+                "family": "Vucic-Pestic",
+                "given": "Olivera"
+            },
+            {
+                "family": "Petchey",
+                "given": "Owen L."
+            }
+        ],
+        "id": "Rall2012UniTem",
+        "DOI": "10.1098/rstb.2012.0242",
+        "keyword": "allometric scaling,body size,functional response,interaction strength,metabolic theory,warming",
+        "volume": "367",
+        "page": "2923-2934",
+        "title": "Universal temperature and body-mass scaling of feeding rates",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "R Foundation for Statistical Computing",
+        "author": [
+            {
+                "literal": "R Core Team"
+            }
+        ],
+        "publisher-place": "Vienna, Austria",
+        "id": "RCoreTeam2024LanEnv",
+        "title": "R: A Language and Environment for Statistical Computing",
+        "issued": {
+            "date-parts": [
+                [
+                    2024
+                ]
+            ]
+        },
+        "type": ""
+    },
+    {
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    2012
+                ]
+            ]
+        },
+        "container-title": "Ecology Letters",
+        "author": [
+            {
+                "family": "Schneider",
+                "given": "Florian Dirk"
+            },
+            {
+                "family": "Scheu",
+                "given": "Stefan"
+            },
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            }
+        ],
+        "id": "Schneider2012BodMas",
+        "DOI": "10.1111/j.1461-0248.2012.01750.x",
+        "keyword": "Allometry,biodiversity-ecosystem functioning,body size,food web,identity effects,interaction strength,intraguild predation,predator-prey interactions,species traits,trophic cascade",
+        "volume": "15",
+        "page": "436-443",
+        "title": "Body mass constraints on feeding rates determine the consequences of predator loss",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Nature Publishing Group",
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2016,
+                    10
+                ]
+            ]
+        },
+        "container-title": "Nature Communications",
+        "author": [
+            {
+                "family": "Schneider",
+                "given": "Florian D."
+            },
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            },
+            {
+                "family": "Rall",
+                "given": "Björn C."
+            },
+            {
+                "family": "Guill",
+                "given": "Christian"
+            }
+        ],
+        "id": "Schneider2016AniDiv",
+        "DOI": "10.1038/ncomms12718",
+        "keyword": "Biodiversity,Ecological networks,Food webs,Theoretical ecology",
+        "volume": "7",
+        "page": "12718",
+        "title": "Animal diversity and ecosystem functioning in dynamic food webs",
+        "type": "article-journal"
+    },
+    {
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2016,
+                    12
+                ]
+            ]
+        },
+        "container-title": "Oecologia",
+        "author": [
+            {
+                "family": "Schröder",
+                "given": "Arne"
+            },
+            {
+                "family": "Kalinkat",
+                "given": "Gregor"
+            },
+            {
+                "family": "Arlinghaus",
+                "given": "Robert"
+            }
+        ],
+        "id": "Schroder2016IndVar",
+        "DOI": "10.1007/s00442-016-3701-7",
+        "keyword": "Allometric relationships,Food webs,Foraging,Population structure,Trait variation",
+        "volume": "182",
+        "page": "1129-1140",
+        "title": "Individual variation in functional response parameters is explained by body size but not by behavioural types in a poeciliid fish",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Public Library of Science",
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    2010,
+                    5
+                ]
+            ]
+        },
+        "container-title": "PLOS ONE",
+        "author": [
+            {
+                "family": "Smout",
+                "given": "Sophie"
+            },
+            {
+                "family": "Asseburg",
+                "given": "Christian"
+            },
+            {
+                "family": "Matthiopoulos",
+                "given": "Jason"
+            },
+            {
+                "family": "Fernández",
+                "given": "Carmen"
+            },
+            {
+                "family": "Redpath",
+                "given": "Stephen"
+            },
+            {
+                "family": "Thirgood",
+                "given": "Simon"
+            },
+            {
+                "family": "Harwood",
+                "given": "John"
+            }
+        ],
+        "id": "Smout2010FunRes",
+        "DOI": "10.1371/journal.pone.0010761",
+        "keyword": "Death rates,Grouse,Nesting habits,Population density,Population dynamics,Predation,Predator-prey dynamics,Voles",
+        "volume": "5",
+        "page": "e10761",
+        "title": "The Functional Response of a Generalist Predator",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "[Wiley, British Ecological Society]",
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    1949
+                ]
+            ]
+        },
+        "container-title": "Journal of Animal Ecology",
+        "author": [
+            {
+                "family": "Solomon",
+                "given": "M. E."
+            }
+        ],
+        "id": "Solomon1949NatCon",
+        "DOI": "10.2307/1578",
+        "volume": "18",
+        "URL": "https://www.jstor.org/stable/1578",
+        "page": "1-35",
+        "title": "The Natural Control of Animal Populations",
+        "type": "article-journal"
+    },
+    {
+        "author": [
+            {
+                "literal": "Stan Development Team"
+            }
+        ],
+        "id": "StanDevelopmentTeam2024StaMod",
+        "title": "Stan Modeling Language Users Guide and Reference Manual",
+        "issued": {
+            "date-parts": [
+                [
+                    2024
+                ]
+            ]
+        },
+        "type": ""
+    },
+    {
+        "publisher": "Royal Society",
+        "issue": "1837",
+        "issued": {
+            "date-parts": [
+                [
+                    2021,
+                    9
+                ]
+            ]
+        },
+        "container-title": "Philosophical Transactions of the Royal Society B: Biological Sciences",
+        "author": [
+            {
+                "family": "Strydom",
+                "given": "Tanya"
+            },
+            {
+                "family": "Catchen",
+                "given": "Michael D."
+            },
+            {
+                "family": "Banville",
+                "given": "Francis"
+            },
+            {
+                "family": "Caron",
+                "given": "Dominique"
+            },
+            {
+                "family": "Dansereau",
+                "given": "Gabriel"
+            },
+            {
+                "family": "Desjardins-Proulx",
+                "given": "Philippe"
+            },
+            {
+                "family": "Forero-Muñoz",
+                "given": "Norma R."
+            },
+            {
+                "family": "Higino",
+                "given": "Gracielle"
+            },
+            {
+                "family": "Mercier",
+                "given": "Benjamin"
+            },
+            {
+                "family": "Gonzalez",
+                "given": "Andrew"
+            },
+            {
+                "family": "Gravel",
+                "given": "Dominique"
+            },
+            {
+                "family": "Pollock",
+                "given": "Laura"
+            },
+            {
+                "family": "Poisot",
+                "given": "Timothée"
+            }
+        ],
+        "id": "Strydom2021RoaPre",
+        "DOI": "10.1098/rstb.2021.0063",
+        "keyword": "biogeography,deep learning,ecological forecasting,ecological networks,machine learning",
+        "volume": "376",
+        "page": "20210063",
+        "title": "A roadmap towards predicting species interaction networks (across space and time)",
+        "type": "article-journal"
+    },
+    {
+        "issue": "4",
+        "issued": {
+            "date-parts": [
+                [
+                    2020
+                ]
+            ]
+        },
+        "container-title": "Ecology",
+        "author": [
+            {
+                "family": "Uiterwaal",
+                "given": "Stella F."
+            },
+            {
+                "family": "DeLong",
+                "given": "John P."
+            }
+        ],
+        "id": "Uiterwaal2020FunRes",
+        "DOI": "10.1002/ecy.2975",
+        "keyword": "Arrhenius,body size,consumer,database,foraging,functional response,handling time,predator,prey,resource,space clearance rate,temperature",
+        "volume": "101",
+        "page": "e02975",
+        "title": "Functional responses are maximized at intermediate temperatures",
+        "type": "article-journal"
+    },
+    {
+        "issue": "7",
+        "issued": {
+            "date-parts": [
+                [
+                    2022
+                ]
+            ]
+        },
+        "container-title": "Ecology",
+        "author": [
+            {
+                "family": "Uiterwaal",
+                "given": "Stella F."
+            },
+            {
+                "family": "Lagerstrom",
+                "given": "Ian T."
+            },
+            {
+                "family": "Lyon",
+                "given": "Shelby R."
+            },
+            {
+                "family": "DeLong",
+                "given": "John P."
+            }
+        ],
+        "id": "Uiterwaal2022ForDat",
+        "DOI": "10.1002/ecy.3706",
+        "keyword": "consumer-resource interactions,functional response,parasitism,predation,predator-prey,species interactions",
+        "volume": "103",
+        "page": "e3706",
+        "title": "FoRAGE database: A compilation of functional responses for consumers and parasitoids",
+        "type": "article-journal"
+    },
+    {
+        "issue": "5",
+        "issued": {
+            "date-parts": [
+                [
+                    2017,
+                    9
+                ]
+            ]
+        },
+        "container-title": "Statistics and Computing",
+        "author": [
+            {
+                "family": "Vehtari",
+                "given": "Aki"
+            },
+            {
+                "family": "Gelman",
+                "given": "Andrew"
+            },
+            {
+                "family": "Gabry",
+                "given": "Jonah"
+            }
+        ],
+        "id": "Vehtari2017PraBay",
+        "DOI": "10.1007/s11222-016-9696-4",
+        "keyword": "Bayesian computation,K-fold cross-validation,Leave-one-out cross-validation (LOO),Pareto smoothed importance sampling (PSIS),Stan,Widely applicable information criterion (WAIC)",
+        "volume": "27",
+        "page": "1413-1432",
+        "title": "Practical Bayesian model evaluation using leave-one-out cross-validation and WAIC",
+        "type": "article-journal"
+    },
+    {
+        "author": [
+            {
+                "family": "Vehtari",
+                "given": "Aki"
+            },
+            {
+                "family": "Gabry",
+                "given": "Jonah"
+            },
+            {
+                "family": "Magnusson",
+                "given": "Mans"
+            },
+            {
+                "family": "Yao",
+                "given": "Yuling"
+            },
+            {
+                "family": "Bürkner",
+                "given": "Paul-Christian"
+            },
+            {
+                "family": "Paananen",
+                "given": "Topi"
+            },
+            {
+                "family": "Gelman",
+                "given": "Andrew"
+            }
+        ],
+        "id": "Vehtari2024LooEff",
+        "title": "Loo: Efficient leave-one-out cross-validation and WAIC for Bayesian models",
+        "issued": {
+            "date-parts": [
+                [
+                    2024
+                ]
+            ]
+        },
+        "type": ""
+    },
+    {
+        "issue": "1",
+        "issued": {
+            "date-parts": [
+                [
+                    2010
+                ]
+            ]
+        },
+        "container-title": "Journal of Animal Ecology",
+        "author": [
+            {
+                "family": "Vucic-Pestic",
+                "given": "Olivera"
+            },
+            {
+                "family": "Rall",
+                "given": "Björn C."
+            },
+            {
+                "family": "Kalinkat",
+                "given": "Gregor"
+            },
+            {
+                "family": "Brose",
+                "given": "Ulrich"
+            }
+        ],
+        "id": "Vucic-Pestic2010AllFun",
+        "DOI": "10.1111/j.1365-2656.2009.01622.x",
+        "keyword": "attack rate,body-mass ratio,food webs and predator-prey interactions,handling time,hill exponent,metabolic theory,optimal foraging,per capita consumption rate",
+        "volume": "79",
+        "page": "249-256",
+        "title": "Allometric functional response model: Body masses constrain interaction strengths",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Nature Publishing Group",
+        "issue": "6774",
+        "issued": {
+            "date-parts": [
+                [
+                    2000,
+                    3
+                ]
+            ]
+        },
+        "container-title": "Nature",
+        "author": [
+            {
+                "family": "Williams",
+                "given": "Richard J."
+            },
+            {
+                "family": "Martinez",
+                "given": "Neo D."
+            }
+        ],
+        "id": "Williams2000SimRul",
+        "DOI": "10.1038/35004572",
+        "keyword": "Humanities and Social Sciences,multidisciplinary,Science",
+        "volume": "404",
+        "page": "180-183",
+        "title": "Simple rules yield complex food webs",
+        "type": "article-journal"
+    },
+    {
+        "issue": "8",
+        "issued": {
+            "date-parts": [
+                [
+                    2012,
+                    10
+                ]
+            ]
+        },
+        "container-title": "Frontiers in Ecology and the Environment",
+        "author": [
+            {
+                "family": "Wilmers",
+                "given": "Christopher C"
+            },
+            {
+                "family": "Estes",
+                "given": "James A"
+            },
+            {
+                "family": "Edwards",
+                "given": "Matthew"
+            },
+            {
+                "family": "Laidre",
+                "given": "Kristin L"
+            },
+            {
+                "family": "Konar",
+                "given": "Brenda"
+            }
+        ],
+        "id": "Wilmers2012TroCas",
+        "DOI": "10.1890/110176",
+        "volume": "10",
+        "page": "409-415",
+        "title": "Do trophic cascades affect the storage and flux of atmospheric carbon? An analysis of sea otters and kelp forests",
+        "type": "article-journal"
+    },
+    {
+        "publisher": "Annual Reviews",
+        "issued": {
+            "date-parts": [
+                [
+                    2005
+                ]
+            ]
+        },
+        "container-title": "Annual Review of Ecology, Evolution, and Systematics",
+        "author": [
+            {
+                "family": "Wootton",
+                "given": "J. Timothy"
+            },
+            {
+                "family": "Emmerson",
+                "given": "Mark"
+            }
+        ],
+        "id": "Wootton2005MeaInt",
+        "volume": "36",
+        "URL": "https://www.jstor.org/stable/30033811",
+        "page": "419-444",
+        "title": "Measurement of Interaction Strength in Nature",
+        "type": "article-journal"
+    },
+    {
+        "issue": "6",
+        "issued": {
+            "date-parts": [
+                [
+                    1992,
+                    6
+                ]
+            ]
+        },
+        "container-title": "The American Naturalist",
+        "author": [
+            {
+                "family": "Yodzis",
+                "given": "P."
+            },
+            {
+                "family": "Innes",
+                "given": "S."
+            }
+        ],
+        "id": "Yodzis1992BodSiz",
+        "DOI": "10.1086/285380",
+        "volume": "139",
+        "page": "1151-1175",
+        "title": "Body Size and Consumer-Resource Dynamics",
         "type": "article-journal"
     }
 ]

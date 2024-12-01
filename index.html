@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Template to prepare preprints and manuscripts using markdown
-and github actions</title>
+    <title>Hierarchical models to predict predation in complex trophic
+communities</title>
     <script src="https://hypothes.is/embed.js" async></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
@@ -239,20 +239,20 @@ and github actions</title>
 <body>
     <header>
         <div class="container">
-            <div class="header--title">Template to prepare preprints and
-manuscripts using markdown and github actions</div>
+            <div class="header--title">Hierarchical models to predict
+predation in complex trophic communities</div>
             <div class="header--authors">
                 <span class="header--author">
-                <a href="https://orcid.org/0000-0002-0735-5184" target="_blank">
-                    Timothée Poisot
+                <a href="https://orcid.org/0000-0002-4104-9463" target="_blank">
+                    Benjamin Mercier
                 </a>
                 <sup class="affiliation">1,2,‡</sup>
                 </span><span class="header--author">
-                Peregrin Took
-                <sup class="affiliation">3,4</sup>
+                Arthur Andrew Meahan MacDonald
+                <sup class="affiliation">1,2</sup>
                 </span><span class="header--author">
-                Merriadoc Brandybuck
-                <sup class="affiliation">4,5,‡</sup>
+                Dominique Gravel
+                <sup class="affiliation">1,2</sup>
                 </span>
             </div>
         </div>
@@ -260,277 +260,1654 @@ manuscripts using markdown and github actions</div>
 
     <main class="container">
         <section class="abstract">
-            
+            Trophic interactions make the backbone of ecological
+            communities. From herbivory to predation, these interactions
+            of varying strength shape ecosystem and their related
+            functions. There is a pressing need to be able to predict
+            interaction strength at the scale of whole communities.
+            While functional responses focus at the pairwise interaction
+            level, we question here if the same underlying mechanisms
+            could be leveraged to make predictions at the scale of the
+            community. In this study, we develop 4 hierarchical models
+            of increasing complexity based on the type I and the type II
+            functional responses to predict biomass fluxes between
+            consumers and resources at the community level. The main
+            objective is to determine if simple mechanism such as mass
+            action (type I) and the saturation of fluxes (type II) are
+            sufficient to predict biomass fluxes. To do so, we collected
+            19 Ecopath networks encompassing 1380 interactions across
+            marine, aquatic and terrestrial ecosystems. While we can not
+            reject the mechanism of saturating fluxes (type II), our
+            results suggest that a mass action mechanism is sufficient
+            and more robust, in the context of our data, to predict
+            biomass fluxes between consumers and resources at the
+            community level. We also recovered the expected allometric
+            relationships between consumers body mass and their space
+            clearance rate parameters within the mass action model,
+            further solidifying our findings. Further modelisation is
+            needed, specifically a trait-matching model with more data,
+            to develop a model generalizable to more taxons and types of
+            trophic interactions.
 
-            <dl>
-                    <dt>Purpose</dt>
-                <dd>This template provides a series of scripts to render
-            a markdown document into an interactive website and a series
-            of PDFs.</dd>
-                    <dt>Internals</dt>
-                <dd>GitHub actions and a series of python scritpts. The
-            markdown is handled with <code>pandoc</code>.</dd>
-                    <dt>Motivation</dt>
-                <dd>It makes collaborating on text with GitHub easier,
-            and means that we never need to think about the output.</dd>
-                </dl>
 
             <div class="artifacts">
-                <a href="Poisot_et_al_2023_template_prepare_draft.pdf" title="Draft" target="_blank">Draft</a>
-                <a href="Poisot_et_al_2023_template_prepare_preprint.pdf" title="Preprint" target="_blank">Preprint</a>
-                <a href="Poisot_et_al_2023_template_prepare.odt" title="OpenDocument" target="_blank">Libre Office</a>
+                <a href="Mercier_et_al_2024_hierarchical_models_draft.pdf" title="Draft" target="_blank">Draft</a>
+                <a href="Mercier_et_al_2024_hierarchical_models_preprint.pdf" title="Preprint" target="_blank">Preprint</a>
+                <a href="Mercier_et_al_2024_hierarchical_models.odt" title="OpenDocument" target="_blank">Libre Office</a>
             </div>
         </section>
 
         <article>
-            <p>This template templates turns README files hosted in a
-            GitHub repo into a formatted manuscript. In practice, this
-            involves converting the <code>README.md</code> file into
-            various LaTeX files, an interactive website, and an
-            OpenDocument text file (for use in Word, or to generate
-            track changes).</p>
-            <p>The workflow is <em>entirely</em> GitHub-based, so the
-            manuscript file is contained entirely in the README. There
-            are a few differences with “normal” markdown (or with GFM,
-            the most commonly used variant). First, because manuscripts
-            require extensive metadata, the metadata are stored in a
-            JSON file, as opposed to a YAML front-matter. Second, we use
-            the <a
-            href="https://github.com/lierdakil/pandoc-crossref"><code>pandoc-crossref</code></a>
-            filter to generate references to figures and tables, which
-            are not rendered when looking at the README on Github.
-            Everything else is standard markdown.</p>
-            <p>There are <em>two</em> important folders:
-            <code>figures</code> and <code>appendix</code>. Both of them
-            will remain in the repository even if they are empty (they
-            come with a <code>.gitkeep</code> file). The
-            <code>figures</code> folder is where figures are stored, and
-            the <code>appendix</code> folder is where you can put
-            markdown files for the appendices. Note that the appendices
-            will come with their <em>own</em> bibliography (which draws
-            from the global <code>references.bib</code> file at the root
-            of the project).</p>
-            <h1 id="the-typesetting">The typesetting</h1>
-            <p>The <em>actual</em> typesetting is handled by another
-            repository, which is located at <a
-            href="https://github.com/PoisotLab/manuscript-typesetter">PoisotLab/manuscript-typesetter</a>.
-            If you don’t feel like running foreign code on your repo,
-            you are absolutely correct. This is why the GitHub action
-            file associated to this template will specify which release
-            of the typesetter will be downloaded, so that you can
-            inspect what the typesetting steps are doing. The
-            typesetting versions follow semantic versioning, so as long
-            the <em>major</em> (as in <code>major.minor.patch</code>)
-            version remains the same, you will not need to change your
-            <code>README.md</code> or <code>metadata.json</code>.</p>
-            <p>In short: they convert the bibliography into a CSL JSON,
-            reformat the metadata so they are usable with pandoc
-            templates, downloads a whole bunch of binaries to do the
-            typesetting (as well as the TeX Gyre fonts we use for text,
-            and the <code>JuliaMono</code> font we use for code), and
-            then return everything as a compressed file, which is then
-            deployed using GitHub pages.</p>
-            <p>All documents will be deployed to <code>gh-pages</code>
-            <em>only</em> on push events from the <code>main</code>
-            branch. All of the artifacts will be built when doing pull
-            requests, so you can check that merging a branch is
-            <em>not</em> going to cause the compilation of the documents
-            to fail; indeed, you can download the artifacts produced
-            during the run, to check the PDF and html files. The website
-            is only updated from the <code>main</code> branch. When
-            doing a pull request, you will be notified of the word count
-            of the manuscript (approximate, and excluding
-            references).</p>
-            <p>If you want to use the typesetting system locally,
-            <em>you can</em>. We do not recommend it, but you absolutely
-            can. All you need to do is make sure it is downloaded in the
-            <code>.typesetter</code> folder in your repository (which is
-            going to be ignored by <code>git</code> by default), and
-            then install <code>Julia</code> (we know…), and then run the
-            top-level script. Again, we definitely advise against
-            running things locally.</p>
-            <h1 id="deploying-the-template">Deploying the template</h1>
-            <p>The process of deploying this template has been
-            <em>greatly</em> streamlined from previous versions. Click
-            on the “Use this template” button at the top of the Github
-            repo, making sure to check the option to import all branches
-            (this will import <code>gh-pages</code> and allow deploys to
-            start immediately). An example is given in fig. 1.</p>
+            <p>Trophic interactions make the backbone of ecological
+            communities <span class="citation"
+            data-cites="Bellingeri2016FooWeb DeLong2021PreEco Wootton2005MeaInt">(Bellingeri
+            &amp; Bodini 2016; DeLong 2021; Wootton &amp; Emmerson
+            2005)</span>, linking every component through nutrient and
+            energy flows <span class="citation"
+            data-cites="Lindeman1942TroAsp">(Lindeman 1942)</span>.
+            Consumer-resource interactions of varying strength play a
+            crucial role in shaping important ecosystem functions and
+            processes <span class="citation"
+            data-cites="Curtsdotter2019EcoFun Koltz2018WarRev Duffy2002BioEco Montoya2003FooWeb Wilmers2012TroCas">(Curtsdotter
+            <em>et al.</em> 2019; Duffy 2002; Koltz <em>et al.</em>
+            2018; Montoya <em>et al.</em> 2003; Wilmers <em>et al.</em>
+            2012)</span> such as disease dynamics, invasive species and
+            biogeochemical cycles <span class="citation"
+            data-cites="Estes2011TroDow">(Estes <em>et al.</em>
+            2011)</span>. Identifying species interactions and
+            quantifying their strength is necessary to understand
+            community composition <span class="citation"
+            data-cites="Paine1992FooAna">(Paine 1992)</span>, stability
+            <span class="citation"
+            data-cites="deRuiter1995EnePat Neutel2002StaRea Bascompte2005IntStr Nilsson2016IntStr">(Bascompte
+            <em>et al.</em> 2005; de Ruiter <em>et al.</em> 1995; Neutel
+            2002; Nilsson &amp; McCann 2016)</span> and the resulting
+            associated ecosystem services <span class="citation"
+            data-cites="Montoya2003FooWeb">(Montoya <em>et al.</em>
+            2003)</span>. Global changes have a diversity of impacts on
+            species themselves, but also how they interact and the
+            resulting assemblages and functioning <span class="citation"
+            data-cites="Koltz2018WarRev Lurgi2012NovCom">(Koltz <em>et
+            al.</em> 2018; Lurgi <em>et al.</em> 2012)</span>. Empirical
+            observation of these interactions and the evaluation of
+            their strength is however challenging, if not unfeasable due
+            to their sheer amount, sampling biases and the emergence of
+            novel interactions between species that never co-occurred
+            <span class="citation"
+            data-cites="Jordano2016ChaEco Wootton2005MeaInt Aguiar2019RevBia">(Aguiar
+            <em>et al.</em> 2019; Jordano 2016; Wootton &amp; Emmerson
+            2005)</span>. The study of ecological networks has therefore
+            recently moved to the development of predictive tools to
+            overcome the limitations associated with empirical sampling
+            of trophic interactions <span class="citation"
+            data-cites="Poisot2016DesUnd">(Poisot <em>et al.</em>
+            2016)</span>. Different models are derived from food web
+            theory, such as the niche model <span class="citation"
+            data-cites="Williams2000SimRul">(Williams &amp; Martinez
+            2000)</span>, the nested-hierarchy model <span
+            class="citation" data-cites="Cattin2004PhyCon">(Cattin
+            <em>et al.</em> 2004)</span>, trait-matching model <span
+            class="citation" data-cites="Bartomeus2016ComFra">(Bartomeus
+            <em>et al.</em> 2016)</span> or physical constraints <span
+            class="citation" data-cites="Portalier2019MecPre">(Portalier
+            <em>et al.</em> 2019)</span>. More recently, <span
+            class="citation" data-cites="Strydom2021RoaPre">Strydom
+            <em>et al.</em> (2021)</span> developed a general framework
+            to predict interaction probabilities between species in a
+            community context. These methods are however mostly
+            qualitative, i.e. they are meant to predict if there is an
+            interaction or not, and there is a pressing need to expand
+            them to quantitative interactions, where the strength of
+            interaction between any two organisms is described.</p>
+            <p>There are many definitions of interaction strength <span
+            class="citation" data-cites="Berlow2004IntStr">(Berlow
+            <em>et al.</em> 2004)</span>, and among them biomass flows
+            can be particularly suited for the development of predictive
+            models. Biomass flows between consumers and resources can be
+            derived from functional traits, with the promise of a
+            standardized measure independent of taxa involved <span
+            class="citation" data-cites="Berlow2004IntStr">(Berlow
+            <em>et al.</em> 2004)</span>. Quantitative predictive models
+            of biomass flows might also offer potential support to the
+            study of biodiversity and ecosystem functioning
+            relationship, as it seeks to depict all energy flows within
+            communities <span class="citation"
+            data-cites="Barnes2018EneFlu">(Barnes <em>et al.</em>
+            2018)</span>. Biomass flows are defined as a quantity of
+            resource biomass that is consumed by a consumer per unit
+            area and unit of time, reporting how energy circulates
+            through the food web <span class="citation"
+            data-cites="Lindeman1942TroAsp">(Lindeman 1942)</span>.
+            Interaction strengths between consumers and resources is
+            closely related to predation rate in a food web model,
+            namely the functional responses ]<span class="citation"
+            data-cites="Rall2012UniTem">(Rall <em>et al.</em>
+            2012)</span>. Functional response theory aims at describing
+            the change in feeding rate of a consumer, or how many prey
+            or resource a consumer can predate per unit area over time,
+            relative to prey or resource availability <span
+            class="citation"
+            data-cites="Holling1959ChaSim Holling1959ComPrea Solomon1949NatCon">(Holling
+            1959a, b; Solomon 1949)</span>. Where the functional
+            response describes the actual number of individual prey or
+            resource predated by a consumer per unit area over time,
+            biomass flows describes the amount of biomass flowing from a
+            prey or resource to a consumer per unit area over time.
+            Since both quantities report the rate of the same underlying
+            process that is predation, we anchored the development of
+            our modeling approach in functional response theory.</p>
+            <p>A fundamental principle underlying the majority of
+            functional responses is the mass action, stating that
+            predator and prey move randomly in an area and encounter at
+            a rate proportional to the product of their abundance and
+            their velocity. Here we will focus on the two most commonly
+            used types of functional responses. The type I functional
+            response describes mass action only, where the amount of
+            resource consumed depends on the resource and consumer
+            densities, and the rate (formerly reffered to as attack rate
+            and hereafter space clearance rate <span class="citation"
+            data-cites="DeLong2021PreEco">(DeLong 2021)</span>) at which
+            a consumer searches its home range for resources, leading to
+            random encounters followed by detection, attack and
+            consumption. The type II functional response describes the
+            same process as the type I, but with the addition that
+            consumption saturates with prey availability because of the
+            time required to process prey. These processes are
+            influenced by a multitude of functional traits and
+            environmental conditions <span class="citation"
+            data-cites="Beardsell2021DerPre Beardsell2022MecMod">(Beardsell
+            <em>et al.</em> 2021, 2022)</span>. The space clearance rate
+            parameter varies with consumers and resources intrinsic
+            characteristics such as absolute and relative velocities,
+            perception of the environment and cognitive abilities <span
+            class="citation" data-cites="DeLong2021PreEco">(DeLong
+            2021)</span>. It is also influenced by externalities such as
+            habitat complexity <span class="citation"
+            data-cites="Hall2000OrgMat Manatunge2000InfStr Barrios-ONeill2016ConSca">(Barrios-O’Neill
+            <em>et al.</em> 2016; Hall <em>et al.</em> 2000; Manatunge
+            <em>et al.</em> 2000)</span> and the presence of refugia
+            <span class="citation" data-cites="Hoddle2003EffPre">(Hoddle
+            2003)</span> impeding detection probability. The
+            dimensionality of an interaction, whether it takes place in
+            a two or three dimensional plane, also impacts encounter
+            rates and detection probability <span class="citation"
+            data-cites="Pawar2012DimCon Pawar2019IntDim">(Pawar <em>et
+            al.</em> 2012, 2019)</span>. For instance, a predatory bird
+            searching for preys from above or fishes grazing the benthic
+            surface are examples of 2D planes while aerial insectivorous
+            birds pursuing flying insects or fishes chasing preys in the
+            water column would be in a 3D plane. Functional response
+            theory therefore makes a good start to develop predictive
+            models of quantitative interactions since widely measured
+            functional traits can be combined with consumer and prey
+            density to predict biomass flows.</p>
+            <p>The space clearance rate, in units of space per time,
+            reports the amount of area search by the predator in a time
+            interval. As with many biological processes, the space
+            clearance rate was shown to vary with consumers body mass.
+            Indeed, multiple studies, summarized in the FoRAGE database
+            <span class="citation"
+            data-cites="Uiterwaal2022ForDat">(Uiterwaal <em>et al.</em>
+            2022)</span>, showed an allometric scaling between the space
+            clearance rate and the body mass of consumers. This
+            observation is coherent with <span class="citation"
+            data-cites="Hirt2017GenSca Hirt2020RetTro">(Hirt <em>et
+            al.</em> 2017, 2020)</span> who documented that the maximum
+            velocity of an organism scales with its body mass. Handling
+            time is also expected to follow the same scaling
+            relationship <span class="citation"
+            data-cites="DeLong2021PreEco">(DeLong 2021)</span>, although
+            recent studies are now suggesting that consumers handling
+            time would not be as important at natural resources
+            densities <span class="citation"
+            data-cites="Chan2017ImpAss Preston2018WhaDri Beardsell2021DerPre Coblentz2023PreFee">(Beardsell
+            <em>et al.</em> 2021; Chan <em>et al.</em> 2017; Coblentz
+            <em>et al.</em> 2023; Preston <em>et al.</em> 2018)</span>.
+            Ultimately, an accurate evaluation of these parameters is
+            necessary as they are widely used in theoretical models
+            <span class="citation"
+            data-cites="Brose2008ForThe Pawar2012DimCon Brose2006AllSca">(Brose
+            <em>et al.</em> 2006; Brose <em>et al.</em> 2008; Pawar
+            <em>et al.</em> 2012)</span>. Restraining the parameter
+            space could greatly bonify studies of species coexistence,
+            community stability and trophic regulation. It could also
+            help the parameterization of global ecosystem models used
+            for biodiversity scenarios <span class="citation"
+            data-cites="Harfoot2014EmeGlo">(Harfoot <em>et al.</em>
+            2014})</span>. Following <span class="citation"
+            data-cites="Yodzis1992BodSiz">(Yodzis &amp; Innes
+            1992)</span>, there are a few meta-analyses looking at the
+            scaling of feeding rates with body-mass <span
+            class="citation" data-cites="Rall2012UniTem">(Rall <em>et
+            al.</em> 2012)</span>. These are however concentrated on a
+            re-analysis of univariate functional responses, mostly from
+            experimental studies, and there is currently no study aiming
+            at reconstructing quantitative interaction networks.</p>
+            <p>Our main objective is to test if we could model
+            quantitative interactions in complex food webs with easily
+            accessible information such as abundance and body mass. We
+            compared statistical models derived from functional response
+            theory, including type I and type II forms. We also
+            investigate if allometric relationships between space
+            clearance rate, handling time and consumer body mass can
+            contribute to the prediction of biomass flows in diverse
+            food webs. To do so, we developed four hierarchical models
+            of pairwise quantitative interactions of increasing
+            complexity and evaluated them with empirical data of biomass
+            flows between consumers and resources. We curated Ecopath
+            networks <span class="citation"
+            data-cites="Christensen2005EcoEco">(Christensen <em>et
+            al.</em> 2005)</span> describing marine, aquatic and
+            terrestrial food webs and extracted 1380 pairwise trophic
+            interactions between consumers and resources. Each model
+            represents its own hypothesis and their comparison allow the
+            evaluation of different mechanisms driving interactions.</p>
+            <h1 id="material-and-methods">Material and methods</h1>
+            <p>A litterature search was performed to gather empirically
+            sampled trophic networks with measurements of biomass flows
+            from resources to consumers, along with population
+            densities. Food web data are notoriously heterogeneous <span
+            class="citation" data-cites="Mestre2022HumDis">(Mestre
+            <em>et al.</em> 2022)</span> and we therefore relied on
+            Ecopath models <span class="citation"
+            data-cites="Christensen2005EcoEco">(Christensen <em>et
+            al.</em> 2005)</span> to normalize data collection. Ecopath
+            is a modelling software that relies on a mass-balance
+            premiss and a multitude of parameters (production/biomass
+            ratio, consumption/biomass ratio, diet compositions etc.) to
+            provide a realistic static image of the flows of biomass
+            between resources and consumers in an ecosystem <span
+            class="citation"
+            data-cites="Christensen2005EcoEco">(Christensen <em>et
+            al.</em> 2005)</span>. It was shown the Ecopath methodology
+            reduces biases in comparative analyses among food webs
+            (Brimacombe, in review). We therefore collected openly
+            available models from Ecobase <span class="citation"
+            data-cites="Colleter2013EcoRep">(Colléter <em>et al.</em>
+            2013)</span> and worked with a subset of the models present
+            in <span class="citation"
+            data-cites="Jacquet2016NoCom">(Jacquet <em>et al.</em>
+            2016)</span>. Taxonomic resolution of Ecopath models is
+            highly variable and it is not uncommon that species are
+            lumped into functional groups. The models were therefore
+            selected based on the taxonomic resolution with the criteria
+            that most nodes must be resolved at the species level, or
+            that species within functional groups were taxonomically
+            resolved. We thus curated 19 Ecopath models (detailed list
+            in supplementary material) from aquatic, marine and
+            terrestrial environments (fig. 1), and trophic guilds
+            spanning from mammal carnivores and herbivores, birds,
+            pelagic carnnivorous and herbivorous fish, demersal
+            carnivorous and herbivorous fish and invertebrates.</p>
             <figure>
-            <img src="figures/how-to-clone.png" id="fig:clone"
-            alt="Figure 1: The important steps in using this template are (1) to pick the new name for your repository, (2) to make sure “Include all branches” is checked, and (3) to finish the process by clicking on “Create repository from template”." />
-            <figcaption aria-hidden="true">Figure 1: The important steps
-            in using this template are (1) to pick the new name for your
-            repository, (2) to make sure “Include all branches” is
-            checked, and (3) to finish the process by clicking on
-            “Create repository from template”.</figcaption>
+            <img src="figures/network_map.png" id="fig:network_map"
+            alt="Figure 1: Map of Ecopath models locations used in the present study." />
+            <figcaption aria-hidden="true">Figure 1: Map of Ecopath
+            models locations used in the present study.</figcaption>
             </figure>
-            <p>When this is done, you can open your own repository, edit
-            <code>README.md</code> with your own text, commit, and push.
-            This will trigger the website build, which will become
-            available at <code>http://you.github.io/repo-name/</code>.
-            You can then edit the <code>references.bib</code> file,
-            change the <code>logo.png</code> file, and update the
-            <code>metadata.json</code> file. Every time you push a new
-            commit, everything will be updated.</p>
-            <h1 id="the-metadata-file">The metadata file</h1>
-            <p>The <code>metadata.json</code> file provided with this
-            template is reasonably complete, but the full format is
-            explained in the Supp. Mat. on the metadata specification.
-            From the website, Supp. Mat. can be accessed at the very
-            bottom of the page.</p>
-            <h1 id="references-management">References management</h1>
-            <p>The references are managed by <code>pandoc</code>.
-            References <em>must</em> be stored in a
-            <code>references.bib</code> file, and that it would make
-            sense to order it alphabetically by key, but this makes no
-            difference.</p>
-            <p>We use <a href="https://www.zotero.org/">Zotero</a> for
-            references management, and for the lab’s manuscripts, we
-            work from folders in a shared library (with a folder for
-            every manuscript).</p>
-            <p>We recommend the <a
-            href="https://retorque.re/zotero-better-bibtex/">Better
-            BibTeX</a> plugin for citation key generations, and
-            auto-export of the shared library to the
-            <code>references.bib</code> file. We use a citation key
-            format meant to convey information on the author (first
-            author full name), date (complet year), and title (first
-            non-stop-word word of the title). It must be set in the
-            Better BibTeX preferences as (you might need to remove the
-            line changes):</p>
-            <pre><code>auth.fold.fold + year + title.fold.nopunctordash.skipwords.lower.select(1,1).capitalize()</code></pre>
-            <p>It is a good idea to configure Better BibTeX to
-            auto-export on change, and to remove a lot of fields that
-            are not strictly speaking required for references. The list
-            of fields we usually ignore is:</p>
-            <pre><code>abstract,copyright,annotation,file,pmid,month,shorttitle,keywords</code></pre>
-            <p>The citations are done using the normal markdown syntax,
-            where <code>@Elton1927AniEco</code> produces <span
-            class="citation" data-cites="Elton1927AniEco">Elton
-            (1927)</span>, and <code>[@Camerano1880EquViv]</code>
-            produces <span class="citation"
-            data-cites="Camerano1880EquViv">(Camerano 1880)</span>.</p>
-            <h1 id="figures-tables-and-other-things">Figures, Tables,
-            and other things</h1>
-            <p>Note that you can wrap the text of legends for both
-            figures and tables. This avoids the issue of having very
-            long lines.</p>
-            <h2 id="mathematics">Mathematics</h2>
-            <p>The following equation</p>
-            <p><span id="eq:eq1"><span class="math display">$$J'(p) =
-            \frac{1}{\text{log}(S)}\times\left(-\sum p \times
-            \text{log}(p)\right)\qquad{(1)}$$</span></span></p>
-            <p>is produced using</p>
-            <div class="sourceCode" id="cb3"><pre
-            class="sourceCode latex"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$$J&#39;(p) = </span><span class="sc">\frac</span><span class="ss">{1}{</span><span class="sc">\text</span>{log}<span class="ss">(S)}</span><span class="sc">\times</span><span class="ss"> ... $$</span> {#eq:eq1}</span></code></pre></div>
-            <p>and can be referenced using <code>@eq:eq1</code>, which
-            will result in eq. 1. Note that because we use
-            <code>pandoc-crossref</code>, the label “eq.” will be
-            generated automatically.</p>
-            <h2 id="tables">Tables</h2>
-            <p>Table legends go on the line after the table itself. To
-            generate a reference to the table, use
-            <code>{#tbl:id}</code> – then, in the text, you can use
-            <code>{@tbl:id}</code> to refer to the table. For example,
-            the table below is tbl. 1. You can remove the <em>table</em>
-            in front by using <code>!@tbl:id</code>, or force it to be
-            capitalized with <code>\*tbl:id</code>.</p>
-            <div id="tbl:id">
+            <p>Species identity in the Ecopath models were validated
+            with the original publication and estimates of adult mean
+            body mass was retrived from literature. Body mass for
+            terrestrial species came from different sources such as the
+            GATEWAy database <span class="citation"
+            data-cites="Brose2018GloDat">(Brose 2018)</span>, the
+            original publication for which the Ecopath model was
+            developped or grey literature. Body mass for marine and
+            freshwater species came from Fishbase <span class="citation"
+            data-cites="Froese2023Fis">(Froese <em>et al.</em>
+            2023)</span> and Sealifebase <span class="citation"
+            data-cites="Palomares2023Sea">(Palomares <em>et al.</em>
+            2023)</span>. When only body length was available, Fishbase
+            and Sealifebase calculated weight from body length using a
+            bayesian length-weight model. The midpoint between the
+            minimum and maximum measurements was taken when a mean was
+            not available. Density (number of individuals per unit
+            surface, <span
+            class="math inline"><em>N</em>/km<sup>2</sup></span>) was
+            computed by dividing total biomass per unit surface <span
+            class="math inline"><em>B</em></span> (<span
+            class="math inline">metric tons/km<sup>2</sup></span>) by
+            mean body mass <span class="math inline"><em>M</em></span>
+            (<span class="math inline">metric tons</span>). The 19
+            Ecopath models were aggregated in an edge list with
+            quantitative biomass flows (<span class="math inline">metric
+            tons/km<sup>2</sup>/year</span>), for a total of 1380
+            interactions between 154 consumer species and 153 resource
+            species.</p>
+            <h2 id="model-description">Model description</h2>
+            <p>We developed four different hierarchical models of
+            increasing complexity based on the type I and type II
+            functional responses, and a null model. Models were then
+            parametrized with Hamiltonian Monte Carlo <span
+            class="citation" data-cites="Monnahan2017FasEst">(Monnahan
+            <em>et al.</em> 2017)</span>, compared and ranked from
+            better to worst based on their prediction accuracy. The
+            functional form of these relationships are presented
+            below.</p>
+            <h3 id="model-0---null-model">Model 0 - Null model</h3>
+            <p>The null model acts as a basis of comparison with the
+            other models and does not portray any ecological realism of
+            a trophic interaction. Model 0 hypothesizes that the flow of
+            biomass <span
+            class="math inline"><em>F</em><sub><em>i</em><em>j</em></sub></span>
+            from a prey <span class="math inline"><em>i</em></span> to
+            its predator <span class="math inline"><em>j</em></span> is
+            constant with average <span
+            class="math inline"><em>K</em></span>, irrespective of
+            predator identity:</p>
+            <p><span
+            class="math display"><em>F</em><sub><em>i</em><em>j</em></sub> = <em>K</em></span></p>
+            <h3 id="model-1---general-mass-action">Model 1 - General
+            mass action</h3>
+            <p>Model 1 implements a general version of the type I
+            functional response and thereby focuses on the law of mass
+            action. The flow of biomass <span
+            class="math inline"><em>F</em><sub><em>i</em><em>j</em></sub></span>
+            depends on the available prey biomass <span
+            class="math inline"><em>B</em><sub><em>i</em></sub></span>
+            and the abundance of the predator <span
+            class="math inline"><em>N</em><sub><em>j</em></sub></span>
+            where they encounter each other at a given the <span
+            class="math inline"><em>α</em></span> space clearance rate
+            of the consumer <span
+            class="math inline"><em>N</em><sub><em>j</em></sub></span>.
+            Explicitely, only the consumer’s mobility is considered as
+            it searches for resources. For the purpose of comparison,
+            model 1 hypothesizes that all consumers have the same space
+            clearance rate <span
+            class="math inline"><em>α</em></span>:</p>
+            <p><span
+            class="math display"><em>F</em><sub><em>i</em><em>j</em></sub> = <em>α</em><em>B</em><sub><em>i</em></sub><em>N</em><sub><em>j</em></sub></span></p>
+            <h3 id="model-2---consumer-specific-mass-action">Model 2 -
+            Consumer-specific mass action</h3>
+            <p>Model 2 follows the previous one with the hypothesis that
+            space clearance parameter <span
+            class="math inline"><em>α</em><sub><em>j</em></sub></span>
+            is a specific parameter for each consumer species <span
+            class="math inline"><em>j</em></span>:</p>
+            <p><span
+            class="math display"><em>F</em><sub><em>i</em><em>j</em></sub> = <em>α</em><sub><em>j</em></sub><em>B</em><sub><em>i</em></sub><em>N</em><sub><em>j</em></sub></span></p>
+            <h3 id="model-3---single-species-saturating-model">Model 3 -
+            Single-species saturating model</h3>
+            <p>Model 3 keeps the assumptions of model 2 with the
+            addition of handling time, thereby representing a single
+            species Type II functional response. The space clearance
+            rate parameter <span
+            class="math inline"><em>α</em><sub><em>j</em></sub></span>
+            and the handling time <span
+            class="math inline"><em>h</em><sub><em>j</em></sub></span>
+            are both consumer-specific:</p>
+            <p><span class="math display">$$F_{ij} = \frac{\alpha_j B_i
+            N_j}{1 + h_j \alpha_j B_i N_j}$$</span></p>
+            <h3 id="model-4---multi-species-saturating-model">Model 4 -
+            Multi-species saturating model</h3>
+            <p>Building on model 3, model 4 implements a multi-species
+            version of Type II functional response <span
+            class="citation" data-cites="Smout2010FunRes">(Smout <em>et
+            al.</em> 2010)</span>. Parameters are the same as the ones
+            used in model 3, the difference is found at the denominator
+            where handling is aggregated over all species in the food
+            web:</p>
+            <p><span class="math display">$$F_{ij} = \frac{\alpha_j B_i
+            N_j}{1 + h_j \alpha_j \sum_{i=1}^{nprey}B_i
+            N_j}$$</span></p>
             <table>
-            <caption>Table 1: This is a table, and its identifier is
-            <code>id</code> – we can refer to it using
-            <code>{@tbl:id}</code>. Note that even if the table legend
-            is written below the table itself, it will appear on top in
-            the PDF document.</caption>
+            <colgroup>
+            <col style="width: 24%" />
+            <col style="width: 59%" />
+            <col style="width: 16%" />
+            </colgroup>
             <thead>
             <tr class="header">
-            <th style="text-align: right;">Sepal.Length</th>
-            <th style="text-align: right;">Sepal.Width</th>
-            <th style="text-align: right;">Petal.Length</th>
-            <th style="text-align: right;">Petal.Width</th>
-            <th style="text-align: left;">Species</th>
+            <th>Model name</th>
+            <th>Model equation</th>
+            <th>Number of parameters</th>
             </tr>
             </thead>
             <tbody>
             <tr class="odd">
-            <td style="text-align: right;">5.1</td>
-            <td style="text-align: right;">3.5</td>
-            <td style="text-align: right;">1.4</td>
-            <td style="text-align: right;">0.2</td>
-            <td style="text-align: left;">setosa</td>
+            <td>Null model</td>
+            <td><span
+            class="math inline"><em>F</em><sub><em>i</em><em>j</em></sub> = <em>K</em></span></td>
+            <td>2</td>
             </tr>
             <tr class="even">
-            <td style="text-align: right;">5.0</td>
-            <td style="text-align: right;">3.6</td>
-            <td style="text-align: right;">1.4</td>
-            <td style="text-align: right;">0.2</td>
-            <td style="text-align: left;">setosa</td>
+            <td>General mass action</td>
+            <td><span
+            class="math inline"><em>F</em><sub><em>i</em><em>j</em></sub> = <em>α</em><em>B</em><sub><em>i</em></sub><em>N</em><sub><em>j</em></sub></span></td>
+            <td>2</td>
             </tr>
             <tr class="odd">
-            <td style="text-align: right;">5.4</td>
-            <td style="text-align: right;">3.9</td>
-            <td style="text-align: right;">1.7</td>
-            <td style="text-align: right;">0.4</td>
-            <td style="text-align: left;">setosa</td>
+            <td>Predator specific mass action</td>
+            <td><span
+            class="math inline"><em>F</em><sub><em>i</em><em>j</em></sub> = <em>α</em><sub><em>j</em></sub><em>B</em><sub><em>i</em></sub><em>N</em><sub><em>j</em></sub></span></td>
+            <td>157</td>
+            </tr>
+            <tr class="even">
+            <td>Single species saturating model</td>
+            <td><span class="math inline">$F_{ij} = \frac{\alpha_j B_i
+            N_j}{1 + h_j \alpha_j B_i N_j}$</span></td>
+            <td>313</td>
+            </tr>
+            <tr class="odd">
+            <td>Multi species saturating model</td>
+            <td><span class="math inline">$F_{ij} = \frac{\alpha_j B_i
+            N_j}{1 + h_j \alpha_j \sum_{i=1}^{nprey}B_i
+            N_j}$</span></td>
+            <td>313</td>
             </tr>
             </tbody>
             </table>
-            </div>
-            <h1 id="figures">Figures</h1>
-            <p>Figures can have a legend – all figures <em>must</em> be
-            in the <code>figures/</code> folder of the project, as it is
-            also used for the website. We recommend to use good
-            resolution images, rather than PDFs, or at least to have
-            multiple versions available.</p>
-            <pre><code>![This is the legend of the figure...](figures/figure.png){#fig:figure}</code></pre>
+            <p><span
+            class="math inline"><em>F</em><sub><em>i</em><em>j</em></sub></span>
+            represents the flux of biomass (<span
+            class="math inline">metric tons/km²/year</span>), <span
+            class="math inline"><em>K</em></span> is a parameter
+            representing mean biomass flow (<span
+            class="math inline">metric tons/km²/year</span>), <span
+            class="math inline"><em>α</em></span> is the general space
+            clearance rate (<span
+            class="math inline">km²/consumer/year</span>), <span
+            class="math inline"><em>α</em><sub><em>j</em></sub></span>
+            is the consumer-specific space clearance rate (<span
+            class="math inline">km²/consumer/year</span>), <span
+            class="math inline"><em>B</em><sub><em>i</em></sub></span>
+            is the prey biomass (<span class="math inline">metric
+            tons/km²</span>), <span
+            class="math inline"><em>N</em><sub><em>j</em></sub></span>
+            is the consumer abundance (<span
+            class="math inline">individual/km²</span>) and <span
+            class="math inline"><em>h</em><sub><em>j</em></sub></span>
+            is the consumer handling time (<span
+            class="math inline">metric tons of resource
+            biomass/km²/year</span>). {#tbl:table_model}</p>
+            <h2 id="model-evaluation">Model evaluation</h2>
+            <p>All biomass fluxes and body-mass were log-transformed.
+            Biomass fluxes were modelled with a hierarchical bayesian
+            approach where <span
+            class="math inline"><em>F</em><sub><em>i</em><em>j</em></sub></span>
+            follows, after being log-transformed, a normal distribution
+            with mean <span class="math inline"><em>μ</em></span> and
+            standard deviation <span
+            class="math inline"><em>σ</em></span>, where the mean
+            corresponds to the five different models described above
+            respectively. Species-specific parameters <span
+            class="math inline"><em>α</em><sub><em>j</em></sub></span>
+            and <span
+            class="math inline"><em>h</em><sub><em>j</em></sub></span>
+            were considered as random effects following normal
+            distributions. As we lacked prior knowledge on potentiel
+            distribution for the parameters, we opted for generic weakly
+            informative priors. The mean and standard deviation for
+            <span class="math inline"><em>α</em></span> and <span
+            class="math inline"><em>h</em><sub><em>j</em></sub></span>
+            were 0 and 1 respectively and were the same for all models.
+            The analysis was performed with Stan version 2.32.2 <span
+            class="citation"
+            data-cites="StanDevelopmentTeam2024StaMod">(Stan Development
+            Team 2024)</span> via the package rstan in R version 4.3.3
+            <span class="citation" data-cites="RCoreTeam2024LanEnv">(R
+            Core Team 2024)</span>.</p>
+            <p>After fitting the data to each model respectively, we
+            used the LOO package <span class="citation"
+            data-cites="Vehtari2024LooEff">(Vehtari <em>et al.</em>
+            2024)</span> to compute the expected log pointwise
+            predictive density (ELPD) to perform a leave-one-out (LOO)
+            cross validation based on <span class="citation"
+            data-cites="Vehtari2017PraBay">(Vehtari <em>et al.</em>
+            2017)</span> to estimate prediction accuracy. We computed
+            Pareto diagnostic values per model to evaluate reliability.
+            Models were ranked by predictive accuracy based on their
+            respective ELPD score. We also compared the ELPD score
+            between models to evaluate prediction accuracy and their
+            bayesian R² <span class="citation"
+            data-cites="Gelman2019RsqBay">(Gelman <em>et al.</em>
+            2019)</span>. Finally, we tested with linear regression
+            allometric relationships of the space clearance rate
+            parameter <span class="math inline"><em>α</em></span> and
+            handling time <span
+            class="math inline"><em>h</em><sub><em>j</em></sub></span>
+            with consumer body mass.</p>
+            <h2 id="code-and-data-availibility">Code and data
+            availibility</h2>
+            <p>All the R scripts for model evaluation and figures are
+            available on Github at <a
+            href="https://github.com/BenMerSci/master">https://github.com/BenMerSci/master</a>.</p>
+            <h1 id="results">Results</h1>
+            <p>All models (with the exception of the null hypothesis)
+            had good fit to the data, with <span
+            class="math inline">R<sup>2</sup></span> ranging from 0.697
+            (model 1 - details at
+            tbl. <strong>¿tbl:table_ranking?</strong> and <span
+            class="math inline">R<sup>2</sup></span> posterior
+            distributions in fig. <strong>¿fig:rsq_plot?</strong>) to
+            0.835 (model 3). The model ranking based on the predictive
+            accuracy with LOO, where higher values are better, revealed
+            that the best performing model is the single species
+            saturating model (model 3) with an ELPD score of -2452.8,
+            almost equal to the multi species saturating model (model 4)
+            and the consumer specific mass action model (model 2) with
+            ELPD scores of -2713.5 and -2749.4 respectively. The the
+            null model (model 0) and the general mass action model
+            (model 1) followed with ELPD score of -3529.1 and -4056.1,
+            respectively. Model ranking reveals that, with the exception
+            of model 4, every hypothesis that is added to the model
+            contribute significantly to ELPD and <span
+            class="math inline">R<sup>2</sup></span>. The most
+            significant increases is observed between model 1 and model
+            2, indicating that, once we account for mass action (model
+            1), the most important element is predator specific
+            consumption rate (model 2). Adding saturation only marginaly
+            improves the fit (model 3), while accounting for
+            multi-species saturation has no significant impact (model
+            4).<br />
+            It is to be noted that both model 3 and model 4 had higher
+            Pareto K diagnostic values (&gt; 0.7), which might indicate
+            non-robust model or highly influential observations <span
+            class="citation" data-cites="Vehtari2017PraBay">(Vehtari
+            <em>et al.</em> 2017)</span>.</p>
+            <table>
+            <colgroup>
+            <col style="width: 5%" />
+            <col style="width: 28%" />
+            <col style="width: 5%" />
+            <col style="width: 15%" />
+            <col style="width: 22%" />
+            <col style="width: 12%" />
+            <col style="width: 10%" />
+            </colgroup>
+            <thead>
+            <tr class="header">
+            <th>Model</th>
+            <th>Expected log pointwise predictive density (ELPD)</th>
+            <th><span class="math inline"><em>Δ</em></span>ELPD</th>
+            <th>Standard error difference</th>
+            <th>Effective number of parameters (p-LOO)</th>
+            <th>Number of parameters</th>
+            <th>mean <span class="math inline">R<sup>2</sup></span></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="odd">
+            <td>model 3</td>
+            <td>-2455.4</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>202.5</td>
+            <td>313</td>
+            <td>0.833</td>
+            </tr>
+            <tr class="even">
+            <td>model 4</td>
+            <td>-2717.7</td>
+            <td>-262.3</td>
+            <td>28.8</td>
+            <td>149.5</td>
+            <td>313</td>
+            <td>0.795</td>
+            </tr>
+            <tr class="odd">
+            <td>model 2</td>
+            <td>-2751.3</td>
+            <td>-295.9</td>
+            <td>30.2</td>
+            <td>142.2</td>
+            <td>157</td>
+            <td>0.803</td>
+            </tr>
+            <tr class="even">
+            <td>model 0</td>
+            <td>-3529.1</td>
+            <td>-1073.7</td>
+            <td>35.7</td>
+            <td>2.4</td>
+            <td>2</td>
+            <td>0.000</td>
+            </tr>
+            <tr class="odd">
+            <td>model 1</td>
+            <td>-4056.5</td>
+            <td>-1601.1</td>
+            <td>37.3</td>
+            <td>2.1</td>
+            <td>2</td>
+            <td>0.696</td>
+            </tr>
+            </tbody>
+            </table>
+            <p>Model ranking based on ELPD with LOO. Models are ranked
+            from best to worst based on their predictive accuracy with
+            the LOO package. {#tbl:table_ranking}</p>
+            <p>Model comparison suggests that mass action only catches
+            most of the variability in biomass fluxes, but the graphical
+            representation of predicted biomass flows against observed
+            biomass flows reveals a very significant bias that is solved
+            with species-specific space clearance rates (figure fig. 2).
+            Since the bias in predictions disappears in all three
+            species-specific models and that model 1 ranked below our
+            null model, it was dismissed. Model ranking and the R²
+            suggest the single species saturating model (model 3) is
+            better than model 2 and 4, but the difference is hardly
+            significant both from statistics (Table
+            tbl. <strong>¿tbl:table_ranking?</strong>) and graphical
+            representation (figure fig. 2). The consumer specific mass
+            action model (model 2) and the multi-species saturating
+            model (model 4) are the closest together regarding their
+            ELPD score. Furthermore, the added multi-species aspect of
+            model 4, relative to the single-species model 3, does not
+            improve the fit, neither from statistics nor from graphical
+            representation, therefore dismissing model 4. The
+            <em>extreme</em> Pareto K values of model 3 and 4 would also
+            suggest that both models might not be suited to make
+            prediction as is <span class="citation"
+            data-cites="Vehtari2017PraBay">(Vehtari <em>et al.</em>
+            2017)</span>.</p>
             <figure>
-            <img src="figures/figure.png" id="fig:figure"
-            alt="Figure 2: This is the legend of the figure, which will be shown in the margin in preprint mode, and underneath the figure in draft mode. The legend can contain references, etc. It is advised to use a resolution of at least 600dpi for the figures." />
-            <figcaption aria-hidden="true">Figure 2: This is the legend
-            of the figure, which will be shown in the margin in preprint
-            mode, and underneath the figure in draft mode. The legend
-            can contain references, etc. It is advised to use a
-            resolution of at least 600dpi for the figures.</figcaption>
+            <img src="figures/oneone_plots.png" id="fig:oneone_plot"
+            alt="Figure 2: Models prediction of biomass fluxes compared to the observed biomass fluxes (log-scale) (\text{metric tons}/\text{km}^2/\text{year}). The black line represents a one for one line. Points represent the mean predicted value and thick and fine error bars represent the 0.66 and 0.95 quantile distribution respectively. `Marine and freshwater’ points represent biomass fluxes from consumers that are present both in marine and freshwater ecosystems such as Zooplankton and Zoobenthos." />
+            <figcaption aria-hidden="true">Figure 2: Models prediction
+            of biomass fluxes compared to the observed biomass fluxes
+            (log-scale) (<span class="math inline">metric
+            tons/km<sup>2</sup>/year</span>). The black line represents
+            a one for one line. Points represent the mean predicted
+            value and thick and fine error bars represent the 0.66 and
+            0.95 quantile distribution respectively. `Marine and
+            freshwater’ points represent biomass fluxes from consumers
+            that are present both in marine and freshwater ecosystems
+            such as Zooplankton and Zoobenthos.</figcaption>
             </figure>
-            <p>We can now use <code>@fig:figure</code> to refer to
-            fig. 2.</p>
-            <h1 id="unicode-support">Unicode support</h1>
-            <p>The PDFs are rendered using the excellent <a
-            href="https://tectonic-typesetting.github.io/en-US/"><code>tectonic</code></a>
-            engine, and use <code>fontspec</code> for better looking
-            fonts. The text is set in TeX Gyre Termes, the titles are
-            set in TeX Gyre Heros, and the code is set in JuliaMono.</p>
-            <p>The text can use unicode: for example, this α is written
-            as is in the main text. The code can, similarly, use
-            unicode. For example, we can use the one-liner neural
-            network from the <a href=""
-            title="https://github.com/mossr/BeautifulAlgorithms.jl/blob/master/src/neural_network_one_liner.jl">beautiful
-            algorithms</a> repository:</p>
-            <div class="sourceCode" id="cb5"><pre
-            class="sourceCode julia"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">neural_network</span>(x, 𝐕, 𝐰, <span class="cn">φ</span>, g) <span class="op">=</span> 𝐰 <span class="op">⋅</span> <span class="fu">map</span>(𝐯ⱼ <span class="op">-&gt;</span> <span class="fu">g</span>(𝐯ⱼ <span class="op">⋅</span> <span class="fu">φ</span>(x)), 𝐕)</span></code></pre></div>
-            <p>Every character that <code>JuliaMono</code> supports
-            (which is <em>a lot</em>) can be used in code.</p>
-            <h1 id="suppl.-mat.">Suppl. Mat.</h1>
-            <p>The supplementary material <em>must</em> be in markdown
-            files stored in <code>appendix</code>, and <em>must</em>
-            have a front-matter with <code>order</code> (a number giving
-            the order of the supp. mat. document) and <code>name</code>
-            (a string giving the name of the supp. mat.).</p>
+            <p>At first glance based on the model ranking and the R²,
+            the single species saturating model (model 3) seems to have
+            better predection accuracy than model 2 and 4. The
+            prediction against observations plots is hinting at the same
+            conclusion, where all three models look pretty similar but
+            the points in model 3 are more grouped around the diagonal
+            line. The consumer specific mass action model (model 2) and
+            the multi-species saturating model (model 4) are the closest
+            together regarding their ELPD score. Since model 3 and model
+            4 are both based on the type II functional response, showing
+            barely no difference in fit and model 3 ranking better, we
+            dismissed model 4. This decision is also based on parsimony,
+            the extreme Pareto K values and model 2 having a higher R²
+            than model 4. Posterior distributions of the space clearance
+            rate (figure fig. 3) are very similar across the three
+            models, with the distinction that the distribution of model
+            3 and 4 were wider while model 2 were narrower. Handling
+            time also varies significantly between species (figure
+            fig. 4), with some species having very wide distributions
+            and without clear differences between trophic guilds.</p>
+            <figure>
+            <img src="figures/alpha_comparison.png" id="fig:alpha_plot"
+            alt="Figure 3: Posterior distribution of the space clearance rate parameter (log-scale) for model 2, 3 and 4." />
+            <figcaption aria-hidden="true">Figure 3: Posterior
+            distribution of the space clearance rate parameter
+            (log-scale) for model 2, 3 and 4.</figcaption>
+            </figure>
+            <figure>
+            <img src="figures/ht_comparison.png" id="fig:ht_plot"
+            alt="Figure 4: Posterior distribution of the handling time parameter (log-scale) for model 3 and 4." />
+            <figcaption aria-hidden="true">Figure 4: Posterior
+            distribution of the handling time parameter (log-scale) for
+            model 3 and 4.</figcaption>
+            </figure>
+            <p>We lastly investigated the relationships between space
+            clearance rate, handling time and body mass. We found a
+            significant relationship between body masses and the space
+            clearance rate for the specific mass action model (model 2,
+            figure {fig. 5}.A). Relationship with the space clearance
+            rate and consumers body mass was significant with a slope of
+            0.98 (p-value &lt; 0.05, adjusted R² of 0.56). This
+            relationship was not significant however for space clearance
+            rates extracted from model 3 (model 3, figure fig. 5 .B and
+            fig. 5 .C), neither was the relationship between body mass
+            and handling time.</p>
+            <figure>
+            <img src="figures/model2_3_relationship.png"
+            id="fig:allometric_model"
+            alt="Figure 5: Relationships of the space clearance rate and handling time parameters with consumers body mass (log-scale). A clear and discernable relationship is present for model 2 space clearance rate and absent for model 3 space clearance rate and handling time parameters. The allometric relationship for model 2 space clearance rate is also accompanied by a linear regression with a slope of 0.98 (black line) and its 0.95% confidence interval (grey area). Points represent the mean space clearance rate and thick and fine error bars represent the 0.66 and 0.95 quantile distribution respectively." />
+            <figcaption aria-hidden="true">Figure 5: Relationships of
+            the space clearance rate and handling time parameters with
+            consumers body mass (log-scale). A clear and discernable
+            relationship is present for model 2 space clearance rate and
+            absent for model 3 space clearance rate and handling time
+            parameters. The allometric relationship for model 2 space
+            clearance rate is also accompanied by a linear regression
+            with a slope of 0.98 (black line) and its 0.95% confidence
+            interval (grey area). Points represent the mean space
+            clearance rate and thick and fine error bars represent the
+            0.66 and 0.95 quantile distribution
+            respectively.</figcaption>
+            </figure>
+            <h1 id="discussion">Discussion</h1>
+            <p>The motivation of this study was to develop predictive
+            models of quantitative interactions for entire food webs.
+            There are already several techniques to predict the
+            occurrence of interactions and to reconstruct binary
+            interaction networks such as the niche model <span
+            class="citation" data-cites="Williams2000SimRul">(Williams
+            &amp; Martinez 2000)</span>, trait-matching model <span
+            class="citation" data-cites="Bartomeus2016ComFra">(Bartomeus
+            <em>et al.</em> 2016)</span> and machine learning models
+            <span class="citation"
+            data-cites="Pichler2020MacLea">(Pichler <em>et al.</em>
+            2020)</span>. There are also quite a few meta-analyses of
+            functional responses, none of them can be applied to entire
+            food webs as they were mostly based on single species
+            analyses. Here we developed these one step further with the
+            prediction of biomass flows as a function of mass action,
+            allometric scaling and the full web composition. To do so,
+            we investigated an ensemble of models to predict biomass
+            flows between populations of consumers and resources
+            inspired from functional response theory. Four mechanistic
+            model of increasing complexity based on the type I and the
+            type II functional response were compared to test different
+            hypotheses. In contrast with functional response studies,
+            where the variation of consumption rates of consumers with
+            resource density is evaluated, here we attempted to predict
+            biomass fluxes between all pair of species within a
+            community context. Upon initial inspection of the fits of
+            each model, it appears that models based upon functional
+            response type I (mass action model) and type II (saturating
+            model) are well suited to predict biomass fluxes. We discuss
+            hereafter the inherent propreties of each model and compare
+            them regarding their predictive capabilities of biomass
+            fluxes. Specifically, we compared the different underlying
+            mechanisms and discuss whether mass action is enough or if
+            the incorporation of saturation with consumers handling time
+            is an important addition to predict biomass flows. We follow
+            by exploring whether the expected allometric relationships
+            with both parameters of interest (space clearance rate and
+            handling time) are observed. We conclude by addressing the
+            limitations of the study and potentiel next avenues for
+            improving the model.</p>
+            <p>Overall, based on the Baysian R², the model ranking
+            (table tbl. <strong>¿tbl:table_ranking?</strong>) and their
+            graphical representation, we found that all the models
+            (except the null model) had a good fit. While model 1 looks
+            like a good one by looking at the performance metrics, it
+            had a discernable and clear bias in terms of data fitting
+            which undoubtedly arose from the non-specific space
+            clearance rate. Model 1 portrayed a mass action process
+            where consumption rates simply follows encounters between
+            consumers searching their environment for resources based on
+            a rate at which they clear space <span class="citation"
+            data-cites="ODwyer2019EcoIde DeLong2021PreEco">(DeLong 2021;
+            O’Dwyer 2019)</span>. Space clearance rate is expected to
+            vary with species body mass and other traits <span
+            class="citation"
+            data-cites="Rall2012UniTem DeLong2021PreEco">(DeLong 2021;
+            Rall <em>et al.</em> 2012)</span> and our data comprised a
+            variety of organisms ranging from small fish to terrestrial
+            mammals. The improvement in fit of model 2 in contrast to
+            model 1 further consolidate this hypothesis, where the
+            implementation of a consumer-specific space clearance rate
+            greatly improved model fitting and resulting R², thus
+            dismissing model 1. With this said, model 2, 3 and 4 all had
+            similar outcomes regarding R² and predictive accuracy (table
+            tbl. <strong>¿tbl:table_ranking?</strong>), while portraying
+            different ecological mechanisms. While model 2 implemented a
+            mass action process with consumer-specific space clearance
+            rates, model 3 and 4 incorporated a second mechanism of
+            saturating biomass fluxes with consumers handling time. Both
+            models 3 and 4 were based upon a type II functional
+            response, where the main difference was that model 3 was
+            saturating biomass fluxes over the biomass of one prey
+            (single-species) while model 4 was accounting for the
+            biomass of all prey species available in the community
+            (multi-species). While we expect consumers consumption rates
+            over a resource to vary depending on the availability of all
+            its resources of interest <span class="citation"
+            data-cites="Smout2010FunRes">(Smout <em>et al.</em>
+            2010)</span>, the multi-species saturating model
+            underperformed compared to the single-species saturating
+            model. Accounting for all resource biomass did not seem to
+            improve the fit, thus dismissing model 4. Given the great
+            diffrence in number of parameters between model 2 and 3
+            (table <span class="citation"
+            data-cites="table:table_model">(<strong>table:table_model?</strong>)</span>),
+            their similar fit, and the high Pareto K values of model 3,
+            model 2 seems to be the most parcimonious choice.
+            Additionally, there seems to be a tradeoff between the space
+            clearance rate and handling time parameter which introduces
+            variability in the estimation of space clearance rate
+            (figure fig. 3). This tradeoff also seems to impact the
+            expected allometric relationships of space clearance rate
+            and handling time with consumers body mass in model 3
+            (figure fig. 5 -B-C). Even though model 3 had the highest R²
+            and ELPD score, it may also suffer from misspecification as
+            indicated by the high Pareto K values <span class="citation"
+            data-cites="Vehtari2017PraBay">(Vehtari <em>et al.</em>
+            2017)</span>. While the saturating model might still be
+            relevent and can not totally be dismissed from our analysis,
+            it seems that a simple model such as our consumer-specific
+            mass action model gives a satisfying approximation of
+            biomass fluxes.</p>
+            <h2 id="allometric-relationships">Allometric
+            relationships</h2>
+            <p>The form of the functional response has been the subject
+            of a longstanding debate <span class="citation"
+            data-cites="Barbier2021MacApp">(Barbier <em>et al.</em>
+            2021)</span> since first formalized by <span
+            class="citation" data-cites="Holling1959ChaSim">Holling
+            (1959a)</span>. The statistical models we developed operate
+            on a different scale than single species functional response
+            studies, taking advantage of the wide variability of feeding
+            rates among species of different population sizes in a full
+            community, instead of focusing on pairwise interactions with
+            experimental manipulation of a single resource density. We
+            nonetheless expected to observe similar functional responses
+            and associated parameters since both approach describe the
+            same underlying processes. Larger organisms are expected to
+            have larger space clearance rate, whereas handling time
+            might vary with consumers and resource body mass [<span
+            class="citation" data-cites="Rall2012UniTem">Rall <em>et
+            al.</em> (2012)</span>; <span class="citation"
+            data-cites="Uiterwaal2020FunRes">Uiterwaal &amp; DeLong
+            (2020)</span>; <span class="citation"
+            data-cites="Coblentz2023PreFee">Coblentz <em>et al.</em>
+            (2023)</span>; <span class="citation"
+            data-cites="DeLong2021PreEco">DeLong (2021)</span>}.
+            Consistent with the anticipated relationship, largest space
+            clearance rate in model 2 are related to larger organisms
+            such as large and medium mammal predators, predatory birds
+            and sharks, while lower space clearance rate are related to
+            smaller organisms such as invertebrates, shrimps and small
+            pelagic fish omnivores (figure fig. 3). The space clearance
+            rate in model 3 mostly displays the same relationship with
+            consumers body mass while having larger flat distributions
+            (figure fig. 3). The allometric relationship with handling
+            time is however less precise, where higher or lower handling
+            time are not specifically related to larger or smaller
+            organisms (figure fig. 3) Based on field observations and
+            modeling, handling time would not be as important in
+            consumptions as resource individuals needed to saturate a
+            consumer’s consumption rates could rarely be observed in
+            natural context [<span class="citation"
+            data-cites="Preston2018WhaDri">Preston <em>et al.</em>
+            (2018)</span>; <span class="citation"
+            data-cites="Beardsell2021DerPre">Beardsell <em>et al.</em>
+            (2021)</span>; <span class="citation"
+            data-cites="Coblentz2023PreFee">Coblentz <em>et al.</em>
+            (2023)</span>}. While not necessarily relevant in explaining
+            the poor unobserved body mass relationship of our handling
+            time parameter, it might lend additional support for model
+            2. Overall, the inter-consumer distribution of the space
+            clearance rate parameter for model 2 and 3 fall well within
+            the range values reported in other studies [<span
+            class="citation" data-cites="Rall2012UniTem">Rall <em>et
+            al.</em> (2012)</span>; <span class="citation"
+            data-cites="Portalier2022InfSiz">Portalier <em>et al.</em>
+            (2022)</span>; <span class="citation"
+            data-cites="Coblentz2023PreFee">Coblentz <em>et al.</em>
+            (2023)</span>}.</p>
+            <p>As with many other biological processes, feeding rates
+            are tightly linked with consumers and resources body mass
+            <span class="citation"
+            data-cites="Brose2010BodCon DeLong2012SizSca Schneider2012BodMas Schroder2016IndVar Preston2018WhaDri DeLong2021PreEco">(Brose
+            2010; DeLong 2021; DeLong &amp; Vasseur 2012; Preston <em>et
+            al.</em> 2018; Schneider <em>et al.</em> 2012; Schröder
+            <em>et al.</em> 2016)</span>. More specifically, the
+            underlying space clearance rate and handling time parameters
+            of the feeding process are expected to scale with consumer
+            body mass <span class="citation"
+            data-cites="Yodzis1992BodSiz Vucic-Pestic2010AllFun Kalinkat2013BodMas DeLong2021PreEco">(DeLong
+            2021; Kalinkat <em>et al.</em> 2013; Vucic-Pestic <em>et
+            al.</em> 2010; Yodzis &amp; Innes 1992)</span>. A review of
+            several functional response studies summarized in the foRAGE
+            database <span class="citation"
+            data-cites="Uiterwaal2022ForDat">(Uiterwaal <em>et al.</em>
+            2022)</span> showed a clear allometric scaling relationship
+            between consumers body mass and space clearance rate among
+            multiple taxonomic groups <span class="citation"
+            data-cites="DeLong2021PreEco">(DeLong 2021)</span>. The
+            allometric scaling of movement speed is hypothesized to be
+            the mechanisms underlying variability in the relationship
+            between consumers body mass and their space clearance rate
+            as it is a function of consumers velocity <span
+            class="citation" data-cites="DeLong2021PreEco">(DeLong
+            2021)</span>. Maximum velocities were shown to be
+            allometrically linked with their body mass, displaying a
+            linear increase on the log-scale up to certain extreme
+            values of body mass <span class="citation"
+            data-cites="Bejan2006UniCon Hirt2017GenSca">(Bejan &amp;
+            Marden 2006; Hirt <em>et al.</em> 2017)</span>. The
+            estimates of the slope of this relationship however varies
+            significantly between studies, with values that are usually
+            much smaller than 1 <span class="citation"
+            data-cites="Rall2012UniTem Delong2012DynExpa">(Rall <em>et
+            al.</em> 2012; <strong>Delong2012DynExpa?</strong>)</span>.
+            We found an estimated slope of 0.98 on the log-scale (figure
+            fig. 5 -A), with a relatively narrow confidence interval,
+            suggesting a linear relationship between consumer body mass
+            and the space clearance rate, which is coherent with a
+            certain portion of the relationship developed by <span
+            class="citation" data-cites="Hirt2017GenSca">Hirt <em>et
+            al.</em> (2017)</span>. Although most of the consumers in
+            model 2 seem to display the expected relationship between
+            space clearance rate and consumers body mass (figure fig. 5
+            -A), we can clearly discern some species having an upward
+            offset. The consumers of concern here are all terrestrial
+            carnivores or omnivores belonging to the Arctic networks
+            originating from the same set of study. As Ecopath compute
+            estimates over a year step <span class="citation"
+            data-cites="Christensen2004EcoEco Christensen2005EcoEco">(Christensen
+            <em>et al.</em> 2005; Christensen &amp; Walters 2004)</span>
+            and the data from the Arctic networks were seasonally
+            assessed for summer observations, we can not overlook that
+            this offset might arise from a methodological bias.
+            Alternatively, the higher space clearance rate of these
+            terrestrial species might also arise from other impacting
+            factors such as interaction dimensionality and habitat
+            heterogeneity <span class="citation"
+            data-cites="Pawar2012DimCon">(Pawar <em>et al.</em>
+            2012)</span>. We also note that the allometric relationship
+            disappears with the single-species saturating model (figure
+            fig. 5 -B-C). We believe this may happen because of a ridge
+            in the likelihood space consequent to a tradeoff between
+            space clearance rate and handling time, making the model
+            non-identifiable. Perhaps this problem could be solved with
+            stronger priors, for instance using parameters found in
+            traditional functional studies such as <span
+            class="citation" data-cites="Rall2012UniTem">Rall <em>et
+            al.</em> (2012)</span>. Overall, the allometric relationship
+            displayed in the consumer-specific mass action model
+            represents another supporting element in favor of a simple
+            mass-action model, which would significantly facilitates the
+            parameterization of quantitative food web models.</p>
+            <h2
+            id="quantitative-predictions-general-extent-scope-and-limitations">Quantitative
+            predictions: general extent, scope and limitations</h2>
+            <p>Many techniques were proposed recently to infer
+            ecological interactions from proxies <span class="citation"
+            data-cites="Morales-Castilla2015InfBio">(Morales-Castilla
+            <em>et al.</em> 2015)</span>, some informed by theory <span
+            class="citation" data-cites="Portalier2019MecPre">(Portalier
+            <em>et al.</em> 2019)</span>, others more flexible and using
+            all of the information contained in the data <span
+            class="citation" data-cites="Strydom2021RoaPre">(Strydom
+            <em>et al.</em> 2021)</span>. These methods are motivated by
+            on-going changes in biodiversity <span class="citation"
+            data-cites="Jordano2016ChaEco">(Jordano 2016)</span>, urging
+            for a more integrated description of community structure.
+            There is however an inherent challenge in documenting
+            interactions because their number scales with the square of
+            species richness <span class="citation"
+            data-cites="MacDonald2020RevLin">(MacDonald <em>et al.</em>
+            2020)</span>, some interactions are difficult to document
+            <span class="citation"
+            data-cites="Poisot2021GloKno Wootton2005MeaInt">(Poisot
+            <em>et al.</em> 2021; Wootton &amp; Emmerson 2005)</span>,
+            and also because novel assemblages are made of species that
+            were never seen co-occurring before <span class="citation"
+            data-cites="Montoya2010CliCha Lurgi2012NovCom">(Lurgi <em>et
+            al.</em> 2012; Montoya &amp; Raffaelli 2010)</span>. The
+            variety of available methods allow some flexibility,
+            depending on the objective of the study and data
+            availability. They are however all limited to binary
+            interactions, i.e. if a pair of species are interacting or
+            not. Quantitative information on the strength of interaction
+            is required to move to a next stage of interpretation, just
+            like abundance is a more accurate description of community
+            structure than presence-absence. We successfully predicted
+            biomass fluxes with a very limited amount of information
+            which suggests that, paired with a method to predict binary
+            interactions, the reconstruction of quantitative interaction
+            networks is accessible. Our model analysis was inspired by
+            theory, and despite a different methodological approach, our
+            results are in agreement with previous meta-analyses of
+            functional responses <span class="citation"
+            data-cites="Uiterwaal2020FunRes Rall2012UniTem">(Rall <em>et
+            al.</em> 2012; Uiterwaal &amp; DeLong 2020)</span>, further
+            strenghtening the confidence in our models. We found also
+            coherence in parameter estimates across ecosystems and
+            feeding guilds, suggesting that a general approach is within
+            reach. Nonetheless, although our models were built upon the
+            best available data at the time, it should not be overlook
+            that our results strongly depend on Ecopath model outputs,
+            and thus their limitations. As such, the interpretation of
+            our results should reflect this reality. The obvious next
+            step will be to catch some of the residual variance, likely
+            with the addition of other traits. Inspired by the methods
+            used for binary interactions, the next model generation will
+            have to account for trait-matching between consumer and
+            ressource. Interactions could also be made conditional on
+            the environment, for instance on temperature affecting
+            movement rates <span class="citation"
+            data-cites="Dell2014TemDep">(Dell <em>et al.</em>
+            2014)</span>, or the presence of refuges <span
+            class="citation"
+            data-cites="Barrios-ONeill2016ConSca Chan2017ImpAss">(Barrios-O’Neill
+            <em>et al.</em> 2016; Chan <em>et al.</em> 2017)</span>. The
+            parameterization we offered here should eventually
+            contribute to inform theoretical studies <span
+            class="citation" data-cites="Schneider2016AniDiv">(Schneider
+            <em>et al.</em> 2016)</span> as well as global ecosystem
+            models that are developed to investigate the consequences of
+            biodiversity changes <span class="citation"
+            data-cites="Harfoot2014EmeGlo">(Harfoot <em>et al.</em>
+            2014)</span>.</p>
             <h1 class="unnumbered" id="references">References</h1>
             <div id="refs"
             class="references csl-bib-body hanging-indent"
             role="doc-bibliography">
-            <div id="ref-Camerano1880EquViv" class="csl-entry"
+            <div id="ref-Aguiar2019RevBia" class="csl-entry"
             role="doc-biblioentry">
-            Camerano, L. (1880). Dell’equilibrio dei viventi merce la
-            reciproca distruzione. <em>Atti Della R. Accad. Delle Sci.
-            Torino</em>, 15, 393–414.
+            Aguiar, M.A.M. de, Newman, E.A., Pires, M.M., Yeakel, J.D.,
+            Boettiger, C., Burkle, L.A., <em>et al.</em> (2019). <a
+            href="https://doi.org/10.7717/peerj.7566">Revealing biases
+            in the sampling of ecological interaction networks</a>.
+            <em>PeerJ</em>, 7, e7566.
             </div>
-            <div id="ref-Elton1927AniEco" class="csl-entry"
+            <div id="ref-Barbier2021MacApp" class="csl-entry"
             role="doc-biblioentry">
-            Elton, C.S. (1927). <em>Animal ecology</em>. University of
-            Chicago Press.
+            Barbier, M., Wojcik, L. &amp; Loreau, M. (2021). <a
+            href="https://doi.org/10.1111/oik.08043">A macro-ecological
+            approach to predation density-dependence</a>.
+            <em>Oikos</em>, 130, 553–570.
+            </div>
+            <div id="ref-Barnes2018EneFlu" class="csl-entry"
+            role="doc-biblioentry">
+            Barnes, A.D., Jochum, M., Lefcheck, J.S., Eisenhauer, N.,
+            Scherber, C., O’Connor, M.I., <em>et al.</em> (2018). <a
+            href="https://doi.org/10.1016/j.tree.2017.12.007">Energy
+            Flux: The Link between Multitrophic Biodiversity and
+            Ecosystem Functioning</a>. <em>Trends in Ecology &amp;
+            Evolution</em>, 33, 186–197.
+            </div>
+            <div id="ref-Barrios-ONeill2016ConSca" class="csl-entry"
+            role="doc-biblioentry">
+            Barrios-O’Neill, D., Kelly, R., Dick, J.T.A., Ricciardi, A.,
+            MacIsaac, H.J. &amp; Emmerson, M.C. (2016). <a
+            href="https://doi.org/10.1111/ele.12605">On the
+            context-dependent scaling of consumer feeding rates</a>.
+            <em>Ecology Letters</em>, 19, 668–678.
+            </div>
+            <div id="ref-Bartomeus2016ComFra" class="csl-entry"
+            role="doc-biblioentry">
+            Bartomeus, I., Gravel, D., Tylianakis, J.M., Aizen, M.A.,
+            Dickie, I.A. &amp; Bernard-Verdier, M. (2016). <a
+            href="https://doi.org/10.1111/1365-2435.12666">A common
+            framework for identifying linkage rules across different
+            types of interactions</a>. <em>Functional Ecology</em>, 30,
+            1894–1903.
+            </div>
+            <div id="ref-Bascompte2005IntStr" class="csl-entry"
+            role="doc-biblioentry">
+            Bascompte, J., Melian, C.J. &amp; Sala, E. (2005). <a
+            href="https://doi.org/10.1073/pnas.0501562102">Interaction
+            strength combinations and the overfishing of a marine food
+            web</a>. <em>Proceedings of the National Academy of
+            Sciences</em>, 102, 5443–5447.
+            </div>
+            <div id="ref-Beardsell2021DerPre" class="csl-entry"
+            role="doc-biblioentry">
+            Beardsell, A., Gravel, D., Berteaux, D., Gauthier, G.,
+            Clermont, J., Careau, V., <em>et al.</em> (2021). <a
+            href="https://doi.org/10.3389/fevo.2021.630944">Derivation
+            of Predator Functional Responses Using a Mechanistic
+            Approach in a Natural System</a>. <em>Frontiers in Ecology
+            and Evolution</em>, 9.
+            </div>
+            <div id="ref-Beardsell2022MecMod" class="csl-entry"
+            role="doc-biblioentry">
+            Beardsell, A., Gravel, D., Clermont, J., Berteaux, D.,
+            Gauthier, G. &amp; Bêty, J. (2022). <a
+            href="https://doi.org/10.1002/ecy.3734">A mechanistic model
+            of functional response provides new insights into indirect
+            interactions among arctic tundra prey</a>. <em>Ecology</em>,
+            103.
+            </div>
+            <div id="ref-Bejan2006UniCon" class="csl-entry"
+            role="doc-biblioentry">
+            Bejan, A. &amp; Marden, J.H. (2006). <a
+            href="https://doi.org/10.1242/jeb.01974">Unifying
+            constructal theory for scale effects in running, swimming
+            and flying</a>. <em>Journal of Experimental Biology</em>,
+            209, 238–248.
+            </div>
+            <div id="ref-Bellingeri2016FooWeb" class="csl-entry"
+            role="doc-biblioentry">
+            Bellingeri, M. &amp; Bodini, A. (2016). <a
+            href="https://doi.org/10.1111/oik.02244">Food web’s
+            backbones and energy delivery in ecosystems</a>.
+            <em>Oikos</em>, 125, 586–594.
+            </div>
+            <div id="ref-Berlow2004IntStr" class="csl-entry"
+            role="doc-biblioentry">
+            Berlow, E.L., Neutel, A.-M., Cohen, J.E., de Ruiter, P.C.,
+            Ebenman, B., Emmerson, M., <em>et al.</em> (2004). <a
+            href="https://doi.org/10.1111/j.0021-8790.2004.00833.x">Interaction
+            strengths in food webs: Issues and opportunities</a>.
+            <em>Journal of Animal Ecology</em>, 73, 585–598.
+            </div>
+            <div id="ref-Brose2010BodCon" class="csl-entry"
+            role="doc-biblioentry">
+            Brose, U. (2010). <a
+            href="https://doi.org/10.1111/j.1365-2435.2009.01618.x">Body-mass
+            constraints on foraging behaviour determine population and
+            food-web dynamics</a>. <em>Functional Ecology</em>, 24,
+            28–34.
+            </div>
+            <div id="ref-Brose2018GloDat" class="csl-entry"
+            role="doc-biblioentry">
+            Brose, U. (2018). GlobAL daTabasE of traits and food Web
+            Architecture (GATEWAy) version 1.0.
+            </div>
+            <div id="ref-Brose2008ForThe" class="csl-entry"
+            role="doc-biblioentry">
+            Brose, U., Ehnes, R.B., Rall, B.C., Vucic-Pestic, O.,
+            Berlow, E.L. &amp; Scheu, S. (2008). <a
+            href="https://doi.org/10.1111/j.1365-2656.2008.01408.x">Foraging
+            theory predicts predator–prey energy fluxes</a>. <em>Journal
+            of Animal Ecology</em>, 77, 1072–1078.
+            </div>
+            <div id="ref-Brose2006AllSca" class="csl-entry"
+            role="doc-biblioentry">
+            Brose, U., Williams, R.J. &amp; Martinez, N.D. (2006). <a
+            href="https://doi.org/10.1111/j.1461-0248.2006.00978.x">Allometric
+            scaling enhances stability in complex food webs</a>.
+            <em>Ecology Letters</em>, 9, 1228–1236.
+            </div>
+            <div id="ref-Cattin2004PhyCon" class="csl-entry"
+            role="doc-biblioentry">
+            Cattin, M.-F., Bersier, L.-F., Banašek-Richter, C.,
+            Baltensperger, R. &amp; Gabriel, J.-P. (2004). <a
+            href="https://doi.org/10.1038/nature02327">Phylogenetic
+            constraints and adaptation explain food-web structure</a>.
+            <em>Nature</em>, 427, 835–839.
+            </div>
+            <div id="ref-Chan2017ImpAss" class="csl-entry"
+            role="doc-biblioentry">
+            Chan, K., Boutin, S., Hossie, T.J., Krebs, C.J., O’Donoghue,
+            M. &amp; Murray, D.L. (2017). <a
+            href="https://doi.org/10.1002/ecy.1828">Improving the
+            assessment of predator functional responses by considering
+            alternate prey and predator interactions</a>.
+            <em>Ecology</em>, 98, 1787–1796.
+            </div>
+            <div id="ref-Christensen2004EcoEco" class="csl-entry"
+            role="doc-biblioentry">
+            Christensen, V. &amp; Walters, C.J. (2004). <a
+            href="https://doi.org/10.1016/j.ecolmodel.2003.09.003">Ecopath
+            with Ecosim: Methods, capabilities and limitations</a>.
+            <em>Ecological Modelling</em>, 172, 109–139.
+            </div>
+            <div id="ref-Christensen2005EcoEco" class="csl-entry"
+            role="doc-biblioentry">
+            Christensen, V., Walters, C. &amp; Pauly, D. (2005). Ecopath
+            with Ecosim: A User’s Guide. <em>Fisheries Centre,
+            University of British Columbia, Vancouver, Canada and
+            ICLARM, Penang, Malaysia</em>, 12.
+            </div>
+            <div id="ref-Coblentz2023PreFee" class="csl-entry"
+            role="doc-biblioentry">
+            Coblentz, K.E., Novak, M. &amp; DeLong, J.P. (2023). <a
+            href="https://doi.org/10.1111/ele.14151">Predator feeding
+            rates may often be unsaturated under typical prey
+            densities</a>. <em>Ecology Letters</em>, 26, 302–312.
+            </div>
+            <div id="ref-Colleter2013EcoRep" class="csl-entry"
+            role="doc-biblioentry">
+            Colléter, M., Valls, A., Guitton, J., Lyne, M., Sánchez,
+            F.A.-., Christensen, V., <em>et al.</em> (2013).
+            <em>EcoBase: A repository solution to gather and communicate
+            information from EwE models</em> (Research Report No. 21).
+            Fisheries Centre, University of British Columbia, Canada.
+            </div>
+            <div id="ref-Curtsdotter2019EcoFun" class="csl-entry"
+            role="doc-biblioentry">
+            Curtsdotter, A., Banks, H.T., Banks, J.E., Jonsson, M.,
+            Jonsson, T., Laubmeier, A.N., <em>et al.</em> (2019). <a
+            href="https://doi.org/10.1111/1365-2656.12892">Ecosystem
+            function in predator–prey food webs—confronting dynamic
+            models with empirical data</a>. <em>Journal of Animal
+            Ecology</em>, 88, 196–210.
+            </div>
+            <div id="ref-deRuiter1995EnePat" class="csl-entry"
+            role="doc-biblioentry">
+            de Ruiter, P.C., Neutel, A.-M. &amp; Moore, J.C. (1995). <a
+            href="https://doi.org/10.1126/science.269.5228.1257">Energetics,
+            Patterns of Interaction Strengths, and Stability in Real
+            Ecosystems</a>. <em>Science</em>, 269, 1257–1260.
+            </div>
+            <div id="ref-Dell2014TemDep" class="csl-entry"
+            role="doc-biblioentry">
+            Dell, A.I., Pawar, S. &amp; Savage, V.M. (2014). <a
+            href="https://doi.org/10.1111/1365-2656.12081">Temperature
+            dependence of trophic interactions are driven by asymmetry
+            of species responses and foraging strategy</a>. <em>Journal
+            of Animal Ecology</em>, 83, 70–84.
+            </div>
+            <div id="ref-DeLong2021PreEco" class="csl-entry"
+            role="doc-biblioentry">
+            DeLong, J.P. (2021). <em>Predator Ecology: Evolutionary
+            Ecology of the Functional Response</em>. Oxford University
+            Press.
+            </div>
+            <div id="ref-DeLong2012SizSca" class="csl-entry"
+            role="doc-biblioentry">
+            DeLong, J.P. &amp; Vasseur, D.A. (2012). <a
+            href="https://doi.org/10.1111/j.1365-2656.2012.02013.x">Size-density
+            scaling in protists and the links between consumer–resource
+            interaction parameters</a>. <em>Journal of Animal
+            Ecology</em>, 81, 1193–1201.
+            </div>
+            <div id="ref-Duffy2002BioEco" class="csl-entry"
+            role="doc-biblioentry">
+            Duffy, J.E. (2002). <a
+            href="https://doi.org/10.1034/j.1600-0706.2002.990201.x">Biodiversity
+            and ecosystem function: The consumer connection</a>.
+            <em>Oikos</em>, 99, 201–219.
+            </div>
+            <div id="ref-Estes2011TroDow" class="csl-entry"
+            role="doc-biblioentry">
+            Estes, J.A., Terborgh, J., Brashares, J.S., Power, M.E.,
+            Berger, J., Bond, W.J., <em>et al.</em> (2011). <a
+            href="https://doi.org/10.1126/science.1205106">Trophic
+            Downgrading of Planet Earth</a>. <em>Science</em>, 333,
+            301–306.
+            </div>
+            <div id="ref-Froese2023Fis" class="csl-entry"
+            role="doc-biblioentry">
+            Froese, R., Pauly, D. &amp; Editors. (2023). FishBase.
+            </div>
+            <div id="ref-Gelman2019RsqBay" class="csl-entry"
+            role="doc-biblioentry">
+            Gelman, A., Goodrich, B., Gabry, J. &amp; Vehtari, A.
+            (2019). <a
+            href="https://doi.org/10.1080/00031305.2018.1549100">R-squared
+            for Bayesian Regression Models</a>. <em>The American
+            Statistician</em>, 73, 307–309.
+            </div>
+            <div id="ref-Hall2000OrgMat" class="csl-entry"
+            role="doc-biblioentry">
+            Hall, R.O., Wallace, J.B. &amp; Eggert, S.L. (2000). <a
+            href="https://doi.org/10.1890/0012-9658(2000)081[3445:OMFISF]2.0.CO;2">Organic
+            matter flow in stream food webs with reduced detrital
+            resource base</a>. <em>Ecology</em>, 81, 3445–3463.
+            </div>
+            <div id="ref-Harfoot2014EmeGlo" class="csl-entry"
+            role="doc-biblioentry">
+            Harfoot, M.B.J., Newbold, T., Tittensor, D.P., Emmott, S.,
+            Hutton, J., Lyutsarev, V., <em>et al.</em> (2014). <a
+            href="https://doi.org/10.1371/journal.pbio.1001841">Emergent
+            Global Patterns of Ecosystem Structure and Function from a
+            Mechanistic General Ecosystem Model</a>. <em>PLOS
+            Biology</em>, 12, e1001841.
+            </div>
+            <div id="ref-Hirt2017GenSca" class="csl-entry"
+            role="doc-biblioentry">
+            Hirt, M.R., Jetz, W., Rall, B.C. &amp; Brose, U. (2017). <a
+            href="https://doi.org/10.1038/s41559-017-0241-4">A general
+            scaling law reveals why the largest animals are not the
+            fastest</a>. <em>Nature Ecology &amp; Evolution</em>, 1,
+            1116–1122.
+            </div>
+            <div id="ref-Hirt2020RetTro" class="csl-entry"
+            role="doc-biblioentry">
+            Hirt, M.R., Tucker, M., Müller, T., Rosenbaum, B. &amp;
+            Brose, U. (2020). <a
+            href="https://doi.org/10.1002/ece3.6411">Rethinking trophic
+            niches: Speed and body mass colimit prey space of mammalian
+            predators</a>. <em>Ecology and Evolution</em>, 10,
+            7094–7105.
+            </div>
+            <div id="ref-Hoddle2003EffPre" class="csl-entry"
+            role="doc-biblioentry">
+            Hoddle, M.S. (2003). <a
+            href="https://doi.org/10.1046/j.1365-2311.2003.00518.x">The
+            effect of prey species and environmental complexity on the
+            functional response of Franklinothrips orizabensis: A test
+            of the fractal foraging model</a>. <em>Ecological
+            Entomology</em>, 28, 309–318.
+            </div>
+            <div id="ref-Holling1959ChaSim" class="csl-entry"
+            role="doc-biblioentry">
+            Holling, C.S. (1959a). <a
+            href="https://doi.org/10.4039/Ent91385-7">Some
+            Characteristics of Simple Types of Predation and
+            Parasitism</a>. <em>The Canadian Entomologist</em>, 91,
+            385–398.
+            </div>
+            <div id="ref-Holling1959ComPrea" class="csl-entry"
+            role="doc-biblioentry">
+            Holling, C.S. (1959b). <a
+            href="https://doi.org/10.4039/Ent91293-5">The Components of
+            Predation as Revealed by a Study of Small-Mammal Predation
+            of the European Pine Sawfly</a>. <em>The Canadian
+            Entomologist</em>, 91, 293–320.
+            </div>
+            <div id="ref-Jacquet2016NoCom" class="csl-entry"
+            role="doc-biblioentry">
+            Jacquet, C., Moritz, C., Morissette, L., Legagneux, P.,
+            Massol, F., Archambault, P., <em>et al.</em> (2016). <a
+            href="https://doi.org/10.1038/ncomms12573">No
+            complexity–stability relationship in empirical
+            ecosystems</a>. <em>Nature Communications</em>, 7, 12573.
+            </div>
+            <div id="ref-Jordano2016ChaEco" class="csl-entry"
+            role="doc-biblioentry">
+            Jordano, P. (2016). <a
+            href="https://doi.org/10.1371/journal.pbio.1002559">Chasing
+            Ecological Interactions</a>. <em>PLOS Biology</em>, 14,
+            e1002559.
+            </div>
+            <div id="ref-Kalinkat2013BodMas" class="csl-entry"
+            role="doc-biblioentry">
+            Kalinkat, G., Schneider, F.D., Digel, C., Guill, C., Rall,
+            B.C. &amp; Brose, U. (2013). <a
+            href="https://doi.org/10.1111/ele.12147">Body masses,
+            functional responses and predator–prey stability</a>.
+            <em>Ecology Letters</em>, 16, 1126–1134.
+            </div>
+            <div id="ref-Koltz2018WarRev" class="csl-entry"
+            role="doc-biblioentry">
+            Koltz, A.M., Classen, A.T. &amp; Wright, J.P. (2018). <a
+            href="https://doi.org/10.1073/pnas.1808754115">Warming
+            reverses top-down effects of predators on belowground
+            ecosystem function in Arctic tundra</a>. <em>Proceedings of
+            the National Academy of Sciences</em>, 115, E7541–E7549.
+            </div>
+            <div id="ref-Lindeman1942TroAsp" class="csl-entry"
+            role="doc-biblioentry">
+            Lindeman, R.L. (1942). <a
+            href="https://doi.org/10.2307/1930126">The Trophic-Dynamic
+            Aspect of Ecology</a>. <em>Ecology</em>, 23, 399–417.
+            </div>
+            <div id="ref-Lurgi2012NovCom" class="csl-entry"
+            role="doc-biblioentry">
+            Lurgi, M., López, B.C. &amp; Montoya, J.M. (2012). <a
+            href="https://doi.org/10.1098/rstb.2012.0238">Novel
+            communities from climate change</a>. <em>Philosophical
+            Transactions of the Royal Society B: Biological
+            Sciences</em>, 367, 2913–2922.
+            </div>
+            <div id="ref-MacDonald2020RevLin" class="csl-entry"
+            role="doc-biblioentry">
+            MacDonald, A.A.M., Banville, F. &amp; Poisot, T. (2020). <a
+            href="https://doi.org/10.1016/j.patter.2020.100079">Revisiting
+            the Links-Species Scaling Relationship in Food Webs</a>.
+            <em>Patterns</em>, 1, 100079.
+            </div>
+            <div id="ref-Manatunge2000InfStr" class="csl-entry"
+            role="doc-biblioentry">
+            Manatunge, J., Asaeda, T. &amp; Priyadarshana, T. (2000). <a
+            href="https://doi.org/10.1023/A:1007691425268">The Influence
+            of Structural Complexity on Fish–zooplankton Interactions: A
+            Study Using Artificial Submerged Macrophytes</a>.
+            <em>Environmental Biology of Fishes</em>, 58, 425–438.
+            </div>
+            <div id="ref-Mestre2022HumDis" class="csl-entry"
+            role="doc-biblioentry">
+            Mestre, F., Rozenfeld, A. &amp; Araújo, M.B. (2022). <a
+            href="https://doi.org/10.1111/ele.14107">Human disturbances
+            affect the topology of food webs</a>. <em>Ecology
+            Letters</em>, 25, 2476–2488.
+            </div>
+            <div id="ref-Monnahan2017FasEst" class="csl-entry"
+            role="doc-biblioentry">
+            Monnahan, C.C., Thorson, J.T. &amp; Branch, T.A. (2017). <a
+            href="https://doi.org/10.1111/2041-210X.12681">Faster
+            estimation of Bayesian models in ecology using Hamiltonian
+            Monte Carlo</a>. <em>Methods in Ecology and Evolution</em>,
+            8, 339–348.
+            </div>
+            <div id="ref-Montoya2010CliCha" class="csl-entry"
+            role="doc-biblioentry">
+            Montoya, J.M. &amp; Raffaelli, D. (2010). <a
+            href="https://doi.org/10.1098/rstb.2010.0114">Climate
+            change, biotic interactions and ecosystem services</a>.
+            <em>Philosophical Transactions of the Royal Society B:
+            Biological Sciences</em>, 365, 2013–2018.
+            </div>
+            <div id="ref-Montoya2003FooWeb" class="csl-entry"
+            role="doc-biblioentry">
+            Montoya, J.M., Rodríguez, M.A. &amp; Hawkins, B.A. (2003).
+            <a
+            href="https://doi.org/10.1046/j.1461-0248.2003.00469.x">Food
+            web complexity and higher-level ecosystem services</a>.
+            <em>Ecology Letters</em>, 6, 587–593.
+            </div>
+            <div id="ref-Morales-Castilla2015InfBio" class="csl-entry"
+            role="doc-biblioentry">
+            Morales-Castilla, I., Matias, M.G., Gravel, D. &amp; Araújo,
+            M.B. (2015). <a
+            href="https://doi.org/10.1016/j.tree.2015.03.014">Inferring
+            biotic interactions from proxies</a>. <em>Trends in Ecology
+            &amp; Evolution</em>, 30, 347–356.
+            </div>
+            <div id="ref-Neutel2002StaRea" class="csl-entry"
+            role="doc-biblioentry">
+            Neutel, A.-M. (2002). <a
+            href="https://doi.org/10.1126/science.1068326">Stability in
+            Real Food Webs: Weak Links in Long Loops</a>.
+            <em>Science</em>, 296, 1120–1123.
+            </div>
+            <div id="ref-Nilsson2016IntStr" class="csl-entry"
+            role="doc-biblioentry">
+            Nilsson, K.A. &amp; McCann, K.S. (2016). <a
+            href="https://doi.org/10.1007/s12080-015-0282-8">Interaction
+            strength revisited—clarifying the role of energy flux for
+            food web stability</a>. <em>Theoretical Ecology</em>, 9,
+            59–71.
+            </div>
+            <div id="ref-ODwyer2019EcoIde" class="csl-entry"
+            role="doc-biblioentry">
+            O’Dwyer, J.P. (2019). <a
+            href="https://doi.org/10.1038/s41559-019-1066-0">Beyond an
+            ecological ideal gas law</a>. <em>Nature Ecology &amp;
+            Evolution</em>, 4, 14–15.
+            </div>
+            <div id="ref-Paine1992FooAna" class="csl-entry"
+            role="doc-biblioentry">
+            Paine, R.T. (1992). <a
+            href="https://doi.org/10.1038/355073a0">Food-web analysis
+            through field measurement of per capita interaction
+            strength</a>. <em>Nature</em>, 355, 73–75.
+            </div>
+            <div id="ref-Palomares2023Sea" class="csl-entry"
+            role="doc-biblioentry">
+            Palomares, M.L.D., Pauly, D. &amp; Editors. (2023).
+            SeaLifeBase.
+            </div>
+            <div id="ref-Pawar2019IntDim" class="csl-entry"
+            role="doc-biblioentry">
+            Pawar, S., Dell, A.I., Lin, T., Wieczynski, D.J. &amp;
+            Savage, V.M. (2019). <a
+            href="https://doi.org/10.3389/fevo.2019.00202">Interaction
+            Dimensionality Scales Up to Generate Bimodal
+            Consumer-Resource Size-Ratio Distributions in Ecological
+            Communities</a>. <em>Frontiers in Ecology and
+            Evolution</em>, 7, 202.
+            </div>
+            <div id="ref-Pawar2012DimCon" class="csl-entry"
+            role="doc-biblioentry">
+            Pawar, S., Dell, A.I. &amp; Van M. Savage. (2012). <a
+            href="https://doi.org/10.1038/nature11131">Dimensionality of
+            consumer search space drives trophic interaction
+            strengths</a>. <em>Nature</em>, 486, 485–489.
+            </div>
+            <div id="ref-Pichler2020MacLea" class="csl-entry"
+            role="doc-biblioentry">
+            Pichler, M., Boreux, V., Klein, A.-M., Schleuning, M. &amp;
+            Hartig, F. (2020). <a
+            href="https://doi.org/10.1111/2041-210X.13329">Machine
+            learning algorithms to infer trait-matching and predict
+            species interactions in ecological networks</a>. <em>Methods
+            in Ecology and Evolution</em>, 11, 281–293.
+            </div>
+            <div id="ref-Poisot2021GloKno" class="csl-entry"
+            role="doc-biblioentry">
+            Poisot, T., Bergeron, G., Cazelles, K., Dallas, T., Gravel,
+            D., MacDonald, A., <em>et al.</em> (2021). <a
+            href="https://doi.org/10.1111/jbi.14127">Global knowledge
+            gaps in species interaction networks data</a>. <em>Journal
+            of Biogeography</em>, 48, 1552–1563.
+            </div>
+            <div id="ref-Poisot2016DesUnd" class="csl-entry"
+            role="doc-biblioentry">
+            Poisot, T., Stouffer, D.B. &amp; Kéfi, S. (2016). <a
+            href="https://www.jstor.org/stable/48582345">Describe,
+            understand and predict: Why do we need networks in
+            ecology?</a> <em>Functional Ecology</em>, 30, 1878–1882.
+            </div>
+            <div id="ref-Portalier2019MecPre" class="csl-entry"
+            role="doc-biblioentry">
+            Portalier, S.M.J., Fussmann, G.F., Loreau, M. &amp; Cherif,
+            M. (2019). <a
+            href="https://doi.org/10.1111/1365-2435.13254">The mechanics
+            of predator–prey interactions: First principles of physics
+            predict predator–prey size ratios</a>. <em>Functional
+            Ecology</em>, 33, 323–334.
+            </div>
+            <div id="ref-Portalier2022InfSiz" class="csl-entry"
+            role="doc-biblioentry">
+            Portalier, S.M.J., Fussmann, G.F., Loreau, M. &amp; Cherif,
+            M. (2022). Inferring Size-Based Functional Responses From
+            the Physical Properties of the Medium. <em>Frontiers in
+            Ecology and Evolution</em>, 9.
+            </div>
+            <div id="ref-Preston2018WhaDri" class="csl-entry"
+            role="doc-biblioentry">
+            Preston, D.L., Henderson, J.S., Falke, L.P., Segui, L.M.,
+            Layden, T.J. &amp; Novak, M. (2018). <a
+            href="https://doi.org/10.1002/ecy.2387">What drives
+            interaction strengths in complex food webs? A test with
+            feeding rates of a generalist stream predator</a>.
+            <em>Ecology</em>, 99, 1591–1601.
+            </div>
+            <div id="ref-RCoreTeam2024LanEnv" class="csl-entry"
+            role="doc-biblioentry">
+            R Core Team. (2024). R: A Language and Environment for
+            Statistical Computing.
+            </div>
+            <div id="ref-Rall2012UniTem" class="csl-entry"
+            role="doc-biblioentry">
+            Rall, B.C., Brose, U., Hartvig, M., Kalinkat, G.,
+            Schwarzmüller, F., Vucic-Pestic, O., <em>et al.</em> (2012).
+            <a href="https://doi.org/10.1098/rstb.2012.0242">Universal
+            temperature and body-mass scaling of feeding rates</a>.
+            <em>Philosophical Transactions of the Royal Society B:
+            Biological Sciences</em>, 367, 2923–2934.
+            </div>
+            <div id="ref-Schneider2016AniDiv" class="csl-entry"
+            role="doc-biblioentry">
+            Schneider, F.D., Brose, U., Rall, B.C. &amp; Guill, C.
+            (2016). <a href="https://doi.org/10.1038/ncomms12718">Animal
+            diversity and ecosystem functioning in dynamic food
+            webs</a>. <em>Nature Communications</em>, 7, 12718.
+            </div>
+            <div id="ref-Schneider2012BodMas" class="csl-entry"
+            role="doc-biblioentry">
+            Schneider, F.D., Scheu, S. &amp; Brose, U. (2012). <a
+            href="https://doi.org/10.1111/j.1461-0248.2012.01750.x">Body
+            mass constraints on feeding rates determine the consequences
+            of predator loss</a>. <em>Ecology Letters</em>, 15, 436–443.
+            </div>
+            <div id="ref-Schroder2016IndVar" class="csl-entry"
+            role="doc-biblioentry">
+            Schröder, A., Kalinkat, G. &amp; Arlinghaus, R. (2016). <a
+            href="https://doi.org/10.1007/s00442-016-3701-7">Individual
+            variation in functional response parameters is explained by
+            body size but not by behavioural types in a poeciliid
+            fish</a>. <em>Oecologia</em>, 182, 1129–1140.
+            </div>
+            <div id="ref-Smout2010FunRes" class="csl-entry"
+            role="doc-biblioentry">
+            Smout, S., Asseburg, C., Matthiopoulos, J., Fernández, C.,
+            Redpath, S., Thirgood, S., <em>et al.</em> (2010). <a
+            href="https://doi.org/10.1371/journal.pone.0010761">The
+            Functional Response of a Generalist Predator</a>. <em>PLOS
+            ONE</em>, 5, e10761.
+            </div>
+            <div id="ref-Solomon1949NatCon" class="csl-entry"
+            role="doc-biblioentry">
+            Solomon, M.E. (1949). <a
+            href="https://doi.org/10.2307/1578">The Natural Control of
+            Animal Populations</a>. <em>Journal of Animal Ecology</em>,
+            18, 1–35.
+            </div>
+            <div id="ref-StanDevelopmentTeam2024StaMod"
+            class="csl-entry" role="doc-biblioentry">
+            Stan Development Team. (2024). Stan Modeling Language Users
+            Guide and Reference Manual.
+            </div>
+            <div id="ref-Strydom2021RoaPre" class="csl-entry"
+            role="doc-biblioentry">
+            Strydom, T., Catchen, M.D., Banville, F., Caron, D.,
+            Dansereau, G., Desjardins-Proulx, P., <em>et al.</em>
+            (2021). <a href="https://doi.org/10.1098/rstb.2021.0063">A
+            roadmap towards predicting species interaction networks
+            (across space and time)</a>. <em>Philosophical Transactions
+            of the Royal Society B: Biological Sciences</em>, 376,
+            20210063.
+            </div>
+            <div id="ref-Uiterwaal2020FunRes" class="csl-entry"
+            role="doc-biblioentry">
+            Uiterwaal, S.F. &amp; DeLong, J.P. (2020). <a
+            href="https://doi.org/10.1002/ecy.2975">Functional responses
+            are maximized at intermediate temperatures</a>.
+            <em>Ecology</em>, 101, e02975.
+            </div>
+            <div id="ref-Uiterwaal2022ForDat" class="csl-entry"
+            role="doc-biblioentry">
+            Uiterwaal, S.F., Lagerstrom, I.T., Lyon, S.R. &amp; DeLong,
+            J.P. (2022). <a
+            href="https://doi.org/10.1002/ecy.3706">FoRAGE database: A
+            compilation of functional responses for consumers and
+            parasitoids</a>. <em>Ecology</em>, 103, e3706.
+            </div>
+            <div id="ref-Vehtari2024LooEff" class="csl-entry"
+            role="doc-biblioentry">
+            Vehtari, A., Gabry, J., Magnusson, M., Yao, Y., Bürkner,
+            P.-C., Paananen, T., <em>et al.</em> (2024). Loo: Efficient
+            leave-one-out cross-validation and WAIC for Bayesian models.
+            </div>
+            <div id="ref-Vehtari2017PraBay" class="csl-entry"
+            role="doc-biblioentry">
+            Vehtari, A., Gelman, A. &amp; Gabry, J. (2017). <a
+            href="https://doi.org/10.1007/s11222-016-9696-4">Practical
+            Bayesian model evaluation using leave-one-out
+            cross-validation and WAIC</a>. <em>Statistics and
+            Computing</em>, 27, 1413–1432.
+            </div>
+            <div id="ref-Vucic-Pestic2010AllFun" class="csl-entry"
+            role="doc-biblioentry">
+            Vucic-Pestic, O., Rall, B.C., Kalinkat, G. &amp; Brose, U.
+            (2010). <a
+            href="https://doi.org/10.1111/j.1365-2656.2009.01622.x">Allometric
+            functional response model: Body masses constrain interaction
+            strengths</a>. <em>Journal of Animal Ecology</em>, 79,
+            249–256.
+            </div>
+            <div id="ref-Williams2000SimRul" class="csl-entry"
+            role="doc-biblioentry">
+            Williams, R.J. &amp; Martinez, N.D. (2000). <a
+            href="https://doi.org/10.1038/35004572">Simple rules yield
+            complex food webs</a>. <em>Nature</em>, 404, 180–183.
+            </div>
+            <div id="ref-Wilmers2012TroCas" class="csl-entry"
+            role="doc-biblioentry">
+            Wilmers, C.C., Estes, J.A., Edwards, M., Laidre, K.L. &amp;
+            Konar, B. (2012). <a
+            href="https://doi.org/10.1890/110176">Do trophic cascades
+            affect the storage and flux of atmospheric carbon? An
+            analysis of sea otters and kelp forests</a>. <em>Frontiers
+            in Ecology and the Environment</em>, 10, 409–415.
+            </div>
+            <div id="ref-Wootton2005MeaInt" class="csl-entry"
+            role="doc-biblioentry">
+            Wootton, J.T. &amp; Emmerson, M. (2005). <a
+            href="https://www.jstor.org/stable/30033811">Measurement of
+            Interaction Strength in Nature</a>. <em>Annual Review of
+            Ecology, Evolution, and Systematics</em>, 36, 419–444.
+            </div>
+            <div id="ref-Yodzis1992BodSiz" class="csl-entry"
+            role="doc-biblioentry">
+            Yodzis, P. &amp; Innes, S. (1992). <a
+            href="https://doi.org/10.1086/285380">Body Size and
+            Consumer-Resource Dynamics</a>. <em>The American
+            Naturalist</em>, 139, 1151–1175.
             </div>
             </div>
         </article>
@@ -540,22 +1917,20 @@ manuscripts using markdown and github actions</div>
                 <div class="container">
             <h2>Supplementary Material</h2>
             <span class="appendix--list">
-                <a href="appendix/Poisot_et_al_2023_template_prepare_s1.pdf" target="_blank">
-                    <b>1:</b>&nbsp;The metadata configuration file
+                <a href="appendix/Mercier_et_al_2024_hierarchical_models_s1.pdf" target="_blank">
+                    <b>1:</b>&nbsp;List of Ecopath models
                 </a><br />
             </span><span class="appendix--list">
-                <a href="appendix/Poisot_et_al_2023_template_prepare_s2.pdf" target="_blank">
-                    <b>2:</b>&nbsp;Bibliography in supp. mat.
+                <a href="appendix/Mercier_et_al_2024_hierarchical_models_s2.pdf" target="_blank">
+                    <b>2:</b>&nbsp;Plots
                 </a><br />
             </span>
         </div>
                 <div class="container">
             <h2>Affiliations</h2>
             <sup>1</sup>&nbsp;Université de
-            Montréal; <sup>2</sup>&nbsp;Québec Centre for Biodiversity
-            Sciences; <sup>3</sup>&nbsp;Inn of the Prancing
-            Pony; <sup>4</sup>&nbsp;Fellowship of the
-            Ring; <sup>5</sup>&nbsp;Green Dragon Inn
+            Sherbrooke; <sup>2</sup>&nbsp;Québec Centre for Biodiversity
+            Sciences
             <br />
             
         </div>
