@@ -12,7 +12,7 @@ There are many definitions of interaction strength [@Berlow2004IntStr], and amon
 Biomass flows between consumers and resources can be derived from functional traits, with the promise of a standardized measure independent of taxa involved [@Berlow2004IntStr].
 Quantitative predictive models of biomass flows might also offer potential support to the study of biodiversity and ecosystem functioning relationship, as it seeks to depict all energy flows within communities [@Barnes2018EneFlu].
 Biomass flows are defined as a quantity of resource biomass that is consumed by a consumer per unit area and unit of time, reporting how energy circulates through the food web [@Lindeman1942TroAsp]. 
-Interaction strengths between consumers and resources is closely related to predation rate in a food web model, namely the functional responses ][@Rall2012UniTem].
+Interaction strengths between consumers and resources is closely related to predation rate in a food web model, namely the functional responses [@Rall2012UniTem].
 Functional response theory aims at describing the change in feeding rate of a consumer, or how many prey or resource a consumer can predate per unit area over time, relative to prey or resource availability [@Holling1959ChaSim; @Holling1959ComPrea; @Solomon1949NatCon].
 Where the functional response describes the actual number of individual prey or resource predated by a consumer per unit area over time, biomass flows describes the amount of biomass flowing from a prey or resource to a consumer per unit area over time.
 Since both quantities report the rate of the same underlying process that is predation, we anchored the development of our modeling approach in functional response theory.
@@ -55,7 +55,7 @@ It was shown the Ecopath methodology reduces biases in comparative analyses amon
 We therefore collected openly available models from Ecobase [@Colleter2013EcoRep] and worked with a subset of the models present in [@Jacquet2016NoCom].
 Taxonomic resolution of Ecopath models is highly variable and it is not uncommon that species are lumped into functional groups.
 The models were therefore selected based on the taxonomic resolution with the criteria that most nodes must be resolved at the species level, or that species within functional groups were taxonomically resolved.
-We thus curated 19 Ecopath models (detailed list in supplementary material) from aquatic, marine and terrestrial environments ([@fig:network_map]), and trophic guilds spanning from mammal carnivores and herbivores, birds, pelagic carnnivorous and herbivorous fish, demersal carnivorous and herbivorous fish and invertebrates.
+We thus curated 19 Ecopath models (detailed list in supplementary material) from aquatic, marine and terrestrial environments ([@fig:network_map]), and trophic guilds spanning from mammal carnivores and herbivores, birds, pelagic carnivorous and herbivorous fish, demersal carnivorous and herbivorous fish and invertebrates.
 
 ![Map of Ecopath models locations used in the present study.](figures/network_map.png){#fig:network_map}
 
@@ -64,7 +64,7 @@ Body mass for terrestrial species came from different sources such as the GATEWA
 Body mass for marine and freshwater species came from Fishbase [@Froese2023Fis] and Sealifebase [@Palomares2023Sea].
 When only body length was available, Fishbase and Sealifebase calculated weight from body length using a bayesian length-weight model.
 The midpoint between the minimum and maximum measurements was taken when a mean was not available.
-Density (number of individuals per unit surface, $N/\text{km}^2$) was computed by dividing total biomass per unit surface $B$ ($\text{metric tons}/\text{km}^2$) by mean body mass $M$ ($\text{metric tons}$).
+Density $N$ (number of individuals per unit surface, $N/\text{km}^2$) was computed by dividing total biomass per unit surface $B$ ($\text{metric tons}/\text{km}^2$) by mean body mass $M$ ($\text{metric tons}$).
 The 19 Ecopath models were aggregated in an edge list with quantitative biomass flows ($\text{metric tons}/\text{km}^2/\text{year}$), for a total of 1380 interactions between 154 consumer species and 153 resource species.
 
 ## Model description
@@ -118,7 +118,7 @@ $$F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j \sum_{i=1}^{nprey}B_i N_j}$$
 | Single species saturating model | $F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j B_i N_j}$                   | 313                  |
 | Multi species saturating model  | $F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j \sum_{i=1}^{nprey}B_i N_j}$ | 313                  |
 
-$F_{ij}$ represents the flux of biomass ($\text{metric tons}/\text{km}²/\text{year}$), $K$ is a parameter representing mean biomass flow ($\text{metric tons}/\text{km}²/\text{year}$), $\alpha$ is the general space clearance rate ($\text{km}²/\text{consumer}/\text{year}$), $\alpha_j$ is the consumer-specific space clearance rate ($\text{km}²/\text{consumer}/\text{year}$), $B_i$ is the prey biomass ($\text{metric tons}/\text{km}²$), $N_j$ is the consumer abundance ($\text{individual}/\text{km}²$) and $h_j$ is the consumer handling time ($\text{metric tons of resource biomass}/\text{km}²/\text{year}$). {#tbl:table_model}
+$F_{ij}$ represents the flux of biomass ($\text{metric tons}/\text{km}²/\text{year}$), $K$ is a parameter representing mean biomass flow ($\text{metric tons}/\text{km}²/\text{year}$), $\alpha$ is the general space clearance rate ($\text{km}²/\text{consumer}/\text{year}$), $\alpha_j$ is the consumer-specific space clearance rate ($\text{km}²/\text{consumer}/\text{year}$), $B_i$ is the prey biomass ($\text{metric tons}/\text{km}²$), $N_j$ is the consumer abundance ($\text{individual}/\text{km}²$) and $h_j$ is the consumer handling time ($\text{metric tons of resource biomass}/\text{km}²/\text{year}$).{#tbl:table_model}
 
 ## Model evaluation
 
@@ -141,7 +141,7 @@ All the R scripts for model evaluation and figures are available on Github at [h
 
 # Results
 
-All models (with the exception of the null hypothesis) had good fit to the data, with $\text{R}^2$ ranging from 0.697 (model 1 - details at @tbl:table_ranking and $\text{R}^2$ posterior distributions in @fig:rsq_plot) to 0.835 (model 3).
+All models (with the exception of the null hypothesis) had good fit to the data, with $\text{R}^2$ ranging from 0.697 (model 1 - details at @tbl:table_ranking and $\text{R}^2$ posterior distributions in Appendix 2) to 0.835 (model 3).
 The model ranking based on the predictive accuracy with LOO, where higher values are better, revealed that the best performing model is the single species saturating model (model 3) with an ELPD score of -2452.8, almost equal to the multi species saturating model (model 4) and the consumer specific mass action model (model 2) with ELPD scores of -2713.5 and -2749.4 respectively.
 The the null model (model 0) and the general mass action model (model 1) followed with ELPD score of -3529.1 and -4056.1, respectively.
 Model ranking reveals that, with the exception of model 4, every hypothesis that is added to the model contribute significantly to ELPD and $\text{R}^2$. 
@@ -157,7 +157,7 @@ It is to be noted that both model 3 and model 4 had higher Pareto K diagnostic v
 | model 0 | -3529.1                                          | -1073.7 | 35.7                      | 2.4                                    | 2                    | 0.000             |
 | model 1 | -4056.5                                          | -1601.1 | 37.3                      | 2.1                                    | 2                    | 0.696             |
 
-Model ranking based on ELPD with LOO. Models are ranked from best to worst based on their predictive accuracy with the LOO package. {#tbl:table_ranking}
+Model ranking based on ELPD with LOO. Models are ranked from best to worst based on their predictive accuracy with the LOO package.{#tbl:table_ranking}
 
 Model comparison suggests that mass action only catches most of the variability in biomass fluxes, but the graphical representation of predicted biomass flows against observed biomass flows reveals a very significant bias that is solved with species-specific space clearance rates (figure @fig:oneone_plot). 
 Since the bias in predictions disappears in all three species-specific models and that model 1 ranked below our null model, it was dismissed.
@@ -223,13 +223,13 @@ While the saturating model might still be relevent and can not totally be dismis
 The form of the functional response has been the subject of a longstanding debate [@Barbier2021MacApp] since first formalized by @Holling1959ChaSim.
 The statistical models we developed operate on a different scale than single species functional response studies, taking advantage of the wide variability of feeding rates among species of different population sizes in a full community, instead of focusing on pairwise interactions with experimental manipulation of a single resource density.
 We nonetheless expected to observe similar functional responses and associated parameters since both approach describe the same underlying processes.
-Larger organisms are expected to have larger space clearance rate, whereas handling time might vary with consumers and resource body mass [@Rall2012UniTem; @Uiterwaal2020FunRes; @Coblentz2023PreFee; @DeLong2021PreEco}.
+Larger organisms are expected to have larger space clearance rate, whereas handling time might vary with consumers and resource body mass [@Rall2012UniTem; @Uiterwaal2020FunRes; @Coblentz2023PreFee; @DeLong2021PreEco].
 Consistent with the anticipated relationship, largest space clearance rate in model 2 are related to larger organisms such as large and medium mammal predators, predatory birds and sharks, while lower space clearance rate are related to smaller organisms such as invertebrates, shrimps and small pelagic fish omnivores (figure @fig:alpha_plot).
 The space clearance rate in model 3 mostly displays the same relationship with consumers body mass while having larger flat distributions (figure @fig:alpha_plot).
 The allometric relationship with handling time is however less precise, where higher or lower handling time are not specifically related to larger or smaller organisms (figure @fig:alpha_plot)
-Based on field observations and modeling, handling time would not be as important in consumptions as resource individuals needed to saturate a consumer's consumption rates could rarely be observed in natural context [@Preston2018WhaDri; @Beardsell2021DerPre; @Coblentz2023PreFee}.
+Based on field observations and modeling, handling time would not be as important in consumptions as resource individuals needed to saturate a consumer's consumption rates could rarely be observed in natural context [@Preston2018WhaDri; @Beardsell2021DerPre; @Coblentz2023PreFee].
 While not necessarily relevant in explaining the poor unobserved body mass relationship of our handling time parameter, it might lend additional support for model 2.
-Overall, the inter-consumer distribution of the space clearance rate parameter for model 2 and 3 fall well within the range values reported in other studies [@Rall2012UniTem; @Portalier2022InfSiz; @Coblentz2023PreFee}.
+Overall, the inter-consumer distribution of the space clearance rate parameter for model 2 and 3 fall well within the range values reported in other studies [@Rall2012UniTem; @Portalier2022InfSiz; @Coblentz2023PreFee].
 
 As with many other biological processes, feeding rates are tightly linked with consumers and resources body mass [@Brose2010BodCon; @DeLong2012SizSca; @Schneider2012BodMas; @Schroder2016IndVar; @Preston2018WhaDri; @DeLong2021PreEco].
 More specifically, the underlying space clearance rate and handling time parameters of the feeding process are expected to scale with consumer body mass [@Yodzis1992BodSiz; @Vucic-Pestic2010AllFun; @Kalinkat2013BodMas; @DeLong2021PreEco].
