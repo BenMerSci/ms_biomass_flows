@@ -380,7 +380,7 @@ predation in complex trophic communities</div>
             data-cites="Lindeman1942TroAsp">(Lindeman 1942)</span>.
             Interaction strengths between consumers and resources is
             closely related to predation rate in a food web model,
-            namely the functional responses ]<span class="citation"
+            namely the functional responses <span class="citation"
             data-cites="Rall2012UniTem">(Rall <em>et al.</em>
             2012)</span>. Functional response theory aims at describing
             the change in feeding rate of a consumer, or how many prey
@@ -537,7 +537,7 @@ predation in complex trophic communities</div>
             in supplementary material) from aquatic, marine and
             terrestrial environments (fig. 1), and trophic guilds
             spanning from mammal carnivores and herbivores, birds,
-            pelagic carnnivorous and herbivorous fish, demersal
+            pelagic carnivorous and herbivorous fish, demersal
             carnivorous and herbivorous fish and invertebrates.</p>
             <figure>
             <img src="figures/network_map.png" id="fig:network_map"
@@ -561,8 +561,9 @@ predation in complex trophic communities</div>
             and Sealifebase calculated weight from body length using a
             bayesian length-weight model. The midpoint between the
             minimum and maximum measurements was taken when a mean was
-            not available. Density (number of individuals per unit
-            surface, <span
+            not available. Density <span
+            class="math inline"><em>N</em></span> (number of individuals
+            per unit surface, <span
             class="math inline"><em>N</em>/km<sup>2</sup></span>) was
             computed by dividing total biomass per unit surface <span
             class="math inline"><em>B</em></span> (<span
@@ -720,7 +721,7 @@ predation in complex trophic communities</div>
             class="math inline"><em>h</em><sub><em>j</em></sub></span>
             is the consumer handling time (<span
             class="math inline">metric tons of resource
-            biomass/km²/year</span>). {#tbl:table_model}</p>
+            biomass/km²/year</span>).{#tbl:table_model}</p>
             <h2 id="model-evaluation">Model evaluation</h2>
             <p>All biomass fluxes and body-mass were log-transformed.
             Biomass fluxes were modelled with a hierarchical bayesian
@@ -780,20 +781,19 @@ predation in complex trophic communities</div>
             (model 1 - details at
             tbl. <strong>¿tbl:table_ranking?</strong> and <span
             class="math inline">R<sup>2</sup></span> posterior
-            distributions in fig. <strong>¿fig:rsq_plot?</strong>) to
-            0.835 (model 3). The model ranking based on the predictive
-            accuracy with LOO, where higher values are better, revealed
-            that the best performing model is the single species
-            saturating model (model 3) with an ELPD score of -2452.8,
-            almost equal to the multi species saturating model (model 4)
-            and the consumer specific mass action model (model 2) with
-            ELPD scores of -2713.5 and -2749.4 respectively. The the
-            null model (model 0) and the general mass action model
-            (model 1) followed with ELPD score of -3529.1 and -4056.1,
-            respectively. Model ranking reveals that, with the exception
-            of model 4, every hypothesis that is added to the model
-            contribute significantly to ELPD and <span
-            class="math inline">R<sup>2</sup></span>. The most
+            distributions in Appendix 2) to 0.835 (model 3). The model
+            ranking based on the predictive accuracy with LOO, where
+            higher values are better, revealed that the best performing
+            model is the single species saturating model (model 3) with
+            an ELPD score of -2452.8, almost equal to the multi species
+            saturating model (model 4) and the consumer specific mass
+            action model (model 2) with ELPD scores of -2713.5 and
+            -2749.4 respectively. The the null model (model 0) and the
+            general mass action model (model 1) followed with ELPD score
+            of -3529.1 and -4056.1, respectively. Model ranking reveals
+            that, with the exception of model 4, every hypothesis that
+            is added to the model contribute significantly to ELPD and
+            <span class="math inline">R<sup>2</sup></span>. The most
             significant increases is observed between model 1 and model
             2, indicating that, once we account for mass action (model
             1), the most important element is predator specific
@@ -877,7 +877,7 @@ predation in complex trophic communities</div>
             </table>
             <p>Model ranking based on ELPD with LOO. Models are ranked
             from best to worst based on their predictive accuracy with
-            the LOO package. {#tbl:table_ranking}</p>
+            the LOO package.{#tbl:table_ranking}</p>
             <p>Model comparison suggests that mass action only catches
             most of the variability in biomass fluxes, but the graphical
             representation of predicted biomass flows against observed
@@ -1099,47 +1099,39 @@ predation in complex trophic communities</div>
             and associated parameters since both approach describe the
             same underlying processes. Larger organisms are expected to
             have larger space clearance rate, whereas handling time
-            might vary with consumers and resource body mass [<span
-            class="citation" data-cites="Rall2012UniTem">Rall <em>et
-            al.</em> (2012)</span>; <span class="citation"
-            data-cites="Uiterwaal2020FunRes">Uiterwaal &amp; DeLong
-            (2020)</span>; <span class="citation"
-            data-cites="Coblentz2023PreFee">Coblentz <em>et al.</em>
-            (2023)</span>; <span class="citation"
-            data-cites="DeLong2021PreEco">DeLong (2021)</span>}.
-            Consistent with the anticipated relationship, largest space
-            clearance rate in model 2 are related to larger organisms
-            such as large and medium mammal predators, predatory birds
-            and sharks, while lower space clearance rate are related to
-            smaller organisms such as invertebrates, shrimps and small
-            pelagic fish omnivores (figure fig. 3). The space clearance
-            rate in model 3 mostly displays the same relationship with
-            consumers body mass while having larger flat distributions
-            (figure fig. 3). The allometric relationship with handling
-            time is however less precise, where higher or lower handling
-            time are not specifically related to larger or smaller
-            organisms (figure fig. 3) Based on field observations and
-            modeling, handling time would not be as important in
-            consumptions as resource individuals needed to saturate a
-            consumer’s consumption rates could rarely be observed in
-            natural context [<span class="citation"
-            data-cites="Preston2018WhaDri">Preston <em>et al.</em>
-            (2018)</span>; <span class="citation"
-            data-cites="Beardsell2021DerPre">Beardsell <em>et al.</em>
-            (2021)</span>; <span class="citation"
-            data-cites="Coblentz2023PreFee">Coblentz <em>et al.</em>
-            (2023)</span>}. While not necessarily relevant in explaining
-            the poor unobserved body mass relationship of our handling
-            time parameter, it might lend additional support for model
-            2. Overall, the inter-consumer distribution of the space
-            clearance rate parameter for model 2 and 3 fall well within
-            the range values reported in other studies [<span
-            class="citation" data-cites="Rall2012UniTem">Rall <em>et
-            al.</em> (2012)</span>; <span class="citation"
-            data-cites="Portalier2022InfSiz">Portalier <em>et al.</em>
-            (2022)</span>; <span class="citation"
-            data-cites="Coblentz2023PreFee">Coblentz <em>et al.</em>
-            (2023)</span>}.</p>
+            might vary with consumers and resource body mass <span
+            class="citation"
+            data-cites="Rall2012UniTem Uiterwaal2020FunRes Coblentz2023PreFee DeLong2021PreEco">(Coblentz
+            <em>et al.</em> 2023; DeLong 2021; Rall <em>et al.</em>
+            2012; Uiterwaal &amp; DeLong 2020)</span>. Consistent with
+            the anticipated relationship, largest space clearance rate
+            in model 2 are related to larger organisms such as large and
+            medium mammal predators, predatory birds and sharks, while
+            lower space clearance rate are related to smaller organisms
+            such as invertebrates, shrimps and small pelagic fish
+            omnivores (figure fig. 3). The space clearance rate in model
+            3 mostly displays the same relationship with consumers body
+            mass while having larger flat distributions (figure fig. 3).
+            The allometric relationship with handling time is however
+            less precise, where higher or lower handling time are not
+            specifically related to larger or smaller organisms (figure
+            fig. 3) Based on field observations and modeling, handling
+            time would not be as important in consumptions as resource
+            individuals needed to saturate a consumer’s consumption
+            rates could rarely be observed in natural context <span
+            class="citation"
+            data-cites="Preston2018WhaDri Beardsell2021DerPre Coblentz2023PreFee">(Beardsell
+            <em>et al.</em> 2021; Coblentz <em>et al.</em> 2023; Preston
+            <em>et al.</em> 2018)</span>. While not necessarily relevant
+            in explaining the poor unobserved body mass relationship of
+            our handling time parameter, it might lend additional
+            support for model 2. Overall, the inter-consumer
+            distribution of the space clearance rate parameter for model
+            2 and 3 fall well within the range values reported in other
+            studies <span class="citation"
+            data-cites="Rall2012UniTem Portalier2022InfSiz Coblentz2023PreFee">(Coblentz
+            <em>et al.</em> 2023; Portalier <em>et al.</em> 2022; Rall
+            <em>et al.</em> 2012)</span>.</p>
             <p>As with many other biological processes, feeding rates
             are tightly linked with consumers and resources body mass
             <span class="citation"
