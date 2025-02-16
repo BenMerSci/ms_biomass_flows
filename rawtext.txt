@@ -85,10 +85,11 @@ and detection probability [@Pawar2012DimCon; @Pawar2019IntDim]. For
 instance, a predatory bird searching for preys from above or fishes
 grazing the benthic surface are examples of 2D planes while aerial
 insectivorous birds pursuing flying insects or fishes chasing preys in
-the water column would be in a 3D plane. Functional response theory
-therefore makes a good start to develop predictive models of
-quantitative interactions since widely measured functional traits can be
-combined with consumer and prey density to predict biomass flows.
+the water column would be in a 3D plane [@Pawar2019IntDim]. Functional
+response theory therefore makes a good start to develop predictive
+models of quantitative interactions since widely measured functional
+traits can be combined with consumer and prey density to predict biomass
+flows.
 
 The space clearance rate, in units of space per time, reports the amount
 of area search by the predator in a time interval. As with many
@@ -109,12 +110,12 @@ they are widely used in theoretical models
 parameter space could greatly bonify studies of species coexistence,
 community stability and trophic regulation. It could also help the
 parameterization of global ecosystem models used for biodiversity
-scenarios [@Harfoot2014EmeGlo }]. Following [@Yodzis1992BodSiz], there
-are a few meta-analyses looking at the scaling of feeding rates with
-body-mass [@Rall2012UniTem]. These are however concentrated on a
-re-analysis of univariate functional responses, mostly from experimental
-studies, and there is currently no study aiming at reconstructing
-quantitative interaction networks.
+scenarios [@Harfoot2014EmeGlo]. Following @Yodzis1992BodSiz, there are a
+few meta-analyses looking at the scaling of feeding rates with body-mass
+[@Rall2012UniTem]. These are however concentrated on a re-analysis of
+univariate functional responses, mostly from experimental studies, and
+there is currently no study aiming at reconstructing quantitative
+interaction networks.
 
 Our main objective is to test if we could model quantitative
 interactions in complex food webs with easily accessible information
@@ -143,8 +144,14 @@ a modelling software that relies on a mass-balance premiss and a
 multitude of parameters (production/biomass ratio, consumption/biomass
 ratio, diet compositions etc.) to provide a realistic static image of
 the flows of biomass between resources and consumers in an ecosystem
-[@Christensen2005EcoEco]. It was shown the Ecopath methodology reduces
-biases in comparative analyses among food webs (Brimacombe, in review).
+[@Christensen2005EcoEco].
+
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* TODO
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\* It was shown the Ecopath
+methodology reduces biases in comparative analyses among food webs
+(Brimacombe, in review). \*\*\*\*\*\*\*\*\*\*\*\*\*\*\* TODO
+\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
 We therefore collected openly available models from Ecobase
 [@Colleter2013EcoRep] and worked with a subset of the models present in
 [@Jacquet2016NoCom]. Taxonomic resolution of Ecopath models is highly
@@ -265,7 +272,8 @@ $\alpha_j$ is the consumer-specific space clearance rate
 ($\text{km}²/\text{consumer}/\text{year}$), $B_i$ is the prey biomass
 ($\text{metric tons}/\text{km}²$), $N_j$ is the consumer abundance
 ($\text{individual}/\text{km}²$) and $h_j$ is the consumer handling time
-($\text{metric tons of resource biomass}/\text{km}²/\text{year}$).{#tbl:table_model}
+($\text{metric tons of resource biomass}/\text{km}²/\text{year}$).
+{#tbl:table_model}
 
 ## Model evaluation
 
@@ -342,8 +350,8 @@ highly influential observations [@Vehtari2017PraBay].
   -----------------------------------------------------------------------------------------------------
 
 Model ranking based on ELPD with LOO. Models are ranked from best to
-worst based on their predictive accuracy with the LOO
-package.{#tbl:table_ranking}
+worst based on their predictive accuracy with the LOO package.
+{#tbl:table_ranking}
 
 Model comparison suggests that mass action only catches most of the
 variability in biomass fluxes, but the graphical representation of
