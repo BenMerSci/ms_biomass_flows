@@ -16,9 +16,9 @@ jobs:
     strategy:
       matrix:
         julia-version: [1.8]
-        typesetter-version: [0.0.17]
+        typesetter-version: [0.0.19]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Julia ${{ matrix.julia-version }}
         uses: julia-actions/setup-julia@v1
         with:
@@ -47,7 +47,7 @@ jobs:
           message: ${{ steps.word-count.outputs.count }}
       - name: Save artifacts
         if: always()
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v4
         with:
           name: "dist"
           path: dist
