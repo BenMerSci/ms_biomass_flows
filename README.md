@@ -25,7 +25,7 @@ These processes are influenced by a multitude of functional traits and environme
 The space clearance rate parameter varies with consumers and resources intrinsic characteristics such as absolute and relative velocities, perception of the environment and cognitive abilities  [@DeLong2021PreEco].
 It is also influenced by externalities such as habitat complexity [@Hall2000OrgMat; @Manatunge2000InfStr; @Barrios-ONeill2016ConSca] and the presence of refugia [@Hoddle2003EffPre] impeding detection probability.
 The dimensionality of an interaction, whether it takes place in a two or three dimensional plane, also impacts encounter rates and detection probability [@Pawar2012DimCon; @Pawar2019IntDim].
-For instance, a predatory bird searching for preys from above or fishes grazing the benthic surface are examples of 2D planes while aerial insectivorous birds pursuing flying insects or fishes chasing preys in the water column would be in a 3D plane.
+For instance, a predatory bird searching for preys from above or fishes grazing the benthic surface are examples of 2D planes while aerial insectivorous birds pursuing flying insects or fishes chasing preys in the water column would be in a 3D plane [@Pawar2019IntDim].
 Functional response theory therefore makes a good start to develop predictive models of quantitative interactions since widely measured functional traits can be combined with consumer and prey density to predict biomass flows.
 
 The space clearance rate, in units of space per time, reports the amount of area search by the predator in a time interval.
@@ -35,8 +35,8 @@ This observation is coherent with [@Hirt2017GenSca; @Hirt2020RetTro] who documen
 Handling time is also expected to follow the same scaling relationship [@DeLong2021PreEco], although recent studies are now suggesting that consumers handling time would not be as important at natural resources densities [@Chan2017ImpAss; @Preston2018WhaDri; @Beardsell2021DerPre; @Coblentz2023PreFee].
 Ultimately, an accurate evaluation of these parameters is necessary as they are widely used in theoretical models [@Brose2008ForThe; @Pawar2012DimCon; @Brose2006AllSca].
 Restraining the parameter space could greatly bonify studies of species coexistence, community stability and trophic regulation.
-It could also help the parameterization of global ecosystem models used for biodiversity scenarios [@Harfoot2014EmeGlo}].
-Following [@Yodzis1992BodSiz], there are a few meta-analyses looking at the scaling of feeding rates with body-mass [@Rall2012UniTem].
+It could also help the parameterization of global ecosystem models used for biodiversity scenarios [@Harfoot2014EmeGlo].
+Following @Yodzis1992BodSiz, there are a few meta-analyses looking at the scaling of feeding rates with body-mass [@Rall2012UniTem].
 These are however concentrated on a re-analysis of univariate functional responses, mostly from experimental studies, and there is currently no study aiming at reconstructing quantitative interaction networks.
 
 Our main objective is to test if we could model quantitative interactions in complex food webs with easily accessible information such as abundance and body mass. 
@@ -51,7 +51,11 @@ Each model represents its own hypothesis and their comparison allow the evaluati
 A litterature search was performed to gather empirically sampled trophic networks with measurements of biomass flows from resources to consumers, along with population densities.
 Food web data are notoriously heterogeneous [@Mestre2022HumDis] and we therefore relied on Ecopath models [@Christensen2005EcoEco] to normalize data collection. 
 Ecopath is a modelling software that relies on a mass-balance premiss and a multitude of parameters (production/biomass ratio, consumption/biomass ratio, diet compositions etc.) to provide a realistic static image of the flows of biomass between resources and consumers in an ecosystem [@Christensen2005EcoEco].
+
+*************** TODO ********************
 It was shown the Ecopath methodology reduces biases in comparative analyses among food webs (Brimacombe, in review).
+*************** TODO ********************
+
 We therefore collected openly available models from Ecobase [@Colleter2013EcoRep] and worked with a subset of the models present in [@Jacquet2016NoCom].
 Taxonomic resolution of Ecopath models is highly variable and it is not uncommon that species are lumped into functional groups.
 The models were therefore selected based on the taxonomic resolution with the criteria that most nodes must be resolved at the species level, or that species within functional groups were taxonomically resolved.
@@ -118,7 +122,7 @@ $$F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j \sum_{i=1}^{nprey}B_i N_j}$$
 | Single species saturating model | $F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j B_i N_j}$                   | 313                  |
 | Multi species saturating model  | $F_{ij} = \frac{\alpha_j B_i N_j}{1 + h_j \alpha_j \sum_{i=1}^{nprey}B_i N_j}$ | 313                  |
 
-$F_{ij}$ represents the flux of biomass ($\text{metric tons}/\text{km}²/\text{year}$), $K$ is a parameter representing mean biomass flow ($\text{metric tons}/\text{km}²/\text{year}$), $\alpha$ is the general space clearance rate ($\text{km}²/\text{consumer}/\text{year}$), $\alpha_j$ is the consumer-specific space clearance rate ($\text{km}²/\text{consumer}/\text{year}$), $B_i$ is the prey biomass ($\text{metric tons}/\text{km}²$), $N_j$ is the consumer abundance ($\text{individual}/\text{km}²$) and $h_j$ is the consumer handling time ($\text{metric tons of resource biomass}/\text{km}²/\text{year}$).{#tbl:table_model}
+$F_{ij}$ represents the flux of biomass ($\text{metric tons}/\text{km}²/\text{year}$), $K$ is a parameter representing mean biomass flow ($\text{metric tons}/\text{km}²/\text{year}$), $\alpha$ is the general space clearance rate ($\text{km}²/\text{consumer}/\text{year}$), $\alpha_j$ is the consumer-specific space clearance rate ($\text{km}²/\text{consumer}/\text{year}$), $B_i$ is the prey biomass ($\text{metric tons}/\text{km}²$), $N_j$ is the consumer abundance ($\text{individual}/\text{km}²$) and $h_j$ is the consumer handling time ($\text{metric tons of resource biomass}/\text{km}²/\text{year}$). {#tbl:table_model}
 
 ## Model evaluation
 
@@ -157,7 +161,7 @@ It is to be noted that both model 3 and model 4 had higher Pareto K diagnostic v
 | model 0 | -3529.1                                          | -1073.7 | 35.7                      | 2.4                                    | 2                    | 0.000             |
 | model 1 | -4056.5                                          | -1601.1 | 37.3                      | 2.1                                    | 2                    | 0.696             |
 
-Model ranking based on ELPD with LOO. Models are ranked from best to worst based on their predictive accuracy with the LOO package.{#tbl:table_ranking}
+Model ranking based on ELPD with LOO. Models are ranked from best to worst based on their predictive accuracy with the LOO package. {#tbl:table_ranking}
 
 Model comparison suggests that mass action only catches most of the variability in biomass fluxes, but the graphical representation of predicted biomass flows against observed biomass flows reveals a very significant bias that is solved with species-specific space clearance rates (figure @fig:oneone_plot). 
 Since the bias in predictions disappears in all three species-specific models and that model 1 ranked below our null model, it was dismissed.
